@@ -3,7 +3,7 @@
     "model": "openai/gpt-6-luna",
     "promptVersion": "gen-v1",
     "planSeed": 20261113,
-    "generatedAt": "2026-11-13T13:03:30.308Z"
+    "generatedAt": "2026-11-13T14:17:04.548Z"
   },
   "games": [
     {
@@ -60,6 +60,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Lantern League brings the energy of a floodlit football stadium to a five-reel, three-row slot. Wins land across paylines, while multipliers can boost winning combinations. Free spins and random wilds add variation to the match-day action. Its brisk pace and big-feature focus give the game an adrenaline-fuelled feel.",
       "plantedDefects": [
         {
           "kind": "theme_only_in_prose",
@@ -123,6 +124,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Lantern League Megaways takes the floodlit football action of Lantern League to a six-reel Megaways layout, with up to seven symbols on each reel. Winning combinations form across the changing ways, while multipliers can boost wins. Free spins and random wilds add further twists. Its expanded layout and fast-moving feature action create a high-energy feel.",
       "plantedDefects": []
     },
     {
@@ -178,6 +180,7 @@
       "excitementCurve": "slow_build",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Sugarbell Selection is set in a colourful sweet shop filled with cakes, sweets and baking ingredients. The five-reel, four-row game pays across paylines, with a pick-me bonus inviting players to choose from a selection of treats. Free spins and mystery symbols add variety to the play. Its steady pace and cosy presentation make for a light, playful feel.",
       "plantedDefects": []
     },
     {
@@ -234,6 +237,7 @@
       "excitementCurve": "slow_build",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "In a painterly enchanted library, spell symbols and glowing coins fill a five-reel, four-row game. Cash symbols are gathered by a Collector symbol, turning scattered sparks of magic into a central feature. Free spins and random wilds add further ways for a round to develop. The play has a steady pace and a measured build, with a mysterious, storybook atmosphere.",
       "plantedDefects": []
     },
     {
@@ -291,6 +295,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "The Arcane Ledger Megaways brings its enchanted library to six reels, with a changing number of symbols across up to seven rows. Cash symbols can be gathered by the Collector, while mystery symbols, free spins and random wilds add variation to the shifting layout. The changing reel configurations give the game a brisk, lively feel, with bursts of activity as paths open across the reels. Its painterly magical setting keeps the atmosphere mysterious rather than ominous.",
       "plantedDefects": []
     },
     {
@@ -347,6 +352,7 @@
       "excitementCurve": "slow_build",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "The Arcane Ledger Deluxe returns to a five-reel, four-row layout in a richly painted wizard's library. Its Collector gathers cash symbols, while symbol upgrades can improve selected symbols during play. Free spins offer another way for the feature to unfold. The pace is steady, with a slow-building sense of discovery and a quietly mysterious mood.",
       "plantedDefects": [
         {
           "kind": "theme_only_in_prose",
@@ -409,6 +415,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Set in a polished, chandelier-lit casino lounge, Velvet Royale pairs gold detailing and gemstone accents with a high-roller atmosphere. Wins are formed on paylines across the reels, while coin symbols can lead into a hold-and-win feature. Respins give that feature a focused, stop-and-watch rhythm against the steadier base game. The overall feel is poised and luxurious, with bursts of anticipation around the bonus.",
       "plantedDefects": [
         {
           "kind": "feed_omits_feature",
@@ -471,6 +478,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Velvet Royale Jackpot sets its reels in a polished, chandelier-lit casino lounge with gold detailing and gemstone accents. Payline wins sit alongside a hold-and-win feature in which coin symbols are held while respins play out. This version also includes a network progressive jackpot. Its steady base-game feel is punctuated by more focused bursts of anticipation around the feature.",
       "plantedDefects": []
     },
     {
@@ -526,6 +534,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Velvet Royale Megaways brings its gold-trimmed casino lounge to a six-reel layout with changing reel heights. Wins are formed through Megaways ways, and coin symbols can lead into the hold-and-win feature. Respins bring a focused pause to the otherwise steady play, building bursts of anticipation as the feature develops. The presentation remains polished and luxurious throughout.",
       "plantedDefects": []
     },
     {
@@ -582,6 +591,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Set in a quiet Irish coastal village, The Emerald Tidemark pairs lucky charms and folklore-inspired symbols with a painterly seaside setting. It plays across five reels and four rows, with wins formed on paylines and sticky wilds providing the central feature. Free spins can be retriggered, and an optional bonus buy offers entry to the feature. Its cosy presentation contrasts with a high-volatility play style and occasional bursts of activity.",
       "plantedDefects": []
     },
     {
@@ -638,6 +648,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "The Emerald Tidemark Deluxe revisits the Irish coastal village setting with more elaborate painted details and familiar lucky-charm imagery. It keeps the five-reel, four-row payline layout and sticky wild feature, with free spins and the option to buy into the feature. The presentation is warm and relaxed, while the high-volatility play can gather into short bursts of activity.",
       "plantedDefects": [
         {
           "kind": "theme_only_in_prose",
@@ -702,6 +713,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "The Emerald Tidemark Jackpot brings the Irish coastal village and its folklore-inspired lucky charms to a painterly slot setting. Five reels and four rows use paylines, with sticky wilds at the centre of play and free spins that can be retriggered. This edition also includes a network progressive jackpot, alongside an optional bonus buy for the free spins feature. Its cosy style sits alongside high volatility and feature moments that can create a burstier pace.",
       "plantedDefects": []
     },
     {
@@ -761,6 +773,7 @@
       "excitementCurve": "slow_build",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Frostbound Saga sets its reels in a painterly winter realm inspired by Norse mythology, where runes and legendary figures frame a journey through the cold north. The five-reel, three-row game pays in 243 ways. Free spins provide the main bonus, while random wilds can appear during play. Its steady pace and high-volatility profile give the experience a measured build toward occasional larger features.",
       "plantedDefects": [
         {
           "kind": "volatility_conflict",
@@ -828,6 +841,7 @@
       "excitementCurve": "slow_build",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Frostbound Saga Jackpot returns to a painterly winter realm inspired by Norse mythology, where runes and legendary figures frame a journey through the cold north. The five-reel, three-row game pays in 243 ways and includes a network progressive jackpot. Free spins are the main bonus, while random wilds can appear during play. Its steady pace and high-volatility profile give the experience a measured build toward occasional larger features.",
       "plantedDefects": []
     },
     {
@@ -887,6 +901,7 @@
       "excitementCurve": "slow_build",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Frostbound Saga Megaways sets its reels in a painterly winter realm inspired by Norse mythology, where runes and legendary figures frame a journey through the cold north. Its six-reel, seven-row grid uses the Megaways format, with up to 117,649 ways to win. Free spins provide the main bonus, while random wilds can appear during play. Its steady pace and high-volatility profile give the experience a measured build toward occasional larger features.",
       "plantedDefects": []
     },
     {
@@ -945,6 +960,7 @@
       "excitementCurve": "slow_build",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Dustline Drifter sets its reels in a sunbaked frontier town, where a lone rider is following clues to a hidden cache. The five-reel game uses paylines, with expanding wilds able to cover reel positions when they land. Free spins and occasional random wilds add further feature moments to the base game. Its measured pace and frontier imagery give the experience a steady, cinematic feel.",
       "plantedDefects": []
     },
     {
@@ -1003,6 +1019,7 @@
       "excitementCurve": "slow_build",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Dustline Drifter Deluxe returns to the sunbaked frontier town, following a rider deeper into the search for a hidden cache. Its five-reel, payline layout features expanding wilds that can cover a reel when they land. Free spins and random wilds provide additional feature moments as the trail unfolds. The steady pace and cinematic western setting keep the focus on a gradual build of anticipation.",
       "plantedDefects": []
     },
     {
@@ -1062,6 +1079,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "This adventure slot follows a crew exploring misty islands, hidden coves and an old chart’s trail to a lost relic. It uses a 5-reel, 3-row layout with 40 paylines, alongside a wheel bonus as its central feature. Free spins and mystery symbols add further ways for the search to unfold. The feel is a steady voyage punctuated by a more energetic bonus chase.",
       "plantedDefects": [
         {
           "kind": "wrong_game_rules",
@@ -1128,6 +1146,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "This Megaways adventure sends an expedition through shifting islands and hidden coves in pursuit of a lost relic. Its six-reel layout can show up to seven symbols on each reel, with wins formed across adjacent reels from left to right. A bonus wheel anchors the feature play, supported by free spins and mystery symbols. The steady journey builds into bursts of activity when features arrive.",
       "plantedDefects": [
         {
           "kind": "truncated_rules",
@@ -1195,6 +1214,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "community_jackpot",
       "nostalgia": false,
+      "description": "This version of the Far Shoals expedition follows the same search through islands and coves, with a network progressive jackpot added to the adventure. The 5-reel, 3-row game uses 40 paylines and centres on a bonus wheel. Free spins and mystery symbols offer additional feature play as the search unfolds. Its steady pace is punctuated by bursts around the wheel and the shared jackpot feature.",
       "plantedDefects": []
     },
     {
@@ -1251,6 +1271,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "This slot sets a fortune-seeking journey among mountain shrines, carved coins and lantern-lit paths. Its 7-by-7 grid pays through matching symbol clusters, and winning clusters cascade away to make room for new symbols. Free spins and symbol upgrades add further layers, with a bonus buy option available. The cascading play gives the game a lively, feature-led rhythm.",
       "plantedDefects": []
     },
     {
@@ -1306,6 +1327,7 @@
       "excitementCurve": "steady_trickle",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "This space-themed slot follows a small craft travelling between distant planets and quiet starfields. Wins land across fixed paylines, while free spins and random wilds bring additional changes to the reels. Its measured pace and cool, atmospheric presentation make the journey feel exploratory rather than frantic.",
       "plantedDefects": [
         {
           "kind": "thin_record",
@@ -1370,6 +1392,7 @@
       "excitementCurve": "slow_build",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "This seasonal slot sets its reels in a warmly lit winter gathering, filled with festive decorations and wrapped gifts. Wins are formed across 243 ways, and a pick-me bonus lets players choose from a selection of surprises. The presentation is cheerful and cosy, with a steady pace that suits players who enjoy a seasonal theme and a simple choice-based feature.",
       "plantedDefects": []
     },
     {
@@ -1424,6 +1447,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "This gem-and-treasure slot explores a submerged ruin where a forgotten crown is surrounded by precious stones. Wins form across 243 ways, with multipliers adding to winning combinations and free spins and mystery symbols providing extra features. A local progressive jackpot sits alongside the base game, while the high-volatility design creates a measured build with occasional bursts of activity.",
       "plantedDefects": []
     },
     {
@@ -1478,6 +1502,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "This Megaways variation returns to the submerged ruin and its collection of hidden jewels. The six-reel, seven-row layout offers 117,649 ways, with multipliers applying to wins and free spins and mystery symbols adding further features. A local progressive jackpot accompanies the reels, and the very high-volatility experience is built around a steady game pace and occasional bursts of activity.",
       "plantedDefects": [
         {
           "kind": "truncated_rules",
@@ -1538,6 +1563,7 @@
       "excitementCurve": "steady_trickle",
       "socialElement": "none",
       "nostalgia": true,
+      "description": "Orchard Spin brings cherries, citrus and other classic fruit symbols to a traditional-looking reel set. Wins are formed across 243 ways, and winning symbols cascade away to make room for new ones. Free spins add a separate feature to the straightforward base game. Its familiar fruit-machine presentation gives the play a relaxed retro feel.",
       "plantedDefects": [
         {
           "kind": "thin_record",
@@ -1599,6 +1625,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Wild Canopy depicts rainforest animals among layered greenery and tropical foliage. The game uses a five-reel, three-row layout with 20 paylines, while expanding wilds can cover reel positions during play. Free spins and random wilds provide additional features. Its steady pace and dramatic wildlife setting suit players who enjoy a clear slot format with moments of heightened action.",
       "plantedDefects": [
         {
           "kind": "feed_omits_feature",
@@ -1661,6 +1688,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": true,
+      "description": "The Brass Bell Broadcast takes place on the set of The Brass Bell Hour, a fictional television game show with bold retro graphics and playful studio details. The five-reel, three-row game offers 243 ways to win and centres on a hold-and-win feature with a fixed jackpot. Free spins and mystery symbols add further feature variety, and a bonus buy option is available. Its light showtime presentation balances familiar quiz-show nostalgia with feature-led play.",
       "plantedDefects": [
         {
           "kind": "volatility_conflict",
@@ -1722,6 +1750,7 @@
       "excitementCurve": "steady_trickle",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Sands of the Sun Archive explores an ancient Egyptian setting of carved stone, desert sand and hidden relics. The five-reel, three-row game uses 243 ways, with a cash collect mechanic that gathers eligible coin values when the collector appears. Free spins and mystery symbols offer additional features within a simple, relaxed format. The atmosphere is quietly mysterious rather than fast-paced.",
       "plantedDefects": []
     },
     {
@@ -1781,6 +1810,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Set among calm coastal waters, this fishing-themed video slot follows an angler searching for a memorable catch. Wins form along paylines, while a wheel bonus adds a chance to collect a separate prize. Free spins and mystery symbols provide additional changes of pace. Its detailed ocean scenery and steady play create a relaxed setting with occasional bursts of excitement.",
       "plantedDefects": [
         {
           "kind": "truncated_rules",
@@ -1843,6 +1873,7 @@
       "excitementCurve": "steady_trickle",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Hollowmere Afterdark sets a Halloween tale in a crooked village of ghosts, creaking gates and glowing lanterns. The five-reel game pays in ways, while sticky wilds can stay in place to help form wins across successive falls. Free spins and random wilds add further features to the rounds. Its playful spooky artwork gives the game a light, storybook take on a haunted setting.",
       "plantedDefects": []
     },
     {
@@ -1899,6 +1930,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": true,
+      "description": "Neon Encore takes place in a bright, retro-styled music club where the dancefloor is always in motion. Wins land on paylines, and free spins provide the game's central feature. Random wilds and respins add extra changes to the reel action between feature rounds. Its vivid lights and quick musical energy make for a lively, party-like experience.",
       "plantedDefects": [
         {
           "kind": "feed_omits_feature",
@@ -1960,6 +1992,7 @@
       "excitementCurve": "slow_build",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Tempest of the Aegean sets a mythic voyage against painted skies and a restless sea. Wins form along paylines, while sticky wilds can hold their positions and shape the action across spins. Free spins add another feature to the journey. The presentation is epic in scale, with a steady pace that builds towards moments of heightened activity.",
       "plantedDefects": []
     },
     {
@@ -2018,6 +2051,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Reelwater Riches takes place on a working fishing boat above a vividly rendered ocean floor, where fish, tackle and glimpses of sunken treasure fill the reels. Wins are formed across 243 ways, and multiplier effects can increase the value of winning combinations. Free spins and random wilds add feature moments to the base game. Its high-volatility feel gives the action a measured start with the potential for sharper bursts of excitement.",
       "plantedDefects": [
         {
           "kind": "feed_omits_feature",
@@ -2081,6 +2115,7 @@
       "excitementCurve": "steady_trickle",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Cloverfall Cluster sets its reels in a bright, storybook valley inspired by Irish luck and folklore. It uses a 7-by-7 grid where matching symbol clusters pay, then winning symbols cascade away to make room for new ones. Free spins and symbol upgrades provide additional ways for a round to develop. The low-volatility game has a relaxed pace and a gentle, frequent-feature feel.",
       "plantedDefects": [
         {
           "kind": "truncated_rules",
@@ -2145,6 +2180,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Prize Pod Parade brings the colour and bustle of a fictional studio gameshow to a 5-reel, 4-row slot. Wins are evaluated across 1,024 ways, while the hold-and-win mechanic gives selected prize symbols a chance to build during its feature round. Free spins and mystery symbols add variety between feature moments. Its steady pace and medium volatility balance routine spins with a more concentrated prize chase.",
       "plantedDefects": [
         {
           "kind": "volatility_conflict",
@@ -2207,6 +2243,7 @@
       "excitementCurve": "slow_build",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "The Cartographer's Cache follows an explorer tracing a hand-drawn map across remote islands and forgotten landmarks. Its 5-reel, 3-row layout uses 25 paylines, while a cash collect mechanic gathers eligible values during play. Free spins and random wilds bring additional moments of discovery. The medium-volatility game moves at a steady pace, with excitement building as the expedition advances.",
       "plantedDefects": []
     },
     {
@@ -2262,6 +2299,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "The Prismvault Expedition follows treasure-seekers through a cavern of cut gems and ancient stonework. Wins form across 243 ways on a 5-reel, 3-row grid. Expanding wilds can cover reel positions, while mystery symbols and free spins add further chances for combinations. Its shadowy, jewel-lit presentation gives the game a measured build with occasional bursts of activity.",
       "plantedDefects": [
         {
           "kind": "feed_omits_feature",
@@ -2325,6 +2363,7 @@
       "excitementCurve": "slow_build",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Odyssey of the Sunlit Isles sets a mythic voyage among temples, sea cliffs and figures from Greek legend. The 6-reel Megaways grid changes its row configuration from spin to spin, with up to 117,649 ways to win. A pick-me bonus invites a choice of myth-inspired rewards, while mystery symbols and free spins provide additional features. The painterly world and gradual feature progression create an adventurous, steadily building feel.",
       "plantedDefects": []
     },
     {
@@ -2379,6 +2418,7 @@
       "excitementCurve": "steady_trickle",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Neon Encore Club brings a colourful music-party atmosphere to a 5-reel, 3-row slot. Wins are formed across 243 ways, with a prize wheel feature providing the central moment of the game. Free spins add another way to keep the club-night theme moving. Its bright stage graphics and relaxed pace suit players looking for a straightforward, upbeat presentation.",
       "plantedDefects": []
     },
     {
@@ -2437,6 +2477,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Tawny River Reserve is set among quiet wetlands where nocturnal wildlife gathers at the riverbank. Its 5-reel, 4-row grid offers 1,024 ways to win, with a hold-and-win feature at the heart of play. Free spins and random wilds provide additional ways for the reels to change. The realistic wildlife setting balances calm scenery with bursts of feature activity.",
       "plantedDefects": []
     },
     {
@@ -2493,6 +2534,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "In a painterly world of spellbooks and glowing runes, a spellwright searches an enchanted library for a path to its hidden wheel. The 5-reel, 3-row game pays in 243 ways, with a wheel bonus as its central feature. Free spins and random wilds add further changes to the reels. Its steady rhythm gives way to sharper bursts of activity when bonus features appear.",
       "plantedDefects": []
     },
     {
@@ -2549,6 +2591,7 @@
       "excitementCurve": "slow_build",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Gilded High Society sets its reels in a richly appointed casino filled with gold, velvet and cut-glass detail. Its 6-reel, 7-row Megaways layout changes the number of available ways from spin to spin, with expanding wilds at the centre of play. Free spins and symbol upgrades provide additional ways for a round to develop. The overall pace is steady, with a gradual build as features land.",
       "plantedDefects": [
         {
           "kind": "volatility_conflict",
@@ -2617,6 +2660,7 @@
       "excitementCurve": "steady_trickle",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Mossglade Neighbours features a friendly gathering of woodland animals in a leafy forest clearing. The 5-reel, 4-row slot uses 20 paylines and a pick-me bonus. Free spins provide a second feature, while the simple layout keeps the play easy to follow. Its relaxed pace and gentle cartoon presentation give the game a cosy feel.",
       "plantedDefects": [
         {
           "kind": "rg_sensitive_thin",
@@ -2681,6 +2725,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Riverbend Wildlife visits a tranquil river setting, with animals and natural details inspired by life along the water. The 5-reel, 3-row game pays in 243 ways and features a cash collect mechanic. Free spins add another feature to the play, while the painterly style keeps the setting calm and inviting. The steady base-game rhythm can give way to bursts of activity when features appear.",
       "plantedDefects": [
         {
           "kind": "rg_sensitive_thin",
@@ -2745,6 +2790,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Set among dusty trails, a frontier town and a working gold mine, this video slot uses a five-reel, four-row layout with ten paylines. Winning combinations can build through the multiplier mechanic, while free spins and mystery symbols add further feature moments. Its western imagery is rendered in detailed 3D, with a steady pace and a high-volatility profile. The overall feel is a focused, big-feature chase rather than a constant run of small events.",
       "plantedDefects": []
     },
     {
@@ -2802,6 +2848,7 @@
       "excitementCurve": "slow_build",
       "socialElement": "none",
       "nostalgia": true,
+      "description": "Ruby Reel Picnic brings a colourful, familiar fruit-machine look to a five-reel, four-row slot with ten paylines. Classic fruit symbols lead into free spins, with random wilds adding occasional changes to the reels. Its straightforward presentation and steady pace keep the focus on the symbols and the feature. The retro cabinet styling gives the game a light, nostalgic character.",
       "plantedDefects": []
     },
     {
@@ -2859,6 +2906,7 @@
       "excitementCurve": "slow_build",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Bonbon Bloomfall is set in a playful garden filled with sweets, candy flowers and bright confectionery. On its seven-by-seven grid, matching clusters pay and then cascade away, allowing new symbols to fall into place. Free spins and symbol upgrades add variety to the cluster-based play. The cartoon presentation and steady pace give the game a cosy, gently building feel.",
       "plantedDefects": [
         {
           "kind": "feed_omits_feature",
@@ -2926,6 +2974,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Final Whistle Wilds brings a football match-day atmosphere to a five-reel, three-row slot with twenty paylines. Sticky wilds can remain in place across spins, building the sense of a changing stadium board, while free spins can be retriggered. The bright illustrated presentation and brisk pace suit players who enjoy a lively sports theme and feature-led play. Its very high volatility gives the experience a pronounced chase character.",
       "plantedDefects": []
     },
     {
@@ -2981,6 +3030,7 @@
       "excitementCurve": "slow_build",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "The Saffron Pyramid sets its reels among painted desert ruins, carved chambers and relics of an ancient Egyptian kingdom. Wins form in clusters across a 7-by-7 grid, with winning symbols clearing to let new symbols fall into place. Cascades can continue the action, while mystery symbols and free spins add further feature moments. Its measured pace and layered artwork give the adventure a quietly mysterious feel.",
       "plantedDefects": []
     },
     {
@@ -3036,6 +3086,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Ravens of the Iron Fjord draws on Norse legend, with a 3D-rendered world of longships, runes and storm-lit cliffs. Its six reels use a Megaways structure, while sticky wilds can remain in position and shape later spins. Free spins bring an additional feature round, with retriggers and random wilds adding further changes. The result is an epic, steadily paced adventure with bursts of activity.",
       "plantedDefects": [
         {
           "kind": "wrong_game_rules",
@@ -3099,6 +3150,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Fortune Lanterns of Lianhua takes place at a bright festival filled with glowing lanterns, coin motifs and colourful decorations. The 5-by-4 reels use a ways-based pay structure, with cash symbols collected when the collector feature is active. Free spins and mystery symbols provide additional feature moments. Its colourful presentation and steady pace make for a light festival-themed slot.",
       "plantedDefects": [
         {
           "kind": "wrong_game_rules",
@@ -3161,6 +3213,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Tinsel at Northbell brings a winter village to life with decorated trees, snow-covered rooftops and seasonal colours. The five-reel, three-row slot uses a ways-based layout, with a hold-and-win feature at the centre of its play. Free spins and respins add further feature rounds, while a fixed jackpot gives the festive setting a prize-focused finish. Its presentation is cosy, with activity arriving in more concentrated bursts.",
       "plantedDefects": [
         {
           "kind": "thin_record",
@@ -3222,6 +3275,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Apex Sprint Wilds puts a night-time motor race on a floodlit circuit, with racing helmets, pit equipment and trackside lights setting the scene. The five-reel, three-row game uses 243 ways to pay, while expanding wilds can cover reel positions and alter the shape of a spin. Free spins add a dedicated bonus round, and an optional bonus buy is available. Its brisk presentation and high-volatility profile give play a sharp, high-energy feel.",
       "plantedDefects": []
     },
     {
@@ -3276,6 +3330,7 @@
       "excitementCurve": "slow_build",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Morrowglass Expedition follows a small team into a forgotten observatory, where overgrown stonework and celestial instruments hint at discoveries still waiting to be made. The five-reel, three-row slot has 40 paylines and a pick-me bonus in which players select from revealed choices. Free spins offer a separate feature round. Its painterly look and measured pace suit players who enjoy a mystery unfolding gradually.",
       "plantedDefects": []
     },
     {
@@ -3333,6 +3388,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Oath of the Stormhall draws on Norse legend, with a vast timber hall, carved runes and storm-lit skies framing the reels. The five-reel, three-row game offers 243 ways to pay, and its wheel bonus puts a choice of feature outcomes at the centre of the action. Free spins provide an additional feature round. The painterly presentation and high-volatility profile give the game an epic, measured build with bursts of activity.",
       "plantedDefects": [
         {
           "kind": "truncated_rules",
@@ -3394,6 +3450,7 @@
       "excitementCurve": "slow_build",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Marshlight Monarchs visits a moonlit wetland where herons, otters and other wildlife move through reeds and dark water. The five-reel, three-row slot has 40 paylines, with multipliers providing its central mechanic. Free spins add a feature round to the main game. Its realistic 3D scenery and very high volatility create a patient, atmospheric experience punctuated by feature moments.",
       "plantedDefects": []
     },
     {
@@ -3453,6 +3510,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Midnight Amplifier puts a touring band under the lights of a packed concert venue. The video slot uses a 5-reel, 3-row layout with 40 paylines, and its free spins feature can be retriggered. Random wild symbols may appear during play to add another layer to the reels. Its loud stage setting and high-volatility profile make for a fast-paced, feature-led session.",
       "plantedDefects": []
     },
     {
@@ -3505,6 +3563,7 @@
       "excitementCurve": "steady_trickle",
       "socialElement": "live_host",
       "nostalgia": false,
+      "description": "The Spotlight Showdown Live brings a fictional television game-show set to a live-dealer card table. A presenter introduces each round, where players choose whether the next card will be higher or lower than the opening card. The live format keeps the pace steady and puts the focus on each reveal. Its bright studio staging gives the game a playful, on-air feel.",
       "plantedDefects": []
     },
     {
@@ -3556,6 +3615,7 @@
       "excitementCurve": "steady_trickle",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Prime Time Picture Cards brings blackjack to a fictional television studio, with a bright set and a formal card table. Players place a stake, receive cards and decide how to play their hand against the dealer under the displayed blackjack rules. The familiar table format keeps the action steady and easy to follow. Its polished presentation gives the game a primetime-show atmosphere without a live host.",
       "plantedDefects": []
     },
     {
@@ -3610,6 +3670,7 @@
       "excitementCurve": "slow_build",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Shamrock Signal Slingo brings Irish-luck imagery to a 5-by-5 Slingo grid. Players use numbered calls to mark matching spaces and complete lines, while mystery symbols and symbol upgrades add variation to the grid. Its cosy cartoon presentation and steady pace make each call easy to follow. The feature mix builds interest as the board fills in.",
       "plantedDefects": []
     },
     {
@@ -3666,6 +3727,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Set beside a peaceful fishing harbour, this classic slot features nets, tackle and bright catches across a compact three-reel layout. Five paylines provide the regular wins, while buoy symbols can open a brass wheel bonus with prizes that include the local progressive. Free spins and mystery symbols add further feature moments. The overall feel is steady and cosy, with a little extra anticipation when the wheel appears.",
       "plantedDefects": [
         {
           "kind": "truncated_rules",
@@ -3722,6 +3784,7 @@
       "excitementCurve": "steady_trickle",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Snowglow Scratchcard brings a seasonal festive scene to a straightforward scratch-and-reveal game. Players uncover covered panels to reveal symbols and check them against the prize pattern shown on the card. A local progressive prize is also available within the game. Its simple presentation and relaxed pace keep the focus on each reveal.",
       "plantedDefects": []
     },
     {
@@ -3777,6 +3840,7 @@
       "excitementCurve": "steady_trickle",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Champagne Afterglow brings a polished casino-lounge look to a compact three-reel slot. Wins are formed across five paylines, with free spins providing the headline feature. Its low-volatility profile and steady presentation suit players who prefer a straightforward format with occasional feature rounds. The atmosphere is glamorous without straying from the familiar feel of a classic fruit machine.",
       "plantedDefects": []
     },
     {
@@ -3831,6 +3895,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "The Big Number Stage places its Slingo grid in a brightly coloured fictional game-show studio. Players spin through the number columns and mark matching numbers on the five-by-five card, aiming to complete Slingo lines and patterns. Mystery symbols add another variable to the grid, while the very high volatility gives the experience a pronounced, bursty feel. Its quick rounds and playful host-free presentation suit players who enjoy a lively number game with a gameshow atmosphere.",
       "plantedDefects": []
     },
     {
@@ -3879,6 +3944,7 @@
       "excitementCurve": "steady_trickle",
       "socialElement": "live_host",
       "nostalgia": false,
+      "description": "Set against a polished Vegas-inspired backdrop, this live experience centres on a spinning wheel. Players place a stake on the available outcomes before the wheel is spun. Its live presentation gives the game a poised, casino-floor feel.",
       "plantedDefects": [
         {
           "kind": "thin_record",
@@ -3938,6 +4004,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "A spacecraft streaks through a vivid deep-space setting while a multiplier rises during each round. Players decide when to cash out, before the round ends. The simple choice and abrupt round endings create a fast, high-tension experience.",
       "plantedDefects": []
     },
     {
@@ -3986,6 +4053,7 @@
       "excitementCurve": "steady_trickle",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Painted screens, lanterns and auspicious decorative motifs give this bingo game a calm pavilion setting. Players follow the number draws and match them against their ticket. Its measured pace keeps the focus on each draw and the patterns forming on the ticket.",
       "plantedDefects": []
     },
     {
@@ -4040,6 +4108,7 @@
       "excitementCurve": "slow_build",
       "socialElement": "none",
       "nostalgia": true,
+      "description": "This retro fruit-machine slot uses a compact three-reel layout and familiar fruit symbols. Multipliers add a changing value to wins, while free spins and mystery symbols provide additional features. A local progressive jackpot gives the classic presentation a larger prize feature to follow.",
       "plantedDefects": [
         {
           "kind": "duplicate_listing",
@@ -4098,6 +4167,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Luminous Fortune Wheel brings a treasure-room setting to a live wheel game, with jewel-toned details surrounding the wheel. Players place a stake on available outcomes before the wheel is spun. The result is determined by where the wheel stops, with outcomes offering different multipliers. Its straightforward format lets the anticipation build around each spin.",
       "plantedDefects": []
     },
     {
@@ -4145,6 +4215,7 @@
       "excitementCurve": "slow_build",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "The Pharaoh's Number Chamber sets a bingo draw among carved pillars, painted relics and the quiet grandeur of an ancient Egyptian hall. Players take part with bingo tickets as numbered balls are drawn and checked against their selections. The anticipation builds as each draw brings the ticket closer to a match. Its measured pace suits players who enjoy a traditional number-draw format with an atmospheric setting.",
       "plantedDefects": [
         {
           "kind": "theme_only_in_prose",
@@ -4205,6 +4276,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Gloamveil Scratch brings a lightly spooky Halloween mood to an instant-win scratch game, with a creaking manor and eerie symbols. Players scratch to reveal the hidden symbols and check the result against the game's displayed rules. Each reveal is quick, with the suspense focused on what appears beneath the surface. Its simple format keeps attention on the scratch-and-reveal moment.",
       "plantedDefects": []
     },
     {
@@ -4256,6 +4328,7 @@
       "excitementCurve": "steady_trickle",
       "socialElement": "live_host",
       "nostalgia": true,
+      "description": "Citrus Cardroom Live places a live dealer card-table game in a bright, classic fruit-inspired setting. Players make their selections at the table and follow the dealer as the round is played and settled according to the displayed rules. The experience is measured and low-key, with a familiar cardroom format framed by retro fruit-coloured details. It may appeal to players who prefer a hosted table atmosphere over elaborate features.",
       "plantedDefects": []
     },
     {
@@ -4310,6 +4383,7 @@
       "excitementCurve": "slow_build",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Moonweaver’s Slingo brings a spellbound forest to a 5-by-5 Slingo grid. Spins reveal numbers to match against the grid, with completed Slingos advancing the round’s rewards. Free spins and mystery symbols add variation to the matching game. Its painterly moonlit setting gives play a measured, mysterious feel.",
       "plantedDefects": []
     },
     {
@@ -4364,6 +4438,7 @@
       "excitementCurve": "steady_trickle",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Marquee Blackjack places a classic card table in a polished, high-end casino setting. Players build a hand against the dealer, choosing whether to take another card or hold. An optional side bet offers an additional way to wager alongside the main hand. The presentation is composed and familiar, with a steady pace centred on each decision.",
       "plantedDefects": []
     },
     {
@@ -4418,6 +4493,7 @@
       "excitementCurve": "steady_trickle",
       "socialElement": "live_host",
       "nostalgia": false,
+      "description": "Gilded Orbit Live presents a casino wheel in a luxurious live studio, hosted by a real presenter. Players place wagers on wheel outcomes, with an optional side bet providing access to a local progressive jackpot. Each round follows the wheel spin from the host’s announcement through to settlement. The pace is steady and the live presentation gives the game a shared casino-floor feel.",
       "plantedDefects": []
     },
     {
@@ -4475,6 +4551,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Olympus Numberfall Slingo brings a playful Greek-myth setting to a 5-by-5 Slingo grid. Players match revealed numbers against the grid as myth-inspired symbols and free spins add feature variation. A Bonus Buy option is available for players who prefer to enter the bonus feature directly. The bold cartoon presentation and high-volatility profile make this a more feature-heavy, high-energy Slingo experience.",
       "plantedDefects": []
     },
     {
@@ -4524,6 +4601,7 @@
       "excitementCurve": "steady_trickle",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "The Aurelia Card Salon sets a classic card-table game in a polished, Vegas-inspired lounge, with warm lighting and refined details. Players follow the dealt hand and use the available table decisions before the result is settled. Its steady pace and understated presentation keep the focus on the cards rather than side features. The overall feel is poised and sophisticated.",
       "plantedDefects": []
     },
     {
@@ -4574,6 +4652,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Caramel Comet Cashout sends a bright, candy-coated comet racing through a playful space setting. Each round, its multiplier climbs until the flight ends, and players choose whether to cash out beforehand. The simple controls make the action easy to follow, while the fast pace gives each decision a burst of tension. Red Kite Gaming pairs a sweet cartoon look with a high-energy crash format.",
       "plantedDefects": []
     },
     {
@@ -4624,6 +4703,7 @@
       "excitementCurve": "slow_build",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Coyote Gulch Bingo brings a friendly frontier-town setting to a straightforward bingo ball draw. Players follow the drawn numbers and mark matching spaces on their cards as the round develops. Its steady rhythm and playful western artwork make the format easy to follow. Bluefin Interactive gives the setting a light, good-humoured character.",
       "plantedDefects": []
     },
     {
@@ -4675,6 +4755,7 @@
       "excitementCurve": "steady_trickle",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "The Prizeboard Cardroom places a classic card-table game on the bright set of a fictional television contest. Players follow the dealt hand and use the available table decisions before the result is settled. Studio lights and show-style presentation add a playful, theatrical touch without changing the steady pace of the cards. Copperline keeps the focus on the hand and its outcome.",
       "plantedDefects": [
         {
           "kind": "theme_only_in_prose",
@@ -4731,6 +4812,7 @@
       "excitementCurve": "steady_trickle",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "A live card-table experience is set in a refined Vegas-inspired salon, with a dealer guiding each round. Players place their stake and follow the cards as the hand unfolds. The presentation is polished and measured, with the focus kept on the table and its play.",
       "plantedDefects": [
         {
           "kind": "thin_record",
@@ -4794,6 +4876,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": true,
+      "description": "This classic fruit slot presents cherries, bells and other familiar symbols across a three-reel, three-row layout. Wins are formed along a single payline, while the free-spins feature adds a separate bonus round. Its pared-back format and old-school fruit-machine visuals give play a distinctly retro feel.",
       "plantedDefects": []
     },
     {
@@ -4847,6 +4930,7 @@
       "excitementCurve": "slow_build",
       "socialElement": "none",
       "nostalgia": true,
+      "description": "Set among winter greenery and gift-wrapped decorations, this seasonal slot uses a three-reel, three-row layout with one payline. The wheel bonus brings a festive feature round, and free spins add another way for the play to unfold. Its warm illustrated style and familiar fruit-machine structure create a cosy seasonal atmosphere.",
       "plantedDefects": []
     },
     {
@@ -4895,6 +4979,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "live_host",
       "nostalgia": false,
+      "description": "A live host introduces a wheel-based game show set against a Greek-myth-inspired world of gods and legendary trials. Players choose their stake and follow the wheel as it determines the outcome of each round. The live presentation builds anticipation around each result, with a dramatic, theatrical feel.",
       "plantedDefects": [
         {
           "kind": "theme_only_in_prose",
@@ -4959,6 +5044,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": true,
+      "description": "Silverfin's Reel Catch is a fishing-themed classic slot with a bright, illustrated look. Its 3x3 reels use a single payline, with multipliers enhancing eligible line wins. Free spins and randomly appearing wilds add extra moments of activity to the straightforward reel play.",
       "plantedDefects": [
         {
           "kind": "duplicate_listing",
@@ -5022,6 +5108,7 @@
       "excitementCurve": "slow_build",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Wildstone Ruins Slingo sets a number-matching journey among old, overgrown ruins. Players mark matching numbers across a 5x5 Slingo grid as draws progress. Free spins and mystery symbols bring additional twists to the exploration, which builds at a measured pace.",
       "plantedDefects": []
     },
     {
@@ -5074,6 +5161,7 @@
       "excitementCurve": "steady_trickle",
       "socialElement": "none",
       "nostalgia": true,
+      "description": "Cranberry Club Table pairs classic fruit imagery with a card-table format. Players make their selections for each round and follow the on-screen game information as the cards are dealt. Its simple presentation and familiar visual style give the experience a relaxed, nostalgic feel.",
       "plantedDefects": [
         {
           "kind": "thin_record",
@@ -5130,6 +5218,7 @@
       "excitementCurve": "steady_trickle",
       "socialElement": "live_host",
       "nostalgia": true,
+      "description": "The Pomegranate Parlour Live brings classic fruit imagery to a live-dealer card table. Players follow the on-screen instructions, make the available selections and watch the dealer complete each round. The steady, hosted format has a polished, nostalgic atmosphere.",
       "plantedDefects": []
     },
     {
@@ -5184,6 +5273,7 @@
       "excitementCurve": "steady_trickle",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "A lively music-party setting frames a five-by-five Slingo grid, with bright stage lights and cheeky musical details. Players spin through the grid and match called numbers to complete lines. Random Soundcheck Wilds can appear to help mark a space. The experience is light and relaxed, with a steady flow of small feature moments.",
       "plantedDefects": [
         {
           "kind": "theme_only_in_prose",
@@ -5245,6 +5335,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Sapphire Suite Slingo pairs a five-by-five grid with the polished atmosphere of a private city casino lounge. Players spin and match numbers to complete lines, while mystery symbols reveal their value when encountered. Respins offer another chance to work with the grid's remaining spaces. Its high-volatility profile gives the experience a brisk, chase-led feel.",
       "plantedDefects": [
         {
           "kind": "theme_only_in_prose",
@@ -5302,6 +5393,7 @@
       "excitementCurve": "slow_build",
       "socialElement": "none",
       "nostalgia": true,
+      "description": "Buzzerlight Bingo brings the bright staging of a fictional television game show to a straightforward bingo ball draw. Numbers are called in sequence and marked on the player's card, with prizes based on the completed patterns shown in the game. The presentation is playful, but the draw and card rules stay clear. Its steady pace builds anticipation as more numbers are called.",
       "plantedDefects": []
     },
     {
@@ -5355,6 +5447,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "The Grandstand Grid puts a five-by-five Slingo board beneath the lights of a modern sporting arena. Players spin for numbers and mark matching spaces to complete lines as the round develops. Random Scoreline Wilds can appear on the grid and serve as wild spaces. The high-volatility game has a brisk, bursty feel shaped around the next match opportunity.",
       "plantedDefects": []
     },
     {
@@ -5406,6 +5499,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": true,
+      "description": "A frontier saloon at sunset sets the scene, with badges, wanted posters and desert colours across the scratch panel. Scratch to reveal the symbols and check whether they form a prize combination. The play is direct and self-contained, with no extra bonus round to manage. Its old-west presentation gives the reveal a familiar, retro feel.",
       "plantedDefects": []
     },
     {
@@ -5462,6 +5556,7 @@
       "excitementCurve": "slow_build",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Runestones, carved timber and a painted longship frame this Norse-inspired Slingo game. Numbers are drawn onto a five-by-five grid, where matching them across the Slingo lines advances the round. Free spins and random wilds add occasional changes to the grid. The game builds at a measured pace, with a mythic, adventurous atmosphere.",
       "plantedDefects": []
     },
     {
@@ -5519,6 +5614,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Bramblegold Slingo sets its grid among clover fields, folklore charms and bright rainbow trails. Numbers are drawn and marked on the five-by-five grid, with completed Slingo lines shaping each round. Mystery symbols and free spins bring occasional feature moments. The cheerful artwork contrasts with a high-volatility profile and a more stop-start excitement curve.",
       "plantedDefects": []
     },
     {
@@ -5570,6 +5666,7 @@
       "excitementCurve": "steady_trickle",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "An enchanted ballroom and its floating orbs provide the setting for this fantasy bingo game. Numbered balls are drawn and matched against the player's card as the round progresses. Mystery symbols offer an additional feature within the ball-draw format. The presentation is light and magical, with a simple structure and an unhurried feel.",
       "plantedDefects": []
     },
     {
@@ -5619,6 +5716,7 @@
       "excitementCurve": "steady_trickle",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Set among the relics of an ancient Egyptian archive, The Sunseal of Meret centres on a decorated seal covered in hidden markings. Players choose a stake and scratch away the covered panels to reveal the result. Its straightforward reveal mechanic keeps the focus on each symbol as it appears. The presentation is measured and mysterious, with warm desert colours and illustrated stonework.",
       "plantedDefects": []
     },
     {
@@ -5674,6 +5772,7 @@
       "excitementCurve": "slow_build",
       "socialElement": "none",
       "nostalgia": true,
+      "description": "The Farstar Beacon places a small outpost at the edge of a retro-styled galaxy, where a mysterious signal lights up the reels. The game uses a 3-reel, 3-row layout with 9 paylines, and matching symbols form wins along the active lines. Free spins provide a feature round, while random wilds can appear to support combinations. Its steady pace and pixel-art look give the space setting a nostalgic arcade feel.",
       "plantedDefects": []
     },
     {
@@ -5722,6 +5821,7 @@
       "excitementCurve": "bursty_chase",
       "socialElement": "none",
       "nostalgia": false,
+      "description": "Golden Koi Number Room brings an Asian good-fortune theme to a bingo-style number draw, with koi and lucky motifs around the play area. Players choose a stake and follow the drawn balls as they are matched against their ticket. The draw gives the game a relaxed rhythm, while its high-volatility profile creates a more uneven excitement curve. Cartoon illustrations and a calm pond setting keep the presentation light and orderly.",
       "plantedDefects": []
     }
   ],

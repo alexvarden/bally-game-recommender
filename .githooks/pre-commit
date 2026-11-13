@@ -1,0 +1,11 @@
+#!/bin/sh
+# Installed by `npm install` (see the "prepare" script). Rules: CLAUDE.md → Workflow.
+set -e
+
+branch=$(git symbolic-ref --short HEAD 2>/dev/null || echo "")
+if [ "$branch" = "main" ]; then
+  echo "pre-commit: don't commit to main. Create a branch: git checkout -b feat/<name>" >&2
+  exit 1
+fi
+
+npm run --silent ci

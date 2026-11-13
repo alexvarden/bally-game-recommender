@@ -131,7 +131,7 @@ export const DocumentKind = z.enum(["marketing_blurb", "rules_text", "release_no
 export const DocumentFormat = z.enum(["cms_html", "aggregator_xml", "markdown", "email", "pdf_text"]);
 
 /** How a resolved value was obtained. Assigned by code after checking evidence, never by the LLM. */
-export const Provenance = z.enum(["feed", "extracted", "inferred", "unknown"]);
+export const Provenance = z.enum(["feed", "extracted", "inferred", "operator", "unknown"]);
 
 /** Defects planted by the generator so the eval can check each one is handled. */
 export const DefectKind = z.enum([
@@ -209,6 +209,10 @@ export type ExtractableField = z.infer<typeof ExtractableField>;
 
 export const REGULATED_FIELDS = Object.keys(regulatedFields) as (keyof typeof regulatedFields)[];
 
+/** Descriptive values an operator has set by hand. They win over feed and LLM values and survive re-enrichment. */
+export const DescriptiveOverrides = z.object(descriptiveFields).partial();
+export type DescriptiveOverrides = z.infer<typeof DescriptiveOverrides>;
+
 // ---------- Ground truth (generator output, eval reference) ----------
 
 export const PlantedDefect = z.object({
@@ -223,6 +227,8 @@ export const GroundTruthGame = z.object({
   ...structuralFields,
   ...regulatedFields,
   ...descriptiveFields,
+  /** The clean reference description; the eval compares enriched descriptions against it. */
+  description: z.string().min(40),
   plantedDefects: z.array(PlantedDefect),
 });
 export type GroundTruthGame = z.infer<typeof GroundTruthGame>;

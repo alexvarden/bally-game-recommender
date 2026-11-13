@@ -14,7 +14,8 @@
 import { createHash } from "node:crypto";
 import { readFileSync, writeFileSync } from "node:fs";
 import { z } from "zod";
-import { render, type CleanDoc, type Damage, type Format as WireFormat } from "../../.claude/skills/messy-docs/scripts/render.ts";
+import { render, type CleanDoc, type Damage, type Format as WireFormat, type RenderedDoc } from "../../.claude/skills/messy-docs/scripts/render.ts";
+import { argValue, countBy, isMain } from "../../src/lib/cli.ts";
 import { chance, mulberry32, pick, type Rng } from "../../src/lib/random.ts";
 import {
   DocumentKind,
@@ -193,53 +194,97 @@ function joinList(rng: Rng, items: string[]) {
   return items.join(pick(rng, [", ", ";", " | ", ","]));
 }
 
-function feedRecord(g: GroundTruthGame, p: PlannedGame, rng: Rng): RawFeedRecord {
-  const inHouse = g.supplyChannel === "in_house";
-  const thin = p.defects.includes("thin_record") || p.defects.includes("rg_sensitive_thin");
-  const has = (inHouseP: number, aggP: number) => !thin && chance(rng, inHouse ? inHouseP : aggP);
-  const label = (map: Record<string, string[]>, k: string) => pick(rng, map[k] ?? [k]);
+interface FeedContext {
+  g: GroundTruthGame;
+  p: PlannedGame;
+  rng: Rng;
+  inHouse: boolean;
+  thin: boolean;
+  mechanics: string[];
+}
 
-  let name = g.name;
-  if (!inHouse) {
-    if (chance(rng, 0.1)) name = name.toUpperCase();
-    else if (chance(rng, 0.1)) name = `${name}™`;
-    else if (chance(rng, 0.05)) name = `${name} (UKGC)`;
-  }
+/** Presence check for optional feed fields: thin records have none; in-house feeds are fuller than aggregators'. */
+const present = (ctx: FeedContext, inHouseP: number, aggregatorP: number) => !ctx.thin && chance(ctx.rng, ctx.inHouse ? inHouseP : aggregatorP);
 
-  const mechanics = [g.coreMechanic, ...g.secondaryFeatures].filter(
-    (m) => !(m === g.coreMechanic && p.defects.includes("feed_omits_feature")),
-  );
+const label = (ctx: FeedContext, map: Record<string, string[]>, key: string) => pick(ctx.rng, map[key] ?? [key]);
 
-  const r: RawFeedRecord = { id: g.id, name };
-  if (chance(rng, 0.9)) r.supplier_code = g.supplierGameCode;
-  if (thin || chance(rng, 0.95)) r.studio = !inHouse && chance(rng, 0.2) ? `${g.studio} Ltd` : g.studio;
-  if (has(1, 0.8)) r.channel = inHouse ? pick(rng, ["in-house", "INTERNAL"]) : p.aggregator!;
-  if (g.familyId && has(1, 0.4)) r.family = g.familyId;
-  if (has(1, 0.85)) r.type = label(FORMAT_LABELS, g.format);
-  if (!p.defects.includes("theme_only_in_prose") && has(0.9, 0.4)) r.theme = label(THEME_LABELS, g.primaryTheme);
-  if (has(0.85, 0.5) && mechanics.length) {
-    const labels = mechanics.map((m) => label(MECHANIC_LABELS, m));
-    r.features = inHouse ? labels.join(", ") : joinList(rng, labels);
-  }
-  if (g.licensedIp && has(0.9, 0.7)) r.licensed_ip = g.licensedIp;
-  if (g.grid && has(0.9, 0.7)) r.reels = pick(rng, [`${g.grid.reels}x${g.grid.rows}`, `${g.grid.reels} x ${g.grid.rows}`, `${g.grid.reels}-${g.grid.rows}`]);
-  if (g.paylines && has(0.9, 0.6)) r.lines = g.payStructure === "paylines" ? g.paylines : pick(rng, [`${g.paylines} ways`, String(g.paylines)]);
-  if (has(0.9, 0.6)) r.jackpot = label(JACKPOT_LABELS, g.jackpotType);
-  if (!p.defects.includes("volatility_conflict") && has(0.9, 0.5)) r.volatility = inHouse ? VOL_LABELS[g.volatility]![0]! : label(VOL_LABELS, g.volatility);
-  if (has(0.95, 0.7)) r.rtp = inHouse ? Number((g.rtp * 100).toFixed(2)) : rtpVariant(rng, g.rtp);
-  if (has(0.8, 0.4)) r.max_win = pick(rng, [`${g.maxWinMultiplier}x`, g.maxWinMultiplier, `x${g.maxWinMultiplier.toLocaleString("en-GB")}`, `${g.maxWinMultiplier.toLocaleString("en-GB")} x stake`]);
-  if (has(0.9, 0.6)) r.stake_range = stakeRange(rng, p);
-  if (g.hitFrequency !== null && has(0.6, 0.2)) r.hit_freq = pick(rng, [`${(g.hitFrequency * 100).toFixed(1)}%`, g.hitFrequency, `1:${(1 / g.hitFrequency).toFixed(1)}`]);
+const hasDefect = (ctx: FeedContext, defect: string) => ctx.p.defects.includes(defect as never);
 
-  // Operator-owned fields are always present: the operator controls them.
-  r.brands = joinList(rng, g.brands.map((b) => label(BRAND_CODES, b)));
-  r.markets = joinList(rng, g.jurisdictions.map((j) => label(MARKET_CODES, j)));
-  r.status = label(STATUS_LABELS, g.status);
-  if (chance(rng, 0.9)) r.release_date = dateVariant(rng, g.releaseDate, g.jurisdictions.every((j) => j.startsWith("US")));
+interface FieldRule {
+  field: keyof RawFeedRecord;
+  /** Decides whether the field appears; may draw from the RNG. */
+  include: (ctx: FeedContext) => boolean;
+  value: (ctx: FeedContext) => RawFeedRecord[keyof RawFeedRecord];
+}
+
+/**
+ * How each feed field degrades. Order matters: rules draw from the seeded RNG in this order.
+ * Operator-owned fields (brands, markets, status) are always present because the operator controls them.
+ */
+const FIELD_RULES: FieldRule[] = [
+  { field: "supplier_code", include: (c) => chance(c.rng, 0.9), value: (c) => c.g.supplierGameCode },
+  { field: "studio", include: (c) => c.thin || chance(c.rng, 0.95), value: (c) => (!c.inHouse && chance(c.rng, 0.2) ? `${c.g.studio} Ltd` : c.g.studio) },
+  { field: "channel", include: (c) => present(c, 1, 0.8), value: (c) => (c.inHouse ? pick(c.rng, ["in-house", "INTERNAL"]) : c.p.aggregator!) },
+  { field: "family", include: (c) => !!c.g.familyId && present(c, 1, 0.4), value: (c) => c.g.familyId! },
+  { field: "type", include: (c) => present(c, 1, 0.85), value: (c) => label(c, FORMAT_LABELS, c.g.format) },
+  { field: "theme", include: (c) => !hasDefect(c, "theme_only_in_prose") && present(c, 0.9, 0.4), value: (c) => label(c, THEME_LABELS, c.g.primaryTheme) },
+  { field: "features", include: (c) => present(c, 0.85, 0.5) && c.mechanics.length > 0, value: featuresValue },
+  { field: "licensed_ip", include: (c) => !!c.g.licensedIp && present(c, 0.9, 0.7), value: (c) => c.g.licensedIp! },
+  { field: "reels", include: (c) => !!c.g.grid && present(c, 0.9, 0.7), value: (c) => pick(c.rng, gridLabels(c.g.grid!)) },
+  { field: "lines", include: (c) => !!c.g.paylines && present(c, 0.9, 0.6), value: linesValue },
+  { field: "jackpot", include: (c) => present(c, 0.9, 0.6), value: (c) => label(c, JACKPOT_LABELS, c.g.jackpotType) },
+  { field: "volatility", include: (c) => !hasDefect(c, "volatility_conflict") && present(c, 0.9, 0.5), value: (c) => (c.inHouse ? VOL_LABELS[c.g.volatility]![0]! : label(c, VOL_LABELS, c.g.volatility)) },
+  { field: "rtp", include: (c) => present(c, 0.95, 0.7), value: (c) => (c.inHouse ? Number((c.g.rtp * 100).toFixed(2)) : rtpVariant(c.rng, c.g.rtp)) },
+  { field: "max_win", include: (c) => present(c, 0.8, 0.4), value: (c) => pick(c.rng, maxWinLabels(c.g.maxWinMultiplier)) },
+  { field: "stake_range", include: (c) => present(c, 0.9, 0.6), value: (c) => stakeRange(c.rng, c.p) },
+  { field: "hit_freq", include: (c) => c.g.hitFrequency !== null && present(c, 0.6, 0.2), value: (c) => pick(c.rng, hitFrequencyLabels(c.g.hitFrequency!)) },
+  { field: "brands", include: () => true, value: (c) => joinList(c.rng, c.g.brands.map((b) => label(c, BRAND_CODES, b))) },
+  { field: "markets", include: () => true, value: (c) => joinList(c.rng, c.g.jurisdictions.map((j) => label(c, MARKET_CODES, j))) },
+  { field: "status", include: () => true, value: (c) => label(c, STATUS_LABELS, c.g.status) },
+  { field: "release_date", include: (c) => chance(c.rng, 0.9), value: (c) => dateVariant(c.rng, c.g.releaseDate, c.g.jurisdictions.every((j) => j.startsWith("US"))) },
   // The feed misses the RG flag on rg-sensitive games: enrichment should suggest it back.
-  if (g.rgFlags.length && !p.defects.includes("rg_sensitive_thin") && chance(rng, inHouse ? 1 : 0.5)) r.rg_flags = g.rgFlags.join(",");
+  { field: "rg_flags", include: (c) => c.g.rgFlags.length > 0 && !hasDefect(c, "rg_sensitive_thin") && chance(c.rng, c.inHouse ? 1 : 0.5), value: (c) => c.g.rgFlags.join(",") },
+];
 
-  return RawFeedRecord.parse(r);
+function featuresValue(c: FeedContext) {
+  const labels = c.mechanics.map((m) => label(c, MECHANIC_LABELS, m));
+  return c.inHouse ? labels.join(", ") : joinList(c.rng, labels);
+}
+
+function linesValue(c: FeedContext) {
+  return c.g.payStructure === "paylines" ? c.g.paylines! : pick(c.rng, [`${c.g.paylines} ways`, String(c.g.paylines)]);
+}
+
+const gridLabels = (grid: { reels: number; rows: number }) => [`${grid.reels}x${grid.rows}`, `${grid.reels} x ${grid.rows}`, `${grid.reels}-${grid.rows}`];
+
+const maxWinLabels = (m: number) => [`${m}x`, m, `x${m.toLocaleString("en-GB")}`, `${m.toLocaleString("en-GB")} x stake`];
+
+const hitFrequencyLabels = (h: number) => [`${(h * 100).toFixed(1)}%`, h, `1:${(1 / h).toFixed(1)}`];
+
+/** Aggregator feeds mangle names: shouting, trademark symbols, regulator suffixes. */
+export function noisyName(name: string, inHouse: boolean, rng: Rng) {
+  if (inHouse) return name;
+  if (chance(rng, 0.1)) return name.toUpperCase();
+  if (chance(rng, 0.1)) return `${name}™`;
+  return chance(rng, 0.05) ? `${name} (UKGC)` : name;
+}
+
+export function feedRecord(g: GroundTruthGame, p: PlannedGame, rng: Rng): RawFeedRecord {
+  const inHouse = g.supplyChannel === "in_house";
+  const ctx: FeedContext = {
+    g,
+    p,
+    rng,
+    inHouse,
+    thin: p.defects.includes("thin_record") || p.defects.includes("rg_sensitive_thin"),
+    // The feed's feature list leaves out the core mechanic when that defect is planted.
+    mechanics: [g.coreMechanic, ...g.secondaryFeatures].filter((m) => !(m === g.coreMechanic && p.defects.includes("feed_omits_feature"))),
+  };
+  const record: Record<string, unknown> = { id: g.id, name: noisyName(g.name, inHouse, rng) };
+  for (const rule of FIELD_RULES) {
+    if (rule.include(ctx)) record[rule.field] = rule.value(ctx);
+  }
+  return RawFeedRecord.parse(record);
 }
 
 // ---------- Documents ----------
@@ -265,6 +310,58 @@ function receivedAt(rng: Rng, release: string) {
   return d.toISOString().slice(0, 10);
 }
 
+interface DocumentDefects {
+  clean: CleanDoc;
+  describesGameId: string | null;
+  misleadingFacts: z.infer<typeof ExtractableField>[];
+}
+
+/** Applies the plan's semantic defects to one document before it is rendered. */
+export function applyDocumentDefects(doc: GroundTruthDocument, g: GroundTruthGame, p: PlannedGame, all: GroundTruthDocument[]): DocumentDefects {
+  let clean = toClean(doc, g.name, doc.source);
+  let describesGameId: string | null = null;
+  const misleadingFacts: z.infer<typeof ExtractableField>[] = [];
+
+  if (doc.kind === "rules_text" && p.defects.includes("wrong_game_rules")) {
+    // Copy-paste error: the page is titled for this game but the body is another game's rules.
+    const other = all.find((d) => d.gameId === p.relatedGameId && d.kind === "rules_text")!;
+    clean = { ...toClean(other, g.name, doc.source), docId: doc.docId };
+    describesGameId = other.gameId;
+  }
+  if (p.defects.includes("volatility_conflict")) {
+    clean = withVolatilityConflict(clean, doc.kind, g, p);
+    if (doc.kind === "marketing_blurb") misleadingFacts.push("volatility");
+  }
+  return { clean, describesGameId, misleadingFacts };
+}
+
+/** The blurb claims the wrong volatility; the release note states the right one. */
+function withVolatilityConflict(clean: CleanDoc, kind: string, g: GroundTruthGame, p: PlannedGame): CleanDoc {
+  if (kind === "marketing_blurb") {
+    return { ...clean, sections: [...clean.sections, { text: VOL_CONFLICT_SENTENCE[g.volatility]!, tags: [] }] };
+  }
+  if (kind === "release_note" && !clean.sections.some((s) => s.tags.includes("volatility"))) {
+    const keyFacts = { heading: "Key facts", text: `Volatility: ${displayFacts(p).volatility}`, tags: ["volatility"] };
+    return { ...clean, sections: [keyFacts, ...clean.sections] };
+  }
+  return clean;
+}
+
+/** Picks a wire format and damage: aggregator content arrives in worse shape than in-house content. */
+export function chooseRendering(rng: Rng, kind: string, channel: "in_house" | "aggregator", defects: readonly string[]) {
+  const format = pick(rng, FORMATS_BY_KIND[kind]![channel]);
+  const damage: Damage[] = [];
+  if (kind === "rules_text" && defects.includes("truncated_rules")) damage.push("truncate");
+  if (channel === "in_house") {
+    if (chance(rng, 0.2)) damage.push("whitespace");
+    return { format, damage };
+  }
+  if (chance(rng, 0.15)) damage.push("mojibake");
+  if (chance(rng, 0.35)) damage.push("boilerplate");
+  if (chance(rng, 0.3)) damage.push("whitespace");
+  return { format, damage };
+}
+
 function buildDocuments(truth: GroundTruth, plan: Plan, rng: Rng, seed: number) {
   const games = new Map(truth.games.map((g) => [g.id, g]));
   const plans = new Map(plan.games.map((p) => [p.id, p]));
@@ -273,67 +370,42 @@ function buildDocuments(truth: GroundTruth, plan: Plan, rng: Rng, seed: number) 
 
   for (const doc of truth.documents) {
     const g = games.get(doc.gameId)!;
-    const p = plans.get(doc.gameId)!;
-    let clean = toClean(doc, g.name, doc.source);
-    let describesGameId: string | null = null;
-    const misleadingFacts: z.infer<typeof ExtractableField>[] = [];
-
-    if (doc.kind === "rules_text" && p.defects.includes("wrong_game_rules")) {
-      // Copy-paste error: the page is titled for this game but the body is another game's rules.
-      const other = truth.documents.find((d) => d.gameId === p.relatedGameId && d.kind === "rules_text")!;
-      clean = { ...toClean(other, g.name, doc.source), docId: doc.docId };
-      describesGameId = other.gameId;
-    }
-
-    if (p.defects.includes("volatility_conflict")) {
-      if (doc.kind === "marketing_blurb") {
-        clean.sections = [...clean.sections, { text: VOL_CONFLICT_SENTENCE[g.volatility]!, tags: [] }];
-        misleadingFacts.push("volatility");
-      }
-      if (doc.kind === "release_note" && !clean.sections.some((s) => s.tags.includes("volatility"))) {
-        clean.sections = [{ heading: "Key facts", text: `Volatility: ${displayFacts(p).volatility}`, tags: ["volatility"] }, ...clean.sections];
-      }
-    }
-
-    const channel = g.supplyChannel;
-    const format = pick(rng, FORMATS_BY_KIND[doc.kind]![channel]);
-    const damage: Damage[] = [];
-    if (doc.kind === "rules_text" && p.defects.includes("truncated_rules")) damage.push("truncate");
-    if (channel === "aggregator") {
-      if (chance(rng, 0.15)) damage.push("mojibake");
-      if (chance(rng, 0.35)) damage.push("boilerplate");
-      if (chance(rng, 0.3)) damage.push("whitespace");
-    } else if (chance(rng, 0.2)) damage.push("whitespace");
-
-    const rendered = render(clean, { format, seed, damage });
-    const received = receivedAt(rng, g.releaseDate);
-
-    docs.push(
-      GameDocument.parse({
-        docId: doc.docId,
-        gameId: doc.gameId,
-        kind: doc.kind,
-        format: rendered.format,
-        contentType: rendered.contentType,
-        source: doc.source,
-        receivedAt: received,
-        text: rendered.text,
-      }),
-    );
-    docTruth.push({
-      docId: doc.docId,
-      gameId: doc.gameId,
-      kind: doc.kind,
-      format: rendered.format,
-      // A doc describing another game contains no true facts about this one.
-      survivingFacts: describesGameId ? [] : (rendered.survivingTags as DocumentTruth["survivingFacts"]),
-      partialFacts: describesGameId ? [] : (rendered.partialTags as DocumentTruth["partialFacts"]),
-      damage: rendered.appliedDamage,
-      describesGameId,
-      misleadingFacts,
-    });
+    const defects = applyDocumentDefects(doc, g, plans.get(doc.gameId)!, truth.documents);
+    const { format, damage } = chooseRendering(rng, doc.kind, g.supplyChannel, plans.get(doc.gameId)!.defects);
+    const rendered = render(defects.clean, { format, seed, damage });
+    docs.push(toGameDocument(doc, rendered, receivedAt(rng, g.releaseDate)));
+    docTruth.push(toDocumentTruth(doc, rendered, defects));
   }
   return { docs, docTruth };
+}
+
+function toGameDocument(doc: GroundTruthDocument, rendered: RenderedDoc, received: string): GameDocument {
+  return GameDocument.parse({
+    docId: doc.docId,
+    gameId: doc.gameId,
+    kind: doc.kind,
+    format: rendered.format,
+    contentType: rendered.contentType,
+    source: doc.source,
+    receivedAt: received,
+    text: rendered.text,
+  });
+}
+
+function toDocumentTruth(doc: GroundTruthDocument, rendered: RenderedDoc, defects: DocumentDefects): DocumentTruth {
+  // A doc describing another game contains no true facts about this one.
+  const describesOther = defects.describesGameId !== null;
+  return {
+    docId: doc.docId,
+    gameId: doc.gameId,
+    kind: doc.kind,
+    format: rendered.format,
+    survivingFacts: describesOther ? [] : (rendered.survivingTags as DocumentTruth["survivingFacts"]),
+    partialFacts: describesOther ? [] : (rendered.partialTags as DocumentTruth["partialFacts"]),
+    damage: rendered.appliedDamage,
+    describesGameId: defects.describesGameId,
+    misleadingFacts: defects.misleadingFacts,
+  };
 }
 
 // ---------- Duplicates ----------
@@ -374,48 +446,59 @@ function duplicateListings(truth: GroundTruth, plan: Plan, feed: RawFeedRecord[]
   return duplicates;
 }
 
-// ---------- Main ----------
+// ---------- Entry point ----------
+
+export const DEFAULT_DEGRADE_SEED = 7;
 
 const sha = (s: string) => createHash("sha256").update(s).digest("hex").slice(0, 16);
 
-function main() {
-  const seedArg = process.argv.indexOf("--seed");
-  const seed = seedArg > -1 ? Number(process.argv[seedArg + 1]) : 7;
+/** The whole degrade step as a pure function: same truth, plan and seed in, same bytes out. */
+export function degradeCatalogue(truth: GroundTruth, plan: Plan, seed: number) {
   const rng = mulberry32(seed);
-
-  const truth = GroundTruth.parse(JSON.parse(readFileSync(GROUND_TRUTH_PATH, "utf8")));
-  const plan = Plan.parse(JSON.parse(readFileSync(PLAN_PATH, "utf8")));
   const plans = new Map(plan.games.map((p) => [p.id, p]));
-
   const feed = truth.games.map((g) => feedRecord(g, plans.get(g.id)!, rng));
   const { docs, docTruth } = buildDocuments(truth, plan, rng, seed);
   const duplicates = duplicateListings(truth, plan, feed, docs, docTruth, rng);
+  return { feed, docs, docTruth, duplicates };
+}
 
-  const files = {
-    "catalogue.raw.json": JSON.stringify(feed, null, 2),
-    "documents.json": JSON.stringify(docs, null, 2),
-    "documents.truth.json": JSON.stringify(docTruth, null, 2),
+/** The files the degrade step writes, serialised exactly as committed. */
+export function serialise(out: ReturnType<typeof degradeCatalogue>): Record<string, string> {
+  return {
+    "catalogue.raw.json": JSON.stringify(out.feed, null, 2),
+    "documents.json": JSON.stringify(out.docs, null, 2),
+    "documents.truth.json": JSON.stringify(out.docTruth, null, 2),
   };
-  for (const [name, content] of Object.entries(files)) writeFileSync(`${OUT}/${name}`, content);
+}
 
-  const countBy = <T>(xs: T[], f: (x: T) => string) =>
-    Object.fromEntries(Object.entries(xs.reduce<Record<string, number>>((a, x) => ((a[f(x)] = (a[f(x)] ?? 0) + 1), a), {})));
-  const manifest = Manifest.parse({
+export function buildManifest(out: ReturnType<typeof degradeCatalogue>, files: Record<string, string>, truth: GroundTruth, plan: Plan, seed: number) {
+  return Manifest.parse({
     degradeSeed: seed,
     planSeed: plan.seed,
     generation: truth.meta,
     counts: {
-      feedRecords: feed.length,
-      documents: docs.length,
-      ...Object.fromEntries(Object.entries(countBy(docs, (d) => `format:${d.format}`))),
-      ...Object.fromEntries(Object.entries(countBy(docs, (d) => `kind:${d.kind}`))),
+      feedRecords: out.feed.length,
+      documents: out.docs.length,
+      ...countBy(out.docs, (d) => `format:${d.format}`),
+      ...countBy(out.docs, (d) => `kind:${d.kind}`),
     },
-    duplicates,
+    duplicates: out.duplicates,
     files: Object.fromEntries(Object.entries(files).map(([k, v]) => [k, sha(v)])),
   });
-  writeFileSync(`${OUT}/manifest.json`, JSON.stringify(manifest, null, 2));
-  console.log(`wrote ${feed.length} feed records and ${docs.length} documents to ${OUT}/`);
-  console.log(manifest.counts);
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) main();
+export function run(argv: readonly string[], paths = { truth: GROUND_TRUTH_PATH, plan: PLAN_PATH, outDir: OUT }) {
+  const seed = Number(argValue(argv, "--seed", String(DEFAULT_DEGRADE_SEED)));
+  const truth = GroundTruth.parse(JSON.parse(readFileSync(paths.truth, "utf8")));
+  const plan = Plan.parse(JSON.parse(readFileSync(paths.plan, "utf8")));
+
+  const out = degradeCatalogue(truth, plan, seed);
+  const files = serialise(out);
+  for (const [name, content] of Object.entries(files)) writeFileSync(`${paths.outDir}/${name}`, content);
+  const manifest = buildManifest(out, files, truth, plan, seed);
+  writeFileSync(`${paths.outDir}/manifest.json`, JSON.stringify(manifest, null, 2));
+  console.log(`wrote ${out.feed.length} feed records and ${out.docs.length} documents to ${paths.outDir}/`, manifest.counts);
+  return manifest;
+}
+
+if (isMain(import.meta.url)) run(process.argv);
