@@ -8,7 +8,7 @@ export default defineConfig({
     restoreMocks: true,
     coverage: {
       provider: "v8",
-      include: ["src/**/*.ts", "scripts/**/*.ts", ".claude/skills/**/scripts/*.ts"],
+      include: ["src/**/*.ts", "scripts/**/*.ts", "evals/**/*.ts", ".claude/skills/**/scripts/*.ts"],
       exclude: ["**/*.test.ts"],
       reporter: ["text-summary", "json", "html"],
       // Keep in step with CLAUDE.md.

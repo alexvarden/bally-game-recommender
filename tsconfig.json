@@ -12,5 +12,5 @@
     "allowImportingTsExtensions": true,
     "erasableSyntaxOnly": true
   },
-  "include": ["src", "scripts", ".claude/skills/**/*.ts"]
+  "include": ["src", "scripts", "evals", ".claude/skills/**/*.ts"]
 }
