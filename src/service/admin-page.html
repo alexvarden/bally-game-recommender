@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Game Admin</title>
+<style>
+  :root { --bg: #fff; --fg: #1a1a1a; --muted: #666; --line: #ddd; --accent: #0b5cad; --warn: #b3261e; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #161616; --fg: #eee; --muted: #999; --line: #333; --accent: #6aa9ff; --warn: #ff8a80; } }
+  body { margin: 0; padding: 16px; font: 14px/1.4 system-ui, sans-serif; background: var(--bg); color: var(--fg); }
+  h1 { font-size: 18px; margin: 0 0 12px; }
+  form, .bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: end; margin-bottom: 12px; }
+  label { display: flex; flex-direction: column; font-size: 12px; color: var(--muted); }
+  input, select, button { font: inherit; padding: 4px 8px; }
+  button { cursor: pointer; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { text-align: left; padding: 6px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .status-live { color: var(--accent); }
+  .status-suspended, .status-retired, .quarantined { color: var(--warn); }
+  #message { min-height: 1.4em; margin-bottom: 8px; }
+  .wrap { overflow-x: auto; }
+</style>
+</head>
+<body>
+<h1>Game catalogue admin</h1>
+
+<form id="auth">
+  <label>Admin token <input id="token" type="password" autocomplete="off" required></label>
+  <label>Reason for changes <input id="reason" placeholder="Required for status changes" size="40"></label>
+</form>
+
+<form id="filters">
+  <label>Status
+    <select name="status"><option value="">any</option><option>live</option><option>suspended</option><option>retired</option><option>coming_soon</option></select>
+  </label>
+  <label>Brand
+    <select name="brand"><option value="">any</option><option>jackpotjoy</option><option>virgin_games</option><option>monopoly_casino</option><option>rainbow_riches_casino</option><option>double_bubble_bingo</option><option>bally_casino_us</option></select>
+  </label>
+  <label>Quarantined
+    <select name="quarantined"><option value="">any</option><option value="true">yes</option><option value="false">no</option></select>
+  </label>
+  <button type="submit">Load games</button>
+</form>
+
+<div id="message" role="status"></div>
+<div class="wrap">
+  <table>
+    <thead><tr><th>Game</th><th>Name</th><th>Status</th><th>Brands</th><th>Actions</th></tr></thead>
+    <tbody id="rows"></tbody>
+  </table>
+</div>
+
+<script>
+  const $ = (id) => document.getElementById(id);
+  const say = (text) => { $("message").textContent = text; };
+
+  async function api(path, options = {}) {
+    const res = await fetch(path, {
+      ...options,
+      headers: { Authorization: `Bearer ${$("token").value}`, "Content-Type": "application/json", ...(options.headers || {}) },
+    });
+    const body = await res.json().catch(() => ({}));
+    if (!res.ok) throw new Error(body.message || body.error || res.statusText);
+    return body;
+  }
+
+  async function load(event) {
+    if (event) event.preventDefault();
+    const params = new URLSearchParams([...new FormData($("filters"))].filter(([, v]) => v));
+    try {
+      const games = await api(`/admin/games?${params}`);
+      render(games);
+      say(`${games.length} games`);
+    } catch (err) { say(`Could not load games: ${err.message}`); }
+  }
+
+  function cell(text, className) {
+    const td = document.createElement("td");
+    td.textContent = text;
+    if (className) td.className = className;
+    return td;
+  }
+
+  function button(label, onClick) {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.textContent = label;
+    b.addEventListener("click", onClick);
+    return b;
+  }
+
+  function render(games) {
+    const rows = $("rows");
+    rows.replaceChildren();
+    for (const g of games) {
+      const tr = document.createElement("tr");
+      tr.append(cell(g.gameId), cell(g.name || ""), cell(g.status + (g.quarantined ? " · quarantined" : ""), `status-${g.status}${g.quarantined ? " quarantined" : ""}`), cell(g.brands.join(", ")));
+      const actions = document.createElement("td");
+      if (g.status === "live") actions.append(button("Suspend", () => change(g.gameId, "suspended")));
+      if (g.status === "suspended") actions.append(button("Reinstate", () => change(g.gameId, "live")));
+      if (g.status !== "retired") actions.append(" ", button("Retire", () => retire(g.gameId)));
+      tr.append(actions);
+      rows.append(tr);
+    }
+  }
+
+  function reason() {
+    const r = $("reason").value.trim();
+    if (r.length < 3) { say("Enter a reason (at least 3 characters) before changing a game."); return null; }
+    return r;
+  }
+
+  async function change(gameId, status) {
+    const r = reason();
+    if (!r) return;
+    try { await api(`/admin/games/${gameId}`, { method: "PATCH", body: JSON.stringify({ status, reason: r }) }); say(`${gameId} is now ${status}`); await load(); }
+    catch (err) { say(`Change failed: ${err.message}`); }
+  }
+
+  async function retire(gameId) {
+    const r = reason();
+    if (!r) return;
+    try { await api(`/admin/games/${gameId}/retire`, { method: "POST", body: JSON.stringify({ reason: r }) }); say(`${gameId} retired`); await load(); }
+    catch (err) { say(`Retire failed: ${err.message}`); }
+  }
+
+  $("filters").addEventListener("submit", load);
+</script>
+</body>
+</html>
