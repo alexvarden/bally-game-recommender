@@ -8,14 +8,24 @@
     "catalogue:plan": "node scripts/catalogue/plan.ts",
     "catalogue:generate": "node --env-file-if-exists=.env scripts/catalogue/generate.ts",
     "catalogue:degrade": "node scripts/catalogue/degrade.ts",
-    "catalogue": "npm run catalogue:plan && npm run catalogue:generate && npm run catalogue:degrade"
+    "catalogue": "npm run catalogue:plan && npm run catalogue:generate && npm run catalogue:degrade",
+    "prepare": "git config core.hooksPath .githooks || true",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "crap": "node scripts/quality/crap.ts --threshold 30",
+    "ci": "npm run typecheck && npm run test:coverage && npm run crap"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.8.0",
     "zod": "^4.6.7"
   },
   "devDependencies": {
+    "@babel/parser": "^8.1.2",
+    "@babel/types": "^8.1.2",
     "@types/node": "^26.6.6",
-    "typescript": "^7.0.2"
+    "@vitest/coverage-v8": "^5.1.0",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.0"
   }
 }
