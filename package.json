@@ -1,0 +1,21 @@
+{
+  "name": "bally-game-recommender",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "catalogue:plan": "node scripts/catalogue/plan.ts",
+    "catalogue:generate": "node --env-file-if-exists=.env scripts/catalogue/generate.ts",
+    "catalogue:degrade": "node scripts/catalogue/degrade.ts",
+    "catalogue": "npm run catalogue:plan && npm run catalogue:generate && npm run catalogue:degrade"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.8.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2"
+  }
+}
