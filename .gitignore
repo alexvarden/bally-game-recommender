@@ -4,3 +4,4 @@ data/catalogue/.cache/
 coverage/
 data/catalogue/.enrich-cache/
 .scratch/
+.cache/
