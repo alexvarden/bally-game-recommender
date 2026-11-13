@@ -17,9 +17,12 @@
     "ci": "npm run typecheck && npm run test:coverage && npm run crap",
     "eval": "node evals/report.ts",
     "eval:strict": "node evals/report.ts --strict"
+    "similarity:embed": "node scripts/similarity/embed.ts",
+    "similarity:preview": "node scripts/similarity/preview.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.8.0",
+    "@huggingface/transformers": "^4.3.2",
     "zod": "^4.6.7"
   },
   "devDependencies": {
