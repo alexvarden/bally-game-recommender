@@ -1,0 +1,155 @@
+{
+  "about": "Hand labels for the matching eval, drafted by Claude from the ground-truth descriptions and fields, to be reviewed by a human. Grades: 3 = a player would very likely enjoy it next, 2 = clearly related, 1 = loosely related. mustNot = should never appear for this seed. Labels are brand-agnostic: the scorer only counts games that are live on the requesting brand.",
+  "seeds": [
+    {
+      "seedId": "BLY-SLT-0013",
+      "why": "Family base (Frostbound Saga, Norse, very high volatility) with a planted volatility conflict in its blurb.",
+      "relevant": [
+        { "gameId": "BLY-SLT-0056", "grade": 3, "rationale": "Oath of the Stormhall: Norse myth, epic mood, high volatility." },
+        { "gameId": "BLY-SLT-0051", "grade": 3, "rationale": "Ravens of the Iron Fjord: Norse myth, epic mood." },
+        { "gameId": "BLY-SLT-0014", "grade": 2, "rationale": "Frostbound Saga Jackpot: same game with a jackpot; related but not discovery." },
+        { "gameId": "BLY-SLT-0015", "grade": 2, "rationale": "Frostbound Saga Megaways: same theme, Megaways layout." },
+        { "gameId": "BLY-SLT-0039", "grade": 2, "rationale": "Odyssey of the Sunlit Isles: mythological epic, different pantheon." },
+        { "gameId": "BLY-SLT-0033", "grade": 1, "rationale": "Tempest of the Aegean: myth and epic tone, gentler volatility." },
+        { "gameId": "BLY-GAM-0085", "grade": 1, "rationale": "Fates of Asterion: mythic epic, but a game show, not a slot." }
+      ],
+      "mustNot": [
+        { "gameId": "BLY-SLI-0095", "rationale": "Runes of Skeldrun Slingo is Norse but coming soon, not live." },
+        { "gameId": "BLY-SLT-0058", "rationale": "Midnight Amplifier is retired." },
+        { "gameId": "BLY-SLT-0003", "rationale": "Sugarbell Selection: cosy sweet shop is the opposite of a Norse saga." }
+      ]
+    },
+    {
+      "seedId": "BLY-SLT-0035",
+      "why": "Low-volatility seed (Cloverfall Cluster, Irish, cosy cascades) to test the volatility step-up guardrail.",
+      "relevant": [
+        { "gameId": "BLY-SLI-0061", "grade": 3, "rationale": "Shamrock Signal Slingo: Irish luck, cosy, medium volatility (one step up)." },
+        { "gameId": "BLY-SLT-0026", "grade": 2, "rationale": "Orchard Spin: cascades with a light, medium-volatility feel." },
+        { "gameId": "BLY-SLT-0044", "grade": 2, "rationale": "Mossglade Neighbours: cosy, low volatility." },
+        { "gameId": "BLY-SLT-0023", "grade": 1, "rationale": "Hearthlight's Hidden Gifts: cosy, medium volatility." },
+        { "gameId": "BLY-SLT-0047", "grade": 1, "rationale": "Ruby Reel Picnic: light retro fun, medium volatility." }
+      ],
+      "mustNot": [
+        { "gameId": "BLY-SLI-0096", "rationale": "Bramblegold Slingo is Irish but very high volatility: three steps up from low." },
+        { "gameId": "BLY-SLT-0048", "rationale": "Bonbon Bloomfall is cosy cascades but high volatility: two steps up." },
+        { "gameId": "BLY-SLT-0010", "rationale": "The Emerald Tidemark is Irish but high volatility, and US-only." }
+      ]
+    },
+    {
+      "seedId": "BLY-LIV-0076",
+      "why": "Live dealer (Gilded Orbit Live, luxury money wheel, low volatility).",
+      "relevant": [
+        { "gameId": "BLY-LIV-0066", "grade": 3, "rationale": "The Aureate Wheel: live luxury wheel, low volatility." },
+        { "gameId": "BLY-LIV-0082", "grade": 2, "rationale": "The Gilded Card Salon: live, luxury, glamorous." },
+        { "gameId": "BLY-TAB-0075", "grade": 2, "rationale": "Marquee Blackjack: glamorous table game, medium volatility." },
+        { "gameId": "BLY-TAB-0078", "grade": 2, "rationale": "The Aurelia Card Salon: glamorous table game." },
+        { "gameId": "BLY-LIV-0089", "grade": 1, "rationale": "The Pomegranate Parlour Live: live and glamorous, card-based." },
+        { "gameId": "BLY-SLT-0064", "grade": 1, "rationale": "Champagne Afterglow: luxury theme, low volatility, but a slot." }
+      ],
+      "mustNot": [
+        { "gameId": "BLY-GAM-0070", "rationale": "Luminous Fortune Wheel is a similar wheel show but high volatility: two steps up." },
+        { "gameId": "BLY-GAM-0085", "rationale": "Fates of Asterion is a wheel show but high volatility: two steps up." },
+        { "gameId": "BLY-CRA-0067", "rationale": "Starfall Cashout is a very high volatility crash game." }
+      ]
+    },
+    {
+      "seedId": "BLY-BIN-0068",
+      "why": "Bingo (Silk Pavilion Bingo, Asian fortune, cosy) on a bingo-led brand.",
+      "relevant": [
+        { "gameId": "BLY-BIN-0092", "grade": 3, "rationale": "Buzzerlight Bingo: another bingo room, medium volatility." },
+        { "gameId": "BLY-BIN-0080", "grade": 3, "rationale": "Coyote Gulch Bingo: bingo room, medium volatility." },
+        { "gameId": "BLY-BIN-0071", "grade": 2, "rationale": "The Pharaoh's Number Chamber: bingo, one volatility step up." },
+        { "gameId": "BLY-SLT-0052", "grade": 2, "rationale": "Fortune Lanterns of Lianhua: Asian fortune, cosy, medium volatility." },
+        { "gameId": "BLY-SLI-0074", "grade": 1, "rationale": "Moonweaver's Slingo: number-grid play, medium volatility." }
+      ],
+      "mustNot": [
+        { "gameId": "BLY-BIN-0100", "rationale": "Golden Koi Number Room is a near-identical Asian bingo but retired." },
+        { "gameId": "BLY-SLI-0065", "rationale": "The Big Number Stage is very high volatility: two steps up." }
+      ]
+    },
+    {
+      "seedId": "BLY-SLT-0022",
+      "why": "Thin record (Orbit of the Quiet Stars: one-line blurb, US-only). The system may reasonably fall back.",
+      "relevant": [
+        { "gameId": "BLY-SLT-0099", "grade": 3, "rationale": "The Farstar Beacon: space theme, mysterious, medium volatility." },
+        { "gameId": "BLY-SLT-0050", "grade": 2, "rationale": "The Saffron Pyramid: mysterious, low volatility, on the US brand." },
+        { "gameId": "BLY-BIN-0097", "grade": 1, "rationale": "Wandwick Ballrooms Bingo: mysterious, low volatility, US brand." }
+      ],
+      "mustNot": [
+        { "gameId": "BLY-CRA-0067", "rationale": "Starfall Cashout is space-themed but a very high volatility crash game." },
+        { "gameId": "BLY-SLT-0021", "rationale": "Fortune of the Jade Meridian is very high volatility." }
+      ]
+    },
+    {
+      "seedId": "BLY-SLT-0047",
+      "why": "Retro fruit slot (Ruby Reel Picnic) whose closest neighbour has a planted duplicate listing.",
+      "relevant": [
+        { "gameId": "BLY-SLT-0026", "grade": 3, "rationale": "Orchard Spin: fruit theme, retro, medium volatility." },
+        { "gameId": "BLY-SLT-0069", "grade": 3, "rationale": "Cherryline Multiplier: classic fruit, retro, low volatility." },
+        { "gameId": "BLY-SLT-0064", "grade": 1, "rationale": "Champagne Afterglow: classic three-reel feel." },
+        { "gameId": "BLY-LIV-0073", "grade": 1, "rationale": "Citrus Cardroom Live: fruit and retro, but live cards." },
+        { "gameId": "BLY-TAB-0088", "grade": 1, "rationale": "Cranberry Club Table: fruit and retro, but a table game." }
+      ],
+      "mustNot": [
+        { "gameId": "BLY-SLT-9001", "rationale": "Duplicate listing of Cherryline Multiplier from a second aggregator." },
+        { "gameId": "BLY-SLT-0083", "rationale": "Bellfruit Nocturne is retro fruit but very high volatility: two steps up." }
+      ]
+    },
+    {
+      "seedId": "BLY-SLT-0030",
+      "why": "Fishing slot (Tidecatcher's Fortune) with truncated rules; theme has a duplicate-listed neighbour.",
+      "relevant": [
+        { "gameId": "BLY-SLT-0062", "grade": 3, "rationale": "The Angler's Brass Wheel: fishing, wheel bonus, cosy." },
+        { "gameId": "BLY-SLT-0034", "grade": 3, "rationale": "Reelwater Riches: fishing, high volatility." },
+        { "gameId": "BLY-SLT-0086", "grade": 3, "rationale": "Silverfin's Reel Catch: fishing, high volatility." },
+        { "gameId": "BLY-SLT-0042", "grade": 1, "rationale": "The Spellwright's Wheel: wheel bonus, high volatility, different world." }
+      ],
+      "mustNot": [
+        { "gameId": "BLY-SLT-9002", "rationale": "Duplicate listing of Silverfin's Reel Catch." },
+        { "gameId": "BLY-SLT-0041", "rationale": "Tawny River Reserve is suspended." }
+      ]
+    },
+    {
+      "seedId": "BLY-SLI-0061",
+      "why": "Slingo (Shamrock Signal Slingo) on the Slingo-led brand.",
+      "relevant": [
+        { "gameId": "BLY-SLT-0035", "grade": 3, "rationale": "Cloverfall Cluster: Irish luck, cosy, low volatility." },
+        { "gameId": "BLY-SLI-0074", "grade": 2, "rationale": "Moonweaver's Slingo: Slingo, medium volatility." },
+        { "gameId": "BLY-SLI-0091", "grade": 1, "rationale": "Sapphire Suite Slingo: Slingo, one step up in volatility." },
+        { "gameId": "BLY-SLI-0093", "grade": 1, "rationale": "The Grandstand Grid: Slingo, one step up in volatility." }
+      ],
+      "mustNot": [
+        { "gameId": "BLY-SLI-0096", "rationale": "Bramblegold Slingo is Irish Slingo but very high volatility: two steps up." },
+        { "gameId": "BLY-SLI-0087", "rationale": "Wildstone Ruins Slingo is suspended." },
+        { "gameId": "BLY-SLI-0095", "rationale": "Runes of Skeldrun Slingo is coming soon." }
+      ]
+    },
+    {
+      "seedId": "BLY-TAB-0075",
+      "why": "RNG table game (Marquee Blackjack, luxury).",
+      "relevant": [
+        { "gameId": "BLY-TAB-0078", "grade": 3, "rationale": "The Aurelia Card Salon: glamorous card table." },
+        { "gameId": "BLY-LIV-0082", "grade": 3, "rationale": "The Gilded Card Salon: live glamorous cards." },
+        { "gameId": "BLY-LIV-0089", "grade": 2, "rationale": "The Pomegranate Parlour Live: glamorous live cards." },
+        { "gameId": "BLY-TAB-0060", "grade": 2, "rationale": "Prime Time Picture Cards: card table, glamorous." },
+        { "gameId": "BLY-SLT-0043", "grade": 1, "rationale": "Gilded High Society: luxury theme, but a slot." }
+      ],
+      "mustNot": [
+        { "gameId": "BLY-CRA-0067", "rationale": "Starfall Cashout is a very high volatility crash game." }
+      ]
+    },
+    {
+      "seedId": "BLY-SLT-0031",
+      "why": "Sparse theme (Hollowmere Afterdark, horror, low volatility): few good neighbours, so the floor matters.",
+      "relevant": [
+        { "gameId": "BLY-INS-0072", "grade": 3, "rationale": "Gloamveil Scratch: horror, spooky, one volatility step up." },
+        { "gameId": "BLY-SLT-0037", "grade": 1, "rationale": "The Cartographer's Cache: mysterious, medium volatility." },
+        { "gameId": "BLY-SLI-0074", "grade": 1, "rationale": "Moonweaver's Slingo: mysterious, medium volatility." }
+      ],
+      "mustNot": [
+        { "gameId": "BLY-SLT-0055", "rationale": "Morrowglass Expedition is mysterious but high volatility: two steps up." },
+        { "gameId": "BLY-CRA-0067", "rationale": "Starfall Cashout is a very high volatility crash game." }
+      ]
+    }
+  ]
+}
