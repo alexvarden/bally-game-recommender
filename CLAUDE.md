@@ -67,7 +67,14 @@ it by splitting the function or adding tests. Don't raise the threshold or add i
 ## Layout
 
 ```
+src/contracts/   shared interfaces (storage, embedder, ranker, API types); change only via their own PR
 src/catalogue/   schema and catalogue logic
+src/storage/     ObjectStore (local folder) and CatalogueStore (SQLite) implementations
+src/ingest/      bucket → normalised games and documents
+src/enrich/      LLM enrichment, evidence verification, provenance merge
+src/similarity/  embedder, aspect profiles, ranker
+src/service/     Fastify recommendation API and admin API
+src/testing/     fixtures (ground truth as EnrichedGame; never eval output)
 src/lib/         shared utilities (LLM client, seeded RNG)
 scripts/         offline pipelines (catalogue generation; later enrichment and indexing)
 scripts/quality/ CI tooling (CRAP report)

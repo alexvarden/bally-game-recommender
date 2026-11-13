@@ -191,6 +191,10 @@ describe("committed ground truth (golden)", () => {
   const truth = GroundTruth.parse(JSON.parse(readFileSync(GROUND_TRUTH_PATH, "utf8")));
   const plans = new Map(plan.games.map((p) => [p.id, p]));
 
+  it("keeps every game's reference description (zod strips unknown keys, so a schema gap loses data silently)", () => {
+    for (const g of truth.games) expect(g.description.length, g.id).toBeGreaterThan(40);
+  });
+
   it("keeps every regulated and operator fact exactly as planned", () => {
     for (const g of truth.games) {
       const p = plans.get(g.id)!;

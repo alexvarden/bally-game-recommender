@@ -38,6 +38,11 @@ Brief received 11:57. Four-hour timebox.
 5. **Changed: model choice.** Started on Claude Opus 5.5 (est. $5–8); the OpenRouter balance was ~$0.34, so switched
    to gpt-6-luna at the user's direction. Recorded in the manifest.
 
+6. **Bug found: descriptions were silently dropped.** `GroundTruthGame` had no `description` field, so zod stripped
+   the LLM's descriptions when assembling the ground truth. Found while building fixtures for parallel work; fixed
+   the schema and rebuilt from the cached LLM responses (0 tokens). Added a golden test. Lesson for the enrichment
+   step: zod's default is to strip unknown keys, so every schema change needs a test that the data survives.
+
 ## Assumptions
 
 - Studios, game names and licensed IP are fictional. Brand names (Jackpotjoy, Virgin Games, Monopoly Casino,
