@@ -53,6 +53,32 @@ Brief received 11:57. Four-hour timebox.
 - Regulated facts may be extracted from a document with a verified quote, but never inferred.
 - Operator-owned facts (brands, jurisdictions, status) come only from the feed. The LLM can't write them.
 
+## Agreed design (13:30–14:00 discussion)
+
+- **Ingestion:** new titles land in an S3 bucket (locally a folder behind an `ObjectStore` interface); a run-once
+  `npm run pipeline` reads new objects into SQLite behind a `CatalogueStore` interface. Push API, supplier polling,
+  SQS fan-out and snapshot diffing are noted, not built.
+- **Seeding:** most of the catalogue is pre-processed and committed as JSON; `npm run db:seed` builds SQLite. About
+  10 new titles and 2 updates (an RTP change, a late document) are left unprocessed in the bucket for the demo.
+- **Regulated-fact conflict** between feed and document: the game is quarantined until a human resolves it.
+- **Enrichment model:** gpt-6-terra via OpenRouter (a different model from the generator, so the eval isn't
+  self-grading).
+- **Similarity:** one vector per aspect (content, gameplay, experience), weighted, from a local transformers.js
+  model behind an `Embedder` interface. Scored live per request from in-memory vectors. No format rules, no family
+  rule. Baselines for the eval: raw-text embedding, TF-IDF, random.
+- **Guardrails:** volatility step-up limit only. Under-18 appeal isn't filtered because the site is 18+ and
+  age-verified; UK advertising codes judge appeal by content, so marketing outside the site would differ.
+- **Service:** Fastify; `GET /v1/brands/:brand/games/:gameId/recommendations`; brand only (assumption: the brand
+  decides availability); brand fallback list with a reason code; no player-facing reasons; index hot-swap with
+  validation; pino structured logs; `/readyz`. No publish gate.
+- **Game management:** tiered admin API on a separate port with a bearer token. Operator fields apply immediately,
+  regulated facts only via conflict resolution, descriptive overrides marked `provenance: operator`, creation goes
+  through the bucket, delete means retire. Append-only audit log with a required reason. Single static admin page:
+  list/filter, suspend/reinstate/retire. Actor recorded as `admin`.
+- **Evals:** scoring of committed outputs runs in CI; live LLM re-runs on demand. Claude drafts the hand labels for
+  matching. The generator eval is skipped and logged as a known gap.
+- **Part B:** the messy-docs skill. **Workflow:** public GitHub repo, a PR per workstream.
+
 ## Failure cases worth showing
 
 Collected as they turn up; the eval section of the README picks from these.
