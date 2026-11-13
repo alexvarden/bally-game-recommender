@@ -2,3 +2,4 @@ node_modules/
 .env
 data/catalogue/.cache/
 coverage/
+var/
