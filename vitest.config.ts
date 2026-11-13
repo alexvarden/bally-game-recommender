@@ -3,7 +3,8 @@ import { defineConfig } from "vitest/config";
 export default defineConfig({
   test: {
     include: ["**/*.test.ts"],
-    exclude: ["node_modules/**", "coverage/**"],
+    // Agent worktrees live under .claude/worktrees; their tests belong to their own branches.
+    exclude: ["node_modules/**", "coverage/**", ".claude/worktrees/**"],
     restoreMocks: true,
     coverage: {
       provider: "v8",
