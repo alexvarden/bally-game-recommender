@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { EnrichedGame } from "../catalogue/schema.ts";
-import { mergeEnrichment } from "./merge.ts";
+import { mergeEnrichment, sameValue } from "./merge.ts";
 import { documents, llmResponse, quote, source } from "./testing.ts";
 
 const meta = { sourceHash: "h", promptVersion: "p", model: "m", enrichedAt: "2026-11-13T00:00:00.000Z" };
@@ -91,5 +91,17 @@ describe("regulated conflicts and quarantine", () => {
     const { game } = merge(llm);
     expect(game.conflicts[0]!.detail).toBe("blurb says low");
     expect(game.suggestedRgFlags[0]!.flag).toBe("high_intensity");
+  });
+});
+
+describe("sameValue", () => {
+  it("treats values equal at the precision documents state them as the same fact", () => {
+    expect(sameValue("hitFrequency", 0.223, 1 / 4.5)).toBe(true);
+    expect(sameValue("hitFrequency", 0.271, 0.2703)).toBe(true);
+    expect(sameValue("hitFrequency", 0.223, 0.3)).toBe(false);
+    expect(sameValue("rtp", 0.9612, 0.96120001)).toBe(true);
+    expect(sameValue("rtp", 0.9482, 0.9513)).toBe(false);
+    expect(sameValue("maxWinMultiplier", 9600, 18400)).toBe(false);
+    expect(sameValue("volatility", "high", "very_high")).toBe(false);
   });
 });

@@ -70,7 +70,22 @@ export function resolveField(field: FieldName, source: SourceGame, overrides: De
 
 // ---------- Regulated conflicts ----------
 
-const sameValue = (a: unknown, b: unknown) => (typeof a === "number" && typeof b === "number" ? Math.abs(a - b) < 1e-4 : a === b);
+/**
+ * Two regulated values agree if they are equal at the precision documents state them. Hit frequency is written
+ * as "1 in 4.5", so 0.223 (feed) and 0.2222 (document) are the same fact; comparing raw floats would quarantine it.
+ */
+const PRECISION: Partial<Record<FieldName, (n: number) => number>> = {
+  hitFrequency: (n) => Math.round((1 / n) * 10) / 10,
+  rtp: (n) => Math.round(n * 10000),
+  minStake: (n) => Math.round(n * 100),
+  maxStake: (n) => Math.round(n * 100),
+};
+
+export function sameValue(field: FieldName, a: unknown, b: unknown): boolean {
+  if (typeof a !== "number" || typeof b !== "number") return a === b;
+  const atPrecision = PRECISION[field] ?? ((n: number) => n);
+  return atPrecision(a) === atPrecision(b);
+}
 
 export interface RegulatedConflict {
   field: FieldName;
@@ -84,7 +99,7 @@ export function regulatedConflicts(source: SourceGame, claims: Record<FieldName,
   return REGULATED.flatMap((field) => {
     const feed = (source.feedValues as Record<string, unknown>)[field];
     const claim = claims[field];
-    if (!isPresent(feed) || !claim?.evidence || sameValue(feed, claim.value)) return [];
+    if (!isPresent(feed) || !claim?.evidence || sameValue(field, feed, claim.value)) return [];
     if (rejectionFor(field, claim.value, claim.evidence, ctx.docs, ctx.suspect)) return [];
     return [{ field, feed, document: claim.value, docId: claim.evidence.docId }];
   });
