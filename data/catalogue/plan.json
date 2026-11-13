@@ -1,0 +1,4646 @@
+{
+  "seed": 20261113,
+  "createdAt": "2026-11-13T12:47:48.994Z",
+  "games": [
+    {
+      "id": "BLY-SLT-0001",
+      "supplierGameCode": "LUC7707",
+      "studio": "Lucky Lantern",
+      "supplyChannel": "aggregator",
+      "aggregator": "Spinlane Hub",
+      "familyId": "FAM-01",
+      "familyRole": "base",
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "sport",
+      "coreMechanic": "multipliers",
+      "payStructure": "paylines",
+      "grid": {
+        "reels": 5,
+        "rows": 3
+      },
+      "paylines": 20,
+      "jackpotType": "none",
+      "volatility": "high",
+      "rtp": 0.9639,
+      "maxWinMultiplier": 13600,
+      "minStake": 0.1,
+      "maxStake": 5,
+      "hitFrequency": 0.223,
+      "currency": "GBP",
+      "brands": [
+        "monopoly_casino",
+        "jackpotjoy",
+        "rainbow_riches_casino"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2020-01-01",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "release_note"
+      ],
+      "defects": [
+        "theme_only_in_prose"
+      ],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0002",
+      "supplierGameCode": "LUC7707-ME",
+      "studio": "Lucky Lantern",
+      "supplyChannel": "aggregator",
+      "aggregator": "Spinlane Hub",
+      "familyId": "FAM-01",
+      "familyRole": "variant",
+      "variantKind": "megaways",
+      "format": "video_slot",
+      "primaryTheme": "sport",
+      "coreMechanic": "multipliers",
+      "payStructure": "megaways",
+      "grid": {
+        "reels": 6,
+        "rows": 7
+      },
+      "paylines": 117649,
+      "jackpotType": "none",
+      "volatility": "very_high",
+      "rtp": 0.9639,
+      "maxWinMultiplier": 27700,
+      "minStake": 0.1,
+      "maxStake": 5,
+      "hitFrequency": 0.223,
+      "currency": "GBP",
+      "brands": [
+        "monopoly_casino",
+        "jackpotjoy",
+        "rainbow_riches_casino"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2021-07-17",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "release_note"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0003",
+      "supplierGameCode": "FJO3929",
+      "studio": "Fjord Games",
+      "supplyChannel": "aggregator",
+      "aggregator": "ReelBridge",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "food_sweets",
+      "coreMechanic": "pick_me_bonus",
+      "payStructure": "paylines",
+      "grid": {
+        "reels": 5,
+        "rows": 4
+      },
+      "paylines": 20,
+      "jackpotType": "none",
+      "volatility": "medium",
+      "rtp": 0.9556,
+      "maxWinMultiplier": 4000,
+      "minStake": 0.2,
+      "maxStake": 5,
+      "hitFrequency": 0.271,
+      "currency": "GBP",
+      "brands": [
+        "monopoly_casino",
+        "virgin_games"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2025-06-11",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "rules_text"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0004",
+      "supplierGameCode": "SAN1955",
+      "studio": "Sandstone Studios",
+      "supplyChannel": "aggregator",
+      "aggregator": "Spinlane Hub",
+      "familyId": "FAM-02",
+      "familyRole": "base",
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "fantasy_magic",
+      "coreMechanic": "cash_collect",
+      "payStructure": "paylines",
+      "grid": {
+        "reels": 5,
+        "rows": 4
+      },
+      "paylines": 10,
+      "jackpotType": "none",
+      "volatility": "high",
+      "rtp": 0.9554,
+      "maxWinMultiplier": 6700,
+      "minStake": 0.25,
+      "maxStake": 5,
+      "hitFrequency": 0.211,
+      "currency": "GBP",
+      "brands": [
+        "rainbow_riches_casino",
+        "virgin_games"
+      ],
+      "jurisdictions": [
+        "GB",
+        "ES"
+      ],
+      "status": "live",
+      "releaseDate": "2025-06-24",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "release_note"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0005",
+      "supplierGameCode": "SAN1955-ME",
+      "studio": "Sandstone Studios",
+      "supplyChannel": "aggregator",
+      "aggregator": "Spinlane Hub",
+      "familyId": "FAM-02",
+      "familyRole": "variant",
+      "variantKind": "megaways",
+      "format": "video_slot",
+      "primaryTheme": "fantasy_magic",
+      "coreMechanic": "cash_collect",
+      "payStructure": "megaways",
+      "grid": {
+        "reels": 6,
+        "rows": 7
+      },
+      "paylines": 117649,
+      "jackpotType": "none",
+      "volatility": "very_high",
+      "rtp": 0.9554,
+      "maxWinMultiplier": 32500,
+      "minStake": 0.25,
+      "maxStake": 5,
+      "hitFrequency": 0.211,
+      "currency": "GBP",
+      "brands": [
+        "rainbow_riches_casino",
+        "virgin_games"
+      ],
+      "jurisdictions": [
+        "GB",
+        "ES"
+      ],
+      "status": "live",
+      "releaseDate": "2022-01-25",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "release_note"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0006",
+      "supplierGameCode": "SAN1955-DE",
+      "studio": "Sandstone Studios",
+      "supplyChannel": "aggregator",
+      "aggregator": "Spinlane Hub",
+      "familyId": "FAM-02",
+      "familyRole": "variant",
+      "variantKind": "deluxe",
+      "format": "video_slot",
+      "primaryTheme": "fantasy_magic",
+      "coreMechanic": "cash_collect",
+      "payStructure": "paylines",
+      "grid": {
+        "reels": 5,
+        "rows": 4
+      },
+      "paylines": 10,
+      "jackpotType": "none",
+      "volatility": "high",
+      "rtp": 0.9554,
+      "maxWinMultiplier": 10050,
+      "minStake": 0.25,
+      "maxStake": 5,
+      "hitFrequency": 0.211,
+      "currency": "GBP",
+      "brands": [
+        "rainbow_riches_casino",
+        "virgin_games"
+      ],
+      "jurisdictions": [
+        "GB",
+        "ES"
+      ],
+      "status": "live",
+      "releaseDate": "2023-11-20",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "release_note"
+      ],
+      "defects": [
+        "theme_only_in_prose"
+      ],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0007",
+      "supplierGameCode": "HAR3242",
+      "studio": "Harbour Lane Games",
+      "supplyChannel": "in_house",
+      "aggregator": null,
+      "familyId": "FAM-03",
+      "familyRole": "base",
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "luxury_vegas",
+      "coreMechanic": "hold_and_win",
+      "payStructure": "paylines",
+      "grid": {
+        "reels": 5,
+        "rows": 3
+      },
+      "paylines": 40,
+      "jackpotType": "fixed",
+      "volatility": "high",
+      "rtp": 0.9466,
+      "maxWinMultiplier": 11600,
+      "minStake": 0.1,
+      "maxStake": 5,
+      "hitFrequency": 0.239,
+      "currency": "GBP",
+      "brands": [
+        "jackpotjoy",
+        "monopoly_casino",
+        "rainbow_riches_casino"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2023-09-27",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "rules_text",
+        "editorial"
+      ],
+      "defects": [
+        "feed_omits_feature"
+      ],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0008",
+      "supplierGameCode": "HAR3242-JA",
+      "studio": "Harbour Lane Games",
+      "supplyChannel": "in_house",
+      "aggregator": null,
+      "familyId": "FAM-03",
+      "familyRole": "variant",
+      "variantKind": "jackpot",
+      "format": "video_slot",
+      "primaryTheme": "luxury_vegas",
+      "coreMechanic": "hold_and_win",
+      "payStructure": "paylines",
+      "grid": {
+        "reels": 5,
+        "rows": 3
+      },
+      "paylines": 40,
+      "jackpotType": "network_progressive",
+      "volatility": "high",
+      "rtp": 0.9266,
+      "maxWinMultiplier": 11600,
+      "minStake": 0.1,
+      "maxStake": 5,
+      "hitFrequency": 0.239,
+      "currency": "GBP",
+      "brands": [
+        "jackpotjoy",
+        "monopoly_casino",
+        "rainbow_riches_casino"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2021-01-23",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "rules_text",
+        "editorial"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0009",
+      "supplierGameCode": "HAR3242-ME",
+      "studio": "Harbour Lane Games",
+      "supplyChannel": "in_house",
+      "aggregator": null,
+      "familyId": "FAM-03",
+      "familyRole": "variant",
+      "variantKind": "megaways",
+      "format": "video_slot",
+      "primaryTheme": "luxury_vegas",
+      "coreMechanic": "hold_and_win",
+      "payStructure": "megaways",
+      "grid": {
+        "reels": 6,
+        "rows": 7
+      },
+      "paylines": 117649,
+      "jackpotType": "fixed",
+      "volatility": "very_high",
+      "rtp": 0.9466,
+      "maxWinMultiplier": 22300,
+      "minStake": 0.1,
+      "maxStake": 5,
+      "hitFrequency": 0.239,
+      "currency": "GBP",
+      "brands": [
+        "jackpotjoy",
+        "monopoly_casino",
+        "rainbow_riches_casino"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2022-10-27",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "rules_text",
+        "editorial"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0010",
+      "supplierGameCode": "HAR6313",
+      "studio": "Harbour Lane Games",
+      "supplyChannel": "in_house",
+      "aggregator": null,
+      "familyId": "FAM-04",
+      "familyRole": "base",
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "irish_luck",
+      "coreMechanic": "sticky_wilds",
+      "payStructure": "paylines",
+      "grid": {
+        "reels": 5,
+        "rows": 4
+      },
+      "paylines": 40,
+      "jackpotType": "none",
+      "volatility": "high",
+      "rtp": 0.9431,
+      "maxWinMultiplier": 12100,
+      "minStake": 0.2,
+      "maxStake": 50,
+      "hitFrequency": null,
+      "currency": "USD",
+      "brands": [
+        "bally_casino_us"
+      ],
+      "jurisdictions": [
+        "US-NJ",
+        "US-PA"
+      ],
+      "status": "live",
+      "releaseDate": "2019-11-15",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": true,
+      "documents": [
+        "rules_text",
+        "editorial"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0011",
+      "supplierGameCode": "HAR6313-DE",
+      "studio": "Harbour Lane Games",
+      "supplyChannel": "in_house",
+      "aggregator": null,
+      "familyId": "FAM-04",
+      "familyRole": "variant",
+      "variantKind": "deluxe",
+      "format": "video_slot",
+      "primaryTheme": "irish_luck",
+      "coreMechanic": "sticky_wilds",
+      "payStructure": "paylines",
+      "grid": {
+        "reels": 5,
+        "rows": 4
+      },
+      "paylines": 40,
+      "jackpotType": "none",
+      "volatility": "high",
+      "rtp": 0.9431,
+      "maxWinMultiplier": 18150,
+      "minStake": 0.2,
+      "maxStake": 50,
+      "hitFrequency": null,
+      "currency": "USD",
+      "brands": [
+        "bally_casino_us"
+      ],
+      "jurisdictions": [
+        "US-NJ",
+        "US-PA"
+      ],
+      "status": "live",
+      "releaseDate": "2024-07-29",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": true,
+      "documents": [
+        "rules_text",
+        "editorial"
+      ],
+      "defects": [
+        "theme_only_in_prose"
+      ],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0012",
+      "supplierGameCode": "HAR6313-JA",
+      "studio": "Harbour Lane Games",
+      "supplyChannel": "in_house",
+      "aggregator": null,
+      "familyId": "FAM-04",
+      "familyRole": "variant",
+      "variantKind": "jackpot",
+      "format": "video_slot",
+      "primaryTheme": "irish_luck",
+      "coreMechanic": "sticky_wilds",
+      "payStructure": "paylines",
+      "grid": {
+        "reels": 5,
+        "rows": 4
+      },
+      "paylines": 40,
+      "jackpotType": "network_progressive",
+      "volatility": "high",
+      "rtp": 0.9231,
+      "maxWinMultiplier": 12100,
+      "minStake": 0.2,
+      "maxStake": 50,
+      "hitFrequency": null,
+      "currency": "USD",
+      "brands": [
+        "bally_casino_us"
+      ],
+      "jurisdictions": [
+        "US-NJ",
+        "US-PA"
+      ],
+      "status": "live",
+      "releaseDate": "2022-05-18",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": true,
+      "documents": [
+        "rules_text",
+        "editorial"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0013",
+      "supplierGameCode": "FJO9866",
+      "studio": "Fjord Games",
+      "supplyChannel": "aggregator",
+      "aggregator": "Spinlane Hub",
+      "familyId": "FAM-05",
+      "familyRole": "base",
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "norse_myth",
+      "coreMechanic": "free_spins",
+      "payStructure": "ways",
+      "grid": {
+        "reels": 5,
+        "rows": 3
+      },
+      "paylines": 243,
+      "jackpotType": "none",
+      "volatility": "very_high",
+      "rtp": 0.9514,
+      "maxWinMultiplier": 41600,
+      "minStake": 0.1,
+      "maxStake": 5,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "rainbow_riches_casino",
+        "monopoly_casino",
+        "virgin_games",
+        "jackpotjoy"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2025-05-24",
+      "rgFlags": [
+        "high_intensity"
+      ],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "release_note"
+      ],
+      "defects": [
+        "volatility_conflict"
+      ],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0014",
+      "supplierGameCode": "FJO9866-JA",
+      "studio": "Fjord Games",
+      "supplyChannel": "aggregator",
+      "aggregator": "Spinlane Hub",
+      "familyId": "FAM-05",
+      "familyRole": "variant",
+      "variantKind": "jackpot",
+      "format": "video_slot",
+      "primaryTheme": "norse_myth",
+      "coreMechanic": "free_spins",
+      "payStructure": "ways",
+      "grid": {
+        "reels": 5,
+        "rows": 3
+      },
+      "paylines": 243,
+      "jackpotType": "network_progressive",
+      "volatility": "very_high",
+      "rtp": 0.9314,
+      "maxWinMultiplier": 41600,
+      "minStake": 0.1,
+      "maxStake": 5,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "rainbow_riches_casino",
+        "monopoly_casino",
+        "virgin_games",
+        "jackpotjoy"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2023-10-12",
+      "rgFlags": [
+        "high_intensity"
+      ],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0015",
+      "supplierGameCode": "FJO9866-ME",
+      "studio": "Fjord Games",
+      "supplyChannel": "aggregator",
+      "aggregator": "Spinlane Hub",
+      "familyId": "FAM-05",
+      "familyRole": "variant",
+      "variantKind": "megaways",
+      "format": "video_slot",
+      "primaryTheme": "norse_myth",
+      "coreMechanic": "free_spins",
+      "payStructure": "megaways",
+      "grid": {
+        "reels": 6,
+        "rows": 7
+      },
+      "paylines": 117649,
+      "jackpotType": "none",
+      "volatility": "very_high",
+      "rtp": 0.9514,
+      "maxWinMultiplier": 46100,
+      "minStake": 0.1,
+      "maxStake": 5,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "rainbow_riches_casino",
+        "monopoly_casino",
+        "virgin_games",
+        "jackpotjoy"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2023-08-05",
+      "rgFlags": [
+        "high_intensity"
+      ],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0016",
+      "supplierGameCode": "RED4085",
+      "studio": "Red Kite Gaming",
+      "supplyChannel": "aggregator",
+      "aggregator": "Spinlane Hub",
+      "familyId": "FAM-06",
+      "familyRole": "base",
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "wild_west",
+      "coreMechanic": "expanding_wilds",
+      "payStructure": "paylines",
+      "grid": {
+        "reels": 5,
+        "rows": 3
+      },
+      "paylines": 20,
+      "jackpotType": "none",
+      "volatility": "high",
+      "rtp": 0.9423,
+      "maxWinMultiplier": 6200,
+      "minStake": 0.1,
+      "maxStake": 5,
+      "hitFrequency": 0.245,
+      "currency": "GBP",
+      "brands": [
+        "jackpotjoy",
+        "monopoly_casino",
+        "rainbow_riches_casino",
+        "virgin_games"
+      ],
+      "jurisdictions": [
+        "GB",
+        "ES"
+      ],
+      "status": "live",
+      "releaseDate": "2019-09-21",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "rules_text"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0017",
+      "supplierGameCode": "RED4085-DE",
+      "studio": "Red Kite Gaming",
+      "supplyChannel": "aggregator",
+      "aggregator": "Spinlane Hub",
+      "familyId": "FAM-06",
+      "familyRole": "variant",
+      "variantKind": "deluxe",
+      "format": "video_slot",
+      "primaryTheme": "wild_west",
+      "coreMechanic": "expanding_wilds",
+      "payStructure": "paylines",
+      "grid": {
+        "reels": 5,
+        "rows": 3
+      },
+      "paylines": 20,
+      "jackpotType": "none",
+      "volatility": "high",
+      "rtp": 0.9423,
+      "maxWinMultiplier": 9300,
+      "minStake": 0.1,
+      "maxStake": 5,
+      "hitFrequency": 0.245,
+      "currency": "GBP",
+      "brands": [
+        "jackpotjoy",
+        "monopoly_casino",
+        "rainbow_riches_casino",
+        "virgin_games"
+      ],
+      "jurisdictions": [
+        "GB",
+        "ES"
+      ],
+      "status": "live",
+      "releaseDate": "2022-09-07",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "rules_text"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0018",
+      "supplierGameCode": "HAR7695",
+      "studio": "Harbour Lane Games",
+      "supplyChannel": "in_house",
+      "aggregator": null,
+      "familyId": "FAM-07",
+      "familyRole": "base",
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "adventure_exploration",
+      "coreMechanic": "wheel_bonus",
+      "payStructure": "paylines",
+      "grid": {
+        "reels": 5,
+        "rows": 3
+      },
+      "paylines": 40,
+      "jackpotType": "none",
+      "volatility": "high",
+      "rtp": 0.9482,
+      "maxWinMultiplier": 9600,
+      "minStake": 0.1,
+      "maxStake": 5,
+      "hitFrequency": 0.217,
+      "currency": "GBP",
+      "brands": [
+        "rainbow_riches_casino",
+        "monopoly_casino",
+        "jackpotjoy",
+        "bally_casino_us"
+      ],
+      "jurisdictions": [
+        "GB",
+        "US-NJ",
+        "US-PA"
+      ],
+      "status": "live",
+      "releaseDate": "2023-11-16",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "rules_text",
+        "editorial",
+        "marketing_blurb"
+      ],
+      "defects": [
+        "wrong_game_rules"
+      ],
+      "relatedGameId": "BLY-SLT-0038"
+    },
+    {
+      "id": "BLY-SLT-0019",
+      "supplierGameCode": "HAR7695-ME",
+      "studio": "Harbour Lane Games",
+      "supplyChannel": "in_house",
+      "aggregator": null,
+      "familyId": "FAM-07",
+      "familyRole": "variant",
+      "variantKind": "megaways",
+      "format": "video_slot",
+      "primaryTheme": "adventure_exploration",
+      "coreMechanic": "wheel_bonus",
+      "payStructure": "megaways",
+      "grid": {
+        "reels": 6,
+        "rows": 7
+      },
+      "paylines": 117649,
+      "jackpotType": "none",
+      "volatility": "very_high",
+      "rtp": 0.9482,
+      "maxWinMultiplier": 37000,
+      "minStake": 0.1,
+      "maxStake": 5,
+      "hitFrequency": 0.217,
+      "currency": "GBP",
+      "brands": [
+        "rainbow_riches_casino",
+        "monopoly_casino",
+        "jackpotjoy",
+        "bally_casino_us"
+      ],
+      "jurisdictions": [
+        "GB",
+        "US-NJ",
+        "US-PA"
+      ],
+      "status": "live",
+      "releaseDate": "2023-04-10",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "rules_text",
+        "editorial",
+        "marketing_blurb"
+      ],
+      "defects": [
+        "truncated_rules"
+      ],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0020",
+      "supplierGameCode": "HAR7695-JA",
+      "studio": "Harbour Lane Games",
+      "supplyChannel": "in_house",
+      "aggregator": null,
+      "familyId": "FAM-07",
+      "familyRole": "variant",
+      "variantKind": "jackpot",
+      "format": "video_slot",
+      "primaryTheme": "adventure_exploration",
+      "coreMechanic": "wheel_bonus",
+      "payStructure": "paylines",
+      "grid": {
+        "reels": 5,
+        "rows": 3
+      },
+      "paylines": 40,
+      "jackpotType": "network_progressive",
+      "volatility": "high",
+      "rtp": 0.9282,
+      "maxWinMultiplier": 9600,
+      "minStake": 0.1,
+      "maxStake": 5,
+      "hitFrequency": 0.217,
+      "currency": "GBP",
+      "brands": [
+        "rainbow_riches_casino",
+        "monopoly_casino",
+        "jackpotjoy",
+        "bally_casino_us"
+      ],
+      "jurisdictions": [
+        "GB",
+        "US-NJ",
+        "US-PA"
+      ],
+      "status": "live",
+      "releaseDate": "2026-06-30",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "rules_text",
+        "editorial",
+        "marketing_blurb"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0021",
+      "supplierGameCode": "FJO6406",
+      "studio": "Fjord Games",
+      "supplyChannel": "aggregator",
+      "aggregator": "Spinlane Hub",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "asian_fortune",
+      "coreMechanic": "cascades",
+      "payStructure": "cluster_pays",
+      "grid": {
+        "reels": 7,
+        "rows": 7
+      },
+      "paylines": null,
+      "jackpotType": "none",
+      "volatility": "very_high",
+      "rtp": 0.94,
+      "maxWinMultiplier": 30300,
+      "minStake": 0.2,
+      "maxStake": 200,
+      "hitFrequency": null,
+      "currency": "USD",
+      "brands": [
+        "bally_casino_us"
+      ],
+      "jurisdictions": [
+        "US-NJ",
+        "US-PA"
+      ],
+      "status": "live",
+      "releaseDate": "2020-07-17",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": true,
+      "documents": [
+        "marketing_blurb",
+        "rules_text"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0022",
+      "supplierGameCode": "WIL4724",
+      "studio": "Wildgrove",
+      "supplyChannel": "aggregator",
+      "aggregator": "ReelBridge",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "space_scifi",
+      "coreMechanic": "free_spins",
+      "payStructure": "paylines",
+      "grid": {
+        "reels": 5,
+        "rows": 4
+      },
+      "paylines": 40,
+      "jackpotType": "none",
+      "volatility": "low",
+      "rtp": 0.9443,
+      "maxWinMultiplier": 1100,
+      "minStake": 0.2,
+      "maxStake": 100,
+      "hitFrequency": 0.335,
+      "currency": "USD",
+      "brands": [
+        "bally_casino_us"
+      ],
+      "jurisdictions": [
+        "US-NJ",
+        "US-PA"
+      ],
+      "status": "live",
+      "releaseDate": "2023-11-17",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": true,
+      "documents": [
+        "marketing_blurb"
+      ],
+      "defects": [
+        "thin_record"
+      ],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0023",
+      "supplierGameCode": "STA2353",
+      "studio": "Starling Reels",
+      "supplyChannel": "aggregator",
+      "aggregator": "Spinlane Hub",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "seasonal_festive",
+      "coreMechanic": "pick_me_bonus",
+      "payStructure": "ways",
+      "grid": {
+        "reels": 5,
+        "rows": 3
+      },
+      "paylines": 243,
+      "jackpotType": "none",
+      "volatility": "medium",
+      "rtp": 0.944,
+      "maxWinMultiplier": 3900,
+      "minStake": 0.1,
+      "maxStake": 5,
+      "hitFrequency": 0.27,
+      "currency": "GBP",
+      "brands": [
+        "jackpotjoy",
+        "bally_casino_us"
+      ],
+      "jurisdictions": [
+        "GB",
+        "ES",
+        "US-NJ",
+        "US-PA"
+      ],
+      "status": "live",
+      "releaseDate": "2020-01-31",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "release_note"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0024",
+      "supplierGameCode": "SAN3483",
+      "studio": "Sandstone Studios",
+      "supplyChannel": "aggregator",
+      "aggregator": "ReelBridge",
+      "familyId": "FAM-08",
+      "familyRole": "base",
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "gems_treasure",
+      "coreMechanic": "multipliers",
+      "payStructure": "ways",
+      "grid": {
+        "reels": 5,
+        "rows": 3
+      },
+      "paylines": 243,
+      "jackpotType": "local_progressive",
+      "volatility": "high",
+      "rtp": 0.9476,
+      "maxWinMultiplier": 12000,
+      "minStake": 0.25,
+      "maxStake": 5,
+      "hitFrequency": 0.259,
+      "currency": "GBP",
+      "brands": [
+        "monopoly_casino",
+        "jackpotjoy"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2026-05-13",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "rules_text"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0025",
+      "supplierGameCode": "SAN3483-ME",
+      "studio": "Sandstone Studios",
+      "supplyChannel": "aggregator",
+      "aggregator": "ReelBridge",
+      "familyId": "FAM-08",
+      "familyRole": "variant",
+      "variantKind": "megaways",
+      "format": "video_slot",
+      "primaryTheme": "gems_treasure",
+      "coreMechanic": "multipliers",
+      "payStructure": "megaways",
+      "grid": {
+        "reels": 6,
+        "rows": 7
+      },
+      "paylines": 117649,
+      "jackpotType": "local_progressive",
+      "volatility": "very_high",
+      "rtp": 0.9476,
+      "maxWinMultiplier": 27300,
+      "minStake": 0.25,
+      "maxStake": 5,
+      "hitFrequency": 0.259,
+      "currency": "GBP",
+      "brands": [
+        "monopoly_casino",
+        "jackpotjoy"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2024-01-31",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "rules_text"
+      ],
+      "defects": [
+        "truncated_rules"
+      ],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0026",
+      "supplierGameCode": "FJO6308",
+      "studio": "Fjord Games",
+      "supplyChannel": "aggregator",
+      "aggregator": "ReelBridge",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "fruit_classic",
+      "coreMechanic": "cascades",
+      "payStructure": "ways",
+      "grid": {
+        "reels": 5,
+        "rows": 3
+      },
+      "paylines": 243,
+      "jackpotType": "none",
+      "volatility": "medium",
+      "rtp": 0.9442,
+      "maxWinMultiplier": 3000,
+      "minStake": 0.1,
+      "maxStake": 5,
+      "hitFrequency": 0.279,
+      "currency": "GBP",
+      "brands": [
+        "rainbow_riches_casino",
+        "jackpotjoy",
+        "monopoly_casino"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2019-12-11",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb"
+      ],
+      "defects": [
+        "thin_record"
+      ],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0027",
+      "supplierGameCode": "HAR4220",
+      "studio": "Harbour Lane Games",
+      "supplyChannel": "in_house",
+      "aggregator": null,
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "animals_wildlife",
+      "coreMechanic": "expanding_wilds",
+      "payStructure": "paylines",
+      "grid": {
+        "reels": 5,
+        "rows": 3
+      },
+      "paylines": 20,
+      "jackpotType": "none",
+      "volatility": "very_high",
+      "rtp": 0.9444,
+      "maxWinMultiplier": 39000,
+      "minStake": 0.1,
+      "maxStake": 5,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "rainbow_riches_casino",
+        "monopoly_casino"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2021-04-21",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "rules_text",
+        "editorial"
+      ],
+      "defects": [
+        "feed_omits_feature"
+      ],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0028",
+      "supplierGameCode": "LUC9088",
+      "studio": "Lucky Lantern",
+      "supplyChannel": "aggregator",
+      "aggregator": "Spinlane Hub",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "tv_gameshow",
+      "coreMechanic": "hold_and_win",
+      "payStructure": "ways",
+      "grid": {
+        "reels": 5,
+        "rows": 3
+      },
+      "paylines": 243,
+      "jackpotType": "fixed",
+      "volatility": "high",
+      "rtp": 0.9481,
+      "maxWinMultiplier": 12500,
+      "minStake": 0.25,
+      "maxStake": 50,
+      "hitFrequency": 0.202,
+      "currency": "USD",
+      "brands": [
+        "bally_casino_us"
+      ],
+      "jurisdictions": [
+        "US-NJ",
+        "US-PA"
+      ],
+      "status": "live",
+      "releaseDate": "2025-01-26",
+      "rgFlags": [],
+      "hasLicensedIp": true,
+      "bonusBuyAllowed": true,
+      "documents": [
+        "marketing_blurb",
+        "release_note"
+      ],
+      "defects": [
+        "volatility_conflict"
+      ],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0029",
+      "supplierGameCode": "HAR3672",
+      "studio": "Harbour Lane Games",
+      "supplyChannel": "in_house",
+      "aggregator": null,
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "ancient_egypt",
+      "coreMechanic": "cash_collect",
+      "payStructure": "ways",
+      "grid": {
+        "reels": 5,
+        "rows": 3
+      },
+      "paylines": 243,
+      "jackpotType": "none",
+      "volatility": "low",
+      "rtp": 0.9423,
+      "maxWinMultiplier": 700,
+      "minStake": 0.2,
+      "maxStake": 5,
+      "hitFrequency": 0.387,
+      "currency": "GBP",
+      "brands": [
+        "rainbow_riches_casino"
+      ],
+      "jurisdictions": [
+        "GB",
+        "ES"
+      ],
+      "status": "retired",
+      "releaseDate": "2025-01-01",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "rules_text",
+        "editorial"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0030",
+      "supplierGameCode": "NOR6508",
+      "studio": "Northlight Studios",
+      "supplyChannel": "in_house",
+      "aggregator": null,
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "fishing",
+      "coreMechanic": "wheel_bonus",
+      "payStructure": "paylines",
+      "grid": {
+        "reels": 5,
+        "rows": 3
+      },
+      "paylines": 20,
+      "jackpotType": "none",
+      "volatility": "high",
+      "rtp": 0.9444,
+      "maxWinMultiplier": 9700,
+      "minStake": 0.25,
+      "maxStake": 5,
+      "hitFrequency": 0.24,
+      "currency": "GBP",
+      "brands": [
+        "jackpotjoy",
+        "monopoly_casino",
+        "rainbow_riches_casino",
+        "bally_casino_us"
+      ],
+      "jurisdictions": [
+        "GB",
+        "US-NJ",
+        "US-PA"
+      ],
+      "status": "live",
+      "releaseDate": "2022-06-24",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "rules_text",
+        "editorial"
+      ],
+      "defects": [
+        "truncated_rules"
+      ],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0031",
+      "supplierGameCode": "FJO5850",
+      "studio": "Fjord Games",
+      "supplyChannel": "aggregator",
+      "aggregator": "ReelBridge",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "horror_halloween",
+      "coreMechanic": "sticky_wilds",
+      "payStructure": "ways",
+      "grid": {
+        "reels": 5,
+        "rows": 3
+      },
+      "paylines": 243,
+      "jackpotType": "none",
+      "volatility": "low",
+      "rtp": 0.9426,
+      "maxWinMultiplier": 1600,
+      "minStake": 0.1,
+      "maxStake": 5,
+      "hitFrequency": 0.376,
+      "currency": "GBP",
+      "brands": [
+        "virgin_games",
+        "jackpotjoy"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2022-10-05",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "rules_text",
+        "release_note"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0032",
+      "supplierGameCode": "STA5085",
+      "studio": "Starling Reels",
+      "supplyChannel": "aggregator",
+      "aggregator": "Spinlane Hub",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "music_party",
+      "coreMechanic": "free_spins",
+      "payStructure": "paylines",
+      "grid": {
+        "reels": 5,
+        "rows": 3
+      },
+      "paylines": 25,
+      "jackpotType": "none",
+      "volatility": "medium",
+      "rtp": 0.9493,
+      "maxWinMultiplier": 4500,
+      "minStake": 0.25,
+      "maxStake": 5,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "rainbow_riches_casino",
+        "monopoly_casino",
+        "virgin_games"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2025-09-03",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "rules_text",
+        "release_note"
+      ],
+      "defects": [
+        "feed_omits_feature"
+      ],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0033",
+      "supplierGameCode": "BLU1868",
+      "studio": "Bluefin Interactive",
+      "supplyChannel": "aggregator",
+      "aggregator": "ReelBridge",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "greek_myth",
+      "coreMechanic": "sticky_wilds",
+      "payStructure": "paylines",
+      "grid": {
+        "reels": 5,
+        "rows": 3
+      },
+      "paylines": 20,
+      "jackpotType": "none",
+      "volatility": "medium",
+      "rtp": 0.9553,
+      "maxWinMultiplier": 3600,
+      "minStake": 0.1,
+      "maxStake": 5,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "rainbow_riches_casino",
+        "virgin_games"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2025-09-21",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0034",
+      "supplierGameCode": "LUC3734",
+      "studio": "Lucky Lantern",
+      "supplyChannel": "aggregator",
+      "aggregator": "Spinlane Hub",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "fishing",
+      "coreMechanic": "multipliers",
+      "payStructure": "ways",
+      "grid": {
+        "reels": 5,
+        "rows": 3
+      },
+      "paylines": 243,
+      "jackpotType": "none",
+      "volatility": "high",
+      "rtp": 0.9575,
+      "maxWinMultiplier": 11600,
+      "minStake": 0.2,
+      "maxStake": 5,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "jackpotjoy",
+        "monopoly_casino",
+        "virgin_games",
+        "rainbow_riches_casino"
+      ],
+      "jurisdictions": [
+        "GB",
+        "ES"
+      ],
+      "status": "live",
+      "releaseDate": "2021-01-22",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "rules_text",
+        "release_note"
+      ],
+      "defects": [
+        "feed_omits_feature"
+      ],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0035",
+      "supplierGameCode": "SAN8898",
+      "studio": "Sandstone Studios",
+      "supplyChannel": "aggregator",
+      "aggregator": "Spinlane Hub",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "irish_luck",
+      "coreMechanic": "cascades",
+      "payStructure": "cluster_pays",
+      "grid": {
+        "reels": 7,
+        "rows": 7
+      },
+      "paylines": null,
+      "jackpotType": "none",
+      "volatility": "low",
+      "rtp": 0.9604,
+      "maxWinMultiplier": 700,
+      "minStake": 0.1,
+      "maxStake": 5,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "jackpotjoy",
+        "virgin_games",
+        "rainbow_riches_casino"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2019-05-14",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "rules_text",
+        "release_note"
+      ],
+      "defects": [
+        "truncated_rules"
+      ],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0036",
+      "supplierGameCode": "WIL2404",
+      "studio": "Wildgrove",
+      "supplyChannel": "aggregator",
+      "aggregator": "ReelBridge",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "tv_gameshow",
+      "coreMechanic": "hold_and_win",
+      "payStructure": "ways",
+      "grid": {
+        "reels": 5,
+        "rows": 4
+      },
+      "paylines": 1024,
+      "jackpotType": "none",
+      "volatility": "medium",
+      "rtp": 0.9417,
+      "maxWinMultiplier": 2000,
+      "minStake": 0.25,
+      "maxStake": 5,
+      "hitFrequency": 0.309,
+      "currency": "GBP",
+      "brands": [
+        "monopoly_casino",
+        "jackpotjoy",
+        "virgin_games",
+        "rainbow_riches_casino"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2020-05-16",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "release_note"
+      ],
+      "defects": [
+        "volatility_conflict"
+      ],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0037",
+      "supplierGameCode": "FJO8045",
+      "studio": "Fjord Games",
+      "supplyChannel": "aggregator",
+      "aggregator": "ReelBridge",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "adventure_exploration",
+      "coreMechanic": "cash_collect",
+      "payStructure": "paylines",
+      "grid": {
+        "reels": 5,
+        "rows": 3
+      },
+      "paylines": 25,
+      "jackpotType": "none",
+      "volatility": "medium",
+      "rtp": 0.9493,
+      "maxWinMultiplier": 2400,
+      "minStake": 0.1,
+      "maxStake": 5,
+      "hitFrequency": 0.272,
+      "currency": "GBP",
+      "brands": [
+        "rainbow_riches_casino",
+        "monopoly_casino"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2019-11-06",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0038",
+      "supplierGameCode": "NOR3448",
+      "studio": "Northlight Studios",
+      "supplyChannel": "in_house",
+      "aggregator": null,
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "gems_treasure",
+      "coreMechanic": "expanding_wilds",
+      "payStructure": "ways",
+      "grid": {
+        "reels": 5,
+        "rows": 3
+      },
+      "paylines": 243,
+      "jackpotType": "none",
+      "volatility": "very_high",
+      "rtp": 0.9513,
+      "maxWinMultiplier": 18400,
+      "minStake": 0.1,
+      "maxStake": 5,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "jackpotjoy"
+      ],
+      "jurisdictions": [
+        "GB",
+        "ES"
+      ],
+      "status": "live",
+      "releaseDate": "2019-05-23",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "rules_text",
+        "marketing_blurb"
+      ],
+      "defects": [
+        "feed_omits_feature"
+      ],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0039",
+      "supplierGameCode": "FJO1358",
+      "studio": "Fjord Games",
+      "supplyChannel": "aggregator",
+      "aggregator": "ReelBridge",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "greek_myth",
+      "coreMechanic": "pick_me_bonus",
+      "payStructure": "megaways",
+      "grid": {
+        "reels": 6,
+        "rows": 7
+      },
+      "paylines": 117649,
+      "jackpotType": "none",
+      "volatility": "high",
+      "rtp": 0.9665,
+      "maxWinMultiplier": 13000,
+      "minStake": 0.2,
+      "maxStake": 5,
+      "hitFrequency": 0.204,
+      "currency": "GBP",
+      "brands": [
+        "jackpotjoy",
+        "virgin_games",
+        "monopoly_casino"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2025-03-12",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "rules_text",
+        "release_note"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0040",
+      "supplierGameCode": "COP1569",
+      "studio": "Copperline",
+      "supplyChannel": "aggregator",
+      "aggregator": "Spinlane Hub",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "music_party",
+      "coreMechanic": "wheel_bonus",
+      "payStructure": "ways",
+      "grid": {
+        "reels": 5,
+        "rows": 3
+      },
+      "paylines": 243,
+      "jackpotType": "none",
+      "volatility": "low",
+      "rtp": 0.9501,
+      "maxWinMultiplier": 500,
+      "minStake": 0.2,
+      "maxStake": 5,
+      "hitFrequency": 0.38,
+      "currency": "GBP",
+      "brands": [
+        "jackpotjoy",
+        "monopoly_casino"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2023-08-01",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0041",
+      "supplierGameCode": "BLU9556",
+      "studio": "Bluefin Interactive",
+      "supplyChannel": "aggregator",
+      "aggregator": "ReelBridge",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "animals_wildlife",
+      "coreMechanic": "hold_and_win",
+      "payStructure": "ways",
+      "grid": {
+        "reels": 5,
+        "rows": 4
+      },
+      "paylines": 1024,
+      "jackpotType": "fixed",
+      "volatility": "high",
+      "rtp": 0.9561,
+      "maxWinMultiplier": 13200,
+      "minStake": 0.1,
+      "maxStake": 5,
+      "hitFrequency": 0.246,
+      "currency": "GBP",
+      "brands": [
+        "rainbow_riches_casino",
+        "monopoly_casino",
+        "bally_casino_us"
+      ],
+      "jurisdictions": [
+        "GB",
+        "US-NJ",
+        "US-PA"
+      ],
+      "status": "suspended",
+      "releaseDate": "2026-04-01",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "rules_text"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0042",
+      "supplierGameCode": "SAN6713",
+      "studio": "Sandstone Studios",
+      "supplyChannel": "aggregator",
+      "aggregator": "ReelBridge",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "fantasy_magic",
+      "coreMechanic": "wheel_bonus",
+      "payStructure": "ways",
+      "grid": {
+        "reels": 5,
+        "rows": 3
+      },
+      "paylines": 243,
+      "jackpotType": "none",
+      "volatility": "high",
+      "rtp": 0.9526,
+      "maxWinMultiplier": 14000,
+      "minStake": 0.2,
+      "maxStake": 5,
+      "hitFrequency": 0.257,
+      "currency": "GBP",
+      "brands": [
+        "monopoly_casino",
+        "virgin_games",
+        "jackpotjoy"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2020-10-10",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "rules_text",
+        "release_note"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0043",
+      "supplierGameCode": "NOR9268",
+      "studio": "Northlight Studios",
+      "supplyChannel": "in_house",
+      "aggregator": null,
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "luxury_vegas",
+      "coreMechanic": "expanding_wilds",
+      "payStructure": "megaways",
+      "grid": {
+        "reels": 6,
+        "rows": 7
+      },
+      "paylines": 117649,
+      "jackpotType": "none",
+      "volatility": "medium",
+      "rtp": 0.9561,
+      "maxWinMultiplier": 3300,
+      "minStake": 0.1,
+      "maxStake": 5,
+      "hitFrequency": 0.268,
+      "currency": "GBP",
+      "brands": [
+        "virgin_games",
+        "jackpotjoy"
+      ],
+      "jurisdictions": [
+        "GB",
+        "ES"
+      ],
+      "status": "live",
+      "releaseDate": "2024-12-13",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "rules_text",
+        "editorial",
+        "marketing_blurb",
+        "release_note"
+      ],
+      "defects": [
+        "volatility_conflict"
+      ],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0044",
+      "supplierGameCode": "LUC6797",
+      "studio": "Lucky Lantern",
+      "supplyChannel": "aggregator",
+      "aggregator": "Spinlane Hub",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "animals_wildlife",
+      "coreMechanic": "pick_me_bonus",
+      "payStructure": "paylines",
+      "grid": {
+        "reels": 5,
+        "rows": 4
+      },
+      "paylines": 20,
+      "jackpotType": "none",
+      "volatility": "low",
+      "rtp": 0.956,
+      "maxWinMultiplier": 1200,
+      "minStake": 0.2,
+      "maxStake": 5,
+      "hitFrequency": 0.38,
+      "currency": "GBP",
+      "brands": [
+        "rainbow_riches_casino",
+        "virgin_games",
+        "monopoly_casino",
+        "jackpotjoy",
+        "bally_casino_us"
+      ],
+      "jurisdictions": [
+        "GB",
+        "ES",
+        "US-NJ",
+        "US-PA"
+      ],
+      "status": "live",
+      "releaseDate": "2022-01-18",
+      "rgFlags": [
+        "may_appeal_to_under_18s"
+      ],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb"
+      ],
+      "defects": [
+        "rg_sensitive_thin"
+      ],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0045",
+      "supplierGameCode": "LUC8013",
+      "studio": "Lucky Lantern",
+      "supplyChannel": "aggregator",
+      "aggregator": "Spinlane Hub",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "animals_wildlife",
+      "coreMechanic": "cash_collect",
+      "payStructure": "ways",
+      "grid": {
+        "reels": 5,
+        "rows": 3
+      },
+      "paylines": 243,
+      "jackpotType": "none",
+      "volatility": "high",
+      "rtp": 0.9658,
+      "maxWinMultiplier": 11400,
+      "minStake": 0.1,
+      "maxStake": 5,
+      "hitFrequency": 0.244,
+      "currency": "GBP",
+      "brands": [
+        "monopoly_casino",
+        "rainbow_riches_casino",
+        "jackpotjoy",
+        "virgin_games"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2024-06-23",
+      "rgFlags": [
+        "may_appeal_to_under_18s"
+      ],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb"
+      ],
+      "defects": [
+        "rg_sensitive_thin"
+      ],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0046",
+      "supplierGameCode": "STA3620",
+      "studio": "Starling Reels",
+      "supplyChannel": "aggregator",
+      "aggregator": "ReelBridge",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "wild_west",
+      "coreMechanic": "multipliers",
+      "payStructure": "paylines",
+      "grid": {
+        "reels": 5,
+        "rows": 4
+      },
+      "paylines": 10,
+      "jackpotType": "none",
+      "volatility": "high",
+      "rtp": 0.9517,
+      "maxWinMultiplier": 11300,
+      "minStake": 0.25,
+      "maxStake": 5,
+      "hitFrequency": 0.227,
+      "currency": "GBP",
+      "brands": [
+        "jackpotjoy",
+        "virgin_games",
+        "rainbow_riches_casino",
+        "monopoly_casino"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2025-09-16",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "rules_text",
+        "release_note"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0047",
+      "supplierGameCode": "PAR1182",
+      "studio": "Paragon Play",
+      "supplyChannel": "aggregator",
+      "aggregator": "ReelBridge",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "fruit_classic",
+      "coreMechanic": "free_spins",
+      "payStructure": "paylines",
+      "grid": {
+        "reels": 5,
+        "rows": 4
+      },
+      "paylines": 10,
+      "jackpotType": "none",
+      "volatility": "medium",
+      "rtp": 0.9403,
+      "maxWinMultiplier": 2500,
+      "minStake": 0.1,
+      "maxStake": 5,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "jackpotjoy",
+        "rainbow_riches_casino",
+        "virgin_games",
+        "monopoly_casino"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2020-12-10",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0048",
+      "supplierGameCode": "FJO6264",
+      "studio": "Fjord Games",
+      "supplyChannel": "aggregator",
+      "aggregator": "ReelBridge",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "food_sweets",
+      "coreMechanic": "cascades",
+      "payStructure": "cluster_pays",
+      "grid": {
+        "reels": 7,
+        "rows": 7
+      },
+      "paylines": null,
+      "jackpotType": "none",
+      "volatility": "high",
+      "rtp": 0.963,
+      "maxWinMultiplier": 5400,
+      "minStake": 0.2,
+      "maxStake": 5,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "jackpotjoy",
+        "virgin_games",
+        "monopoly_casino",
+        "rainbow_riches_casino"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2024-07-07",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "rules_text"
+      ],
+      "defects": [
+        "feed_omits_feature"
+      ],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0049",
+      "supplierGameCode": "PAR9717",
+      "studio": "Paragon Play",
+      "supplyChannel": "aggregator",
+      "aggregator": "ReelBridge",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "sport",
+      "coreMechanic": "sticky_wilds",
+      "payStructure": "paylines",
+      "grid": {
+        "reels": 5,
+        "rows": 3
+      },
+      "paylines": 20,
+      "jackpotType": "none",
+      "volatility": "very_high",
+      "rtp": 0.9548,
+      "maxWinMultiplier": 41400,
+      "minStake": 0.2,
+      "maxStake": 5,
+      "hitFrequency": 0.16,
+      "currency": "GBP",
+      "brands": [
+        "rainbow_riches_casino",
+        "jackpotjoy",
+        "virgin_games",
+        "monopoly_casino",
+        "bally_casino_us"
+      ],
+      "jurisdictions": [
+        "GB",
+        "US-NJ",
+        "US-PA"
+      ],
+      "status": "live",
+      "releaseDate": "2019-03-03",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "rules_text",
+        "release_note"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0050",
+      "supplierGameCode": "COP9277",
+      "studio": "Copperline",
+      "supplyChannel": "aggregator",
+      "aggregator": "Spinlane Hub",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "ancient_egypt",
+      "coreMechanic": "cascades",
+      "payStructure": "cluster_pays",
+      "grid": {
+        "reels": 7,
+        "rows": 7
+      },
+      "paylines": null,
+      "jackpotType": "none",
+      "volatility": "low",
+      "rtp": 0.9589,
+      "maxWinMultiplier": 1100,
+      "minStake": 0.1,
+      "maxStake": 50,
+      "hitFrequency": null,
+      "currency": "USD",
+      "brands": [
+        "bally_casino_us"
+      ],
+      "jurisdictions": [
+        "US-NJ",
+        "US-PA"
+      ],
+      "status": "live",
+      "releaseDate": "2024-10-30",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": true,
+      "documents": [
+        "marketing_blurb"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0051",
+      "supplierGameCode": "STA5251",
+      "studio": "Starling Reels",
+      "supplyChannel": "aggregator",
+      "aggregator": "Spinlane Hub",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "norse_myth",
+      "coreMechanic": "sticky_wilds",
+      "payStructure": "megaways",
+      "grid": {
+        "reels": 6,
+        "rows": 7
+      },
+      "paylines": 117649,
+      "jackpotType": "none",
+      "volatility": "medium",
+      "rtp": 0.9456,
+      "maxWinMultiplier": 3100,
+      "minStake": 0.2,
+      "maxStake": 5,
+      "hitFrequency": 0.294,
+      "currency": "GBP",
+      "brands": [
+        "virgin_games"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2025-12-14",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "rules_text"
+      ],
+      "defects": [
+        "wrong_game_rules"
+      ],
+      "relatedGameId": "BLY-SLT-0055"
+    },
+    {
+      "id": "BLY-SLT-0052",
+      "supplierGameCode": "LUC9484",
+      "studio": "Lucky Lantern",
+      "supplyChannel": "aggregator",
+      "aggregator": "Spinlane Hub",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "asian_fortune",
+      "coreMechanic": "cash_collect",
+      "payStructure": "ways",
+      "grid": {
+        "reels": 5,
+        "rows": 4
+      },
+      "paylines": 1024,
+      "jackpotType": "none",
+      "volatility": "medium",
+      "rtp": 0.942,
+      "maxWinMultiplier": 4000,
+      "minStake": 0.25,
+      "maxStake": 5,
+      "hitFrequency": 0.297,
+      "currency": "GBP",
+      "brands": [
+        "rainbow_riches_casino",
+        "virgin_games",
+        "jackpotjoy"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2025-08-07",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "rules_text",
+        "release_note"
+      ],
+      "defects": [
+        "wrong_game_rules"
+      ],
+      "relatedGameId": "BLY-SLT-0083"
+    },
+    {
+      "id": "BLY-SLT-0053",
+      "supplierGameCode": "PAR5524",
+      "studio": "Paragon Play",
+      "supplyChannel": "aggregator",
+      "aggregator": "Spinlane Hub",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "seasonal_festive",
+      "coreMechanic": "hold_and_win",
+      "payStructure": "ways",
+      "grid": {
+        "reels": 5,
+        "rows": 3
+      },
+      "paylines": 243,
+      "jackpotType": "fixed",
+      "volatility": "high",
+      "rtp": 0.945,
+      "maxWinMultiplier": 12800,
+      "minStake": 0.25,
+      "maxStake": 5,
+      "hitFrequency": 0.254,
+      "currency": "GBP",
+      "brands": [
+        "jackpotjoy",
+        "monopoly_casino"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2022-11-29",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb"
+      ],
+      "defects": [
+        "thin_record"
+      ],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0054",
+      "supplierGameCode": "STA2951",
+      "studio": "Starling Reels",
+      "supplyChannel": "aggregator",
+      "aggregator": "Spinlane Hub",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "sport",
+      "coreMechanic": "expanding_wilds",
+      "payStructure": "ways",
+      "grid": {
+        "reels": 5,
+        "rows": 3
+      },
+      "paylines": 243,
+      "jackpotType": "none",
+      "volatility": "high",
+      "rtp": 0.9602,
+      "maxWinMultiplier": 13500,
+      "minStake": 0.1,
+      "maxStake": 100,
+      "hitFrequency": 0.2,
+      "currency": "USD",
+      "brands": [
+        "bally_casino_us"
+      ],
+      "jurisdictions": [
+        "US-NJ",
+        "US-PA"
+      ],
+      "status": "live",
+      "releaseDate": "2026-01-04",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": true,
+      "documents": [
+        "marketing_blurb",
+        "rules_text",
+        "release_note"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0055",
+      "supplierGameCode": "NOR4890",
+      "studio": "Northlight Studios",
+      "supplyChannel": "in_house",
+      "aggregator": null,
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "adventure_exploration",
+      "coreMechanic": "pick_me_bonus",
+      "payStructure": "paylines",
+      "grid": {
+        "reels": 5,
+        "rows": 3
+      },
+      "paylines": 40,
+      "jackpotType": "none",
+      "volatility": "high",
+      "rtp": 0.9485,
+      "maxWinMultiplier": 5200,
+      "minStake": 0.2,
+      "maxStake": 5,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "rainbow_riches_casino",
+        "virgin_games",
+        "monopoly_casino"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2023-11-13",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "rules_text",
+        "editorial",
+        "marketing_blurb"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0056",
+      "supplierGameCode": "HAR8424",
+      "studio": "Harbour Lane Games",
+      "supplyChannel": "in_house",
+      "aggregator": null,
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "norse_myth",
+      "coreMechanic": "wheel_bonus",
+      "payStructure": "ways",
+      "grid": {
+        "reels": 5,
+        "rows": 3
+      },
+      "paylines": 243,
+      "jackpotType": "none",
+      "volatility": "high",
+      "rtp": 0.9452,
+      "maxWinMultiplier": 14700,
+      "minStake": 0.2,
+      "maxStake": 5,
+      "hitFrequency": 0.249,
+      "currency": "GBP",
+      "brands": [
+        "rainbow_riches_casino",
+        "jackpotjoy",
+        "bally_casino_us"
+      ],
+      "jurisdictions": [
+        "GB",
+        "ES",
+        "US-NJ",
+        "US-PA"
+      ],
+      "status": "live",
+      "releaseDate": "2020-02-28",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "rules_text",
+        "editorial",
+        "marketing_blurb"
+      ],
+      "defects": [
+        "truncated_rules"
+      ],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0057",
+      "supplierGameCode": "RED9496",
+      "studio": "Red Kite Gaming",
+      "supplyChannel": "aggregator",
+      "aggregator": "ReelBridge",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "animals_wildlife",
+      "coreMechanic": "multipliers",
+      "payStructure": "paylines",
+      "grid": {
+        "reels": 5,
+        "rows": 3
+      },
+      "paylines": 40,
+      "jackpotType": "none",
+      "volatility": "very_high",
+      "rtp": 0.9515,
+      "maxWinMultiplier": 31800,
+      "minStake": 0.2,
+      "maxStake": 5,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "rainbow_riches_casino",
+        "jackpotjoy",
+        "virgin_games"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "coming_soon",
+      "releaseDate": "2026-12-02",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "rules_text"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0058",
+      "supplierGameCode": "FJO3968",
+      "studio": "Fjord Games",
+      "supplyChannel": "aggregator",
+      "aggregator": "ReelBridge",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "video_slot",
+      "primaryTheme": "music_party",
+      "coreMechanic": "free_spins",
+      "payStructure": "paylines",
+      "grid": {
+        "reels": 5,
+        "rows": 3
+      },
+      "paylines": 40,
+      "jackpotType": "none",
+      "volatility": "very_high",
+      "rtp": 0.9488,
+      "maxWinMultiplier": 32500,
+      "minStake": 0.2,
+      "maxStake": 5,
+      "hitFrequency": 0.16,
+      "currency": "GBP",
+      "brands": [
+        "jackpotjoy",
+        "monopoly_casino",
+        "virgin_games",
+        "rainbow_riches_casino"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "retired",
+      "releaseDate": "2020-03-13",
+      "rgFlags": [
+        "high_intensity"
+      ],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "rules_text"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-LIV-0059",
+      "supplierGameCode": "PAR4479",
+      "studio": "Paragon Play",
+      "supplyChannel": "aggregator",
+      "aggregator": "ReelBridge",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "live_dealer",
+      "primaryTheme": "tv_gameshow",
+      "coreMechanic": "card_table",
+      "payStructure": "not_applicable",
+      "grid": null,
+      "paylines": null,
+      "jackpotType": "none",
+      "volatility": "medium",
+      "rtp": 0.9566,
+      "maxWinMultiplier": 2000,
+      "minStake": 0.5,
+      "maxStake": 500,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "rainbow_riches_casino",
+        "virgin_games",
+        "bally_casino_us"
+      ],
+      "jurisdictions": [
+        "GB",
+        "US-NJ",
+        "US-PA"
+      ],
+      "status": "live",
+      "releaseDate": "2024-04-01",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "rules_text",
+        "release_note"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-TAB-0060",
+      "supplierGameCode": "HAR4565",
+      "studio": "Harbour Lane Games",
+      "supplyChannel": "in_house",
+      "aggregator": null,
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "table",
+      "primaryTheme": "tv_gameshow",
+      "coreMechanic": "card_table",
+      "payStructure": "not_applicable",
+      "grid": null,
+      "paylines": null,
+      "jackpotType": "none",
+      "volatility": "medium",
+      "rtp": 0.9881,
+      "maxWinMultiplier": 500,
+      "minStake": 0.1,
+      "maxStake": 500,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "rainbow_riches_casino",
+        "virgin_games",
+        "monopoly_casino",
+        "jackpotjoy"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2026-07-07",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "rules_text",
+        "marketing_blurb"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLI-0061",
+      "supplierGameCode": "NEO9260",
+      "studio": "Neon Arcade",
+      "supplyChannel": "aggregator",
+      "aggregator": "ReelBridge",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "slingo",
+      "primaryTheme": "irish_luck",
+      "coreMechanic": "slingo_grid",
+      "payStructure": "not_applicable",
+      "grid": {
+        "reels": 5,
+        "rows": 5
+      },
+      "paylines": null,
+      "jackpotType": "none",
+      "volatility": "medium",
+      "rtp": 0.9536,
+      "maxWinMultiplier": 4300,
+      "minStake": 0.1,
+      "maxStake": 5,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "monopoly_casino"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2026-08-11",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0062",
+      "supplierGameCode": "SAN8325",
+      "studio": "Sandstone Studios",
+      "supplyChannel": "aggregator",
+      "aggregator": "ReelBridge",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "classic_slot",
+      "primaryTheme": "fishing",
+      "coreMechanic": "wheel_bonus",
+      "payStructure": "paylines",
+      "grid": {
+        "reels": 3,
+        "rows": 3
+      },
+      "paylines": 5,
+      "jackpotType": "local_progressive",
+      "volatility": "medium",
+      "rtp": 0.9596,
+      "maxWinMultiplier": 3400,
+      "minStake": 0.25,
+      "maxStake": 5,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "monopoly_casino",
+        "jackpotjoy",
+        "virgin_games"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2026-09-16",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "rules_text",
+        "release_note"
+      ],
+      "defects": [
+        "truncated_rules"
+      ],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-INS-0063",
+      "supplierGameCode": "HAR6377",
+      "studio": "Harbour Lane Games",
+      "supplyChannel": "in_house",
+      "aggregator": null,
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "instant_win",
+      "primaryTheme": "seasonal_festive",
+      "coreMechanic": "scratch_reveal",
+      "payStructure": "not_applicable",
+      "grid": null,
+      "paylines": null,
+      "jackpotType": "local_progressive",
+      "volatility": "low",
+      "rtp": 0.9155,
+      "maxWinMultiplier": 1500,
+      "minStake": 1,
+      "maxStake": 5,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "virgin_games",
+        "rainbow_riches_casino"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2025-05-24",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "rules_text"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0064",
+      "supplierGameCode": "BLU8111",
+      "studio": "Bluefin Interactive",
+      "supplyChannel": "aggregator",
+      "aggregator": "ReelBridge",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "classic_slot",
+      "primaryTheme": "luxury_vegas",
+      "coreMechanic": "free_spins",
+      "payStructure": "paylines",
+      "grid": {
+        "reels": 3,
+        "rows": 3
+      },
+      "paylines": 5,
+      "jackpotType": "none",
+      "volatility": "low",
+      "rtp": 0.9595,
+      "maxWinMultiplier": 1400,
+      "minStake": 0.1,
+      "maxStake": 5,
+      "hitFrequency": 0.352,
+      "currency": "GBP",
+      "brands": [
+        "jackpotjoy",
+        "rainbow_riches_casino",
+        "virgin_games"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2022-04-21",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLI-0065",
+      "supplierGameCode": "HAR8726",
+      "studio": "Harbour Lane Games",
+      "supplyChannel": "in_house",
+      "aggregator": null,
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "slingo",
+      "primaryTheme": "tv_gameshow",
+      "coreMechanic": "slingo_grid",
+      "payStructure": "not_applicable",
+      "grid": {
+        "reels": 5,
+        "rows": 5
+      },
+      "paylines": null,
+      "jackpotType": "none",
+      "volatility": "very_high",
+      "rtp": 0.9552,
+      "maxWinMultiplier": 39700,
+      "minStake": 0.25,
+      "maxStake": 5,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "monopoly_casino",
+        "double_bubble_bingo"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2026-06-14",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "rules_text",
+        "editorial"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-LIV-0066",
+      "supplierGameCode": "COP6960",
+      "studio": "Copperline",
+      "supplyChannel": "aggregator",
+      "aggregator": "ReelBridge",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "live_dealer",
+      "primaryTheme": "luxury_vegas",
+      "coreMechanic": "live_wheel",
+      "payStructure": "not_applicable",
+      "grid": null,
+      "paylines": null,
+      "jackpotType": "none",
+      "volatility": "low",
+      "rtp": 0.9689,
+      "maxWinMultiplier": 500,
+      "minStake": 0.5,
+      "maxStake": 2500,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "virgin_games",
+        "monopoly_casino"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2024-01-13",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb"
+      ],
+      "defects": [
+        "thin_record"
+      ],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-CRA-0067",
+      "supplierGameCode": "LUC3031",
+      "studio": "Lucky Lantern",
+      "supplyChannel": "aggregator",
+      "aggregator": "ReelBridge",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "crash",
+      "primaryTheme": "space_scifi",
+      "coreMechanic": "crash_multiplier",
+      "payStructure": "not_applicable",
+      "grid": null,
+      "paylines": null,
+      "jackpotType": "none",
+      "volatility": "very_high",
+      "rtp": 0.9612,
+      "maxWinMultiplier": 18200,
+      "minStake": 1,
+      "maxStake": 1000,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "monopoly_casino",
+        "jackpotjoy",
+        "rainbow_riches_casino",
+        "virgin_games"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2023-08-30",
+      "rgFlags": [
+        "high_intensity"
+      ],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "rules_text"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-BIN-0068",
+      "supplierGameCode": "WIL6499",
+      "studio": "Wildgrove",
+      "supplyChannel": "aggregator",
+      "aggregator": "ReelBridge",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "bingo",
+      "primaryTheme": "asian_fortune",
+      "coreMechanic": "bingo_ball_draw",
+      "payStructure": "not_applicable",
+      "grid": null,
+      "paylines": null,
+      "jackpotType": "none",
+      "volatility": "medium",
+      "rtp": 0.9173,
+      "maxWinMultiplier": 2700,
+      "minStake": 0.1,
+      "maxStake": 5,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "double_bubble_bingo"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2020-09-28",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "rules_text"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0069",
+      "supplierGameCode": "SAN8848",
+      "studio": "Sandstone Studios",
+      "supplyChannel": "aggregator",
+      "aggregator": "Spinlane Hub",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "classic_slot",
+      "primaryTheme": "fruit_classic",
+      "coreMechanic": "multipliers",
+      "payStructure": "paylines",
+      "grid": {
+        "reels": 3,
+        "rows": 3
+      },
+      "paylines": 5,
+      "jackpotType": "local_progressive",
+      "volatility": "low",
+      "rtp": 0.963,
+      "maxWinMultiplier": 1700,
+      "minStake": 0.1,
+      "maxStake": 5,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "virgin_games"
+      ],
+      "jurisdictions": [
+        "GB",
+        "ES"
+      ],
+      "status": "live",
+      "releaseDate": "2019-02-13",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb"
+      ],
+      "defects": [
+        "duplicate_listing"
+      ],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-GAM-0070",
+      "supplierGameCode": "WIL5618",
+      "studio": "Wildgrove",
+      "supplyChannel": "aggregator",
+      "aggregator": "Spinlane Hub",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "game_show",
+      "primaryTheme": "gems_treasure",
+      "coreMechanic": "live_wheel",
+      "payStructure": "not_applicable",
+      "grid": null,
+      "paylines": null,
+      "jackpotType": "none",
+      "volatility": "high",
+      "rtp": 0.9578,
+      "maxWinMultiplier": 8600,
+      "minStake": 0.5,
+      "maxStake": 500,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "monopoly_casino",
+        "virgin_games",
+        "bally_casino_us"
+      ],
+      "jurisdictions": [
+        "GB",
+        "US-NJ",
+        "US-PA"
+      ],
+      "status": "live",
+      "releaseDate": "2021-03-12",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "rules_text"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-BIN-0071",
+      "supplierGameCode": "NOR9246",
+      "studio": "Northlight Studios",
+      "supplyChannel": "in_house",
+      "aggregator": null,
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "bingo",
+      "primaryTheme": "ancient_egypt",
+      "coreMechanic": "bingo_ball_draw",
+      "payStructure": "not_applicable",
+      "grid": null,
+      "paylines": null,
+      "jackpotType": "none",
+      "volatility": "high",
+      "rtp": 0.8535,
+      "maxWinMultiplier": 11600,
+      "minStake": 0.05,
+      "maxStake": 5,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "double_bubble_bingo"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2024-12-18",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "rules_text",
+        "editorial"
+      ],
+      "defects": [
+        "theme_only_in_prose"
+      ],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-INS-0072",
+      "supplierGameCode": "RED6378",
+      "studio": "Red Kite Gaming",
+      "supplyChannel": "aggregator",
+      "aggregator": "Spinlane Hub",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "instant_win",
+      "primaryTheme": "horror_halloween",
+      "coreMechanic": "scratch_reveal",
+      "payStructure": "not_applicable",
+      "grid": null,
+      "paylines": null,
+      "jackpotType": "none",
+      "volatility": "medium",
+      "rtp": 0.9221,
+      "maxWinMultiplier": 4800,
+      "minStake": 1,
+      "maxStake": 5,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "monopoly_casino",
+        "virgin_games",
+        "rainbow_riches_casino",
+        "jackpotjoy",
+        "bally_casino_us"
+      ],
+      "jurisdictions": [
+        "GB",
+        "US-NJ",
+        "US-PA"
+      ],
+      "status": "live",
+      "releaseDate": "2019-07-28",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "rules_text",
+        "release_note"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-LIV-0073",
+      "supplierGameCode": "PAR3363",
+      "studio": "Paragon Play",
+      "supplyChannel": "aggregator",
+      "aggregator": "ReelBridge",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "live_dealer",
+      "primaryTheme": "fruit_classic",
+      "coreMechanic": "card_table",
+      "payStructure": "not_applicable",
+      "grid": null,
+      "paylines": null,
+      "jackpotType": "none",
+      "volatility": "low",
+      "rtp": 0.9689,
+      "maxWinMultiplier": 35,
+      "minStake": 1,
+      "maxStake": 500,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "rainbow_riches_casino",
+        "monopoly_casino",
+        "jackpotjoy",
+        "virgin_games"
+      ],
+      "jurisdictions": [
+        "GB",
+        "ES"
+      ],
+      "status": "live",
+      "releaseDate": "2021-09-24",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "rules_text",
+        "release_note"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLI-0074",
+      "supplierGameCode": "WIL1820",
+      "studio": "Wildgrove",
+      "supplyChannel": "aggregator",
+      "aggregator": "Spinlane Hub",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "slingo",
+      "primaryTheme": "fantasy_magic",
+      "coreMechanic": "slingo_grid",
+      "payStructure": "not_applicable",
+      "grid": {
+        "reels": 5,
+        "rows": 5
+      },
+      "paylines": null,
+      "jackpotType": "none",
+      "volatility": "medium",
+      "rtp": 0.9539,
+      "maxWinMultiplier": 3200,
+      "minStake": 0.25,
+      "maxStake": 5,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "monopoly_casino",
+        "double_bubble_bingo"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2025-08-29",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "rules_text"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-TAB-0075",
+      "supplierGameCode": "LUC9927",
+      "studio": "Lucky Lantern",
+      "supplyChannel": "aggregator",
+      "aggregator": "Spinlane Hub",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "table",
+      "primaryTheme": "luxury_vegas",
+      "coreMechanic": "card_table",
+      "payStructure": "not_applicable",
+      "grid": null,
+      "paylines": null,
+      "jackpotType": "none",
+      "volatility": "medium",
+      "rtp": 0.9921,
+      "maxWinMultiplier": 500,
+      "minStake": 1,
+      "maxStake": 1000,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "rainbow_riches_casino",
+        "jackpotjoy",
+        "monopoly_casino",
+        "bally_casino_us"
+      ],
+      "jurisdictions": [
+        "GB",
+        "US-NJ",
+        "US-PA"
+      ],
+      "status": "live",
+      "releaseDate": "2022-10-15",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "rules_text"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-LIV-0076",
+      "supplierGameCode": "FJO9681",
+      "studio": "Fjord Games",
+      "supplyChannel": "aggregator",
+      "aggregator": "ReelBridge",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "live_dealer",
+      "primaryTheme": "luxury_vegas",
+      "coreMechanic": "live_wheel",
+      "payStructure": "not_applicable",
+      "grid": null,
+      "paylines": null,
+      "jackpotType": "local_progressive",
+      "volatility": "low",
+      "rtp": 0.9579,
+      "maxWinMultiplier": 35,
+      "minStake": 1,
+      "maxStake": 1000,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "jackpotjoy",
+        "monopoly_casino",
+        "virgin_games",
+        "bally_casino_us"
+      ],
+      "jurisdictions": [
+        "GB",
+        "US-NJ",
+        "US-PA"
+      ],
+      "status": "live",
+      "releaseDate": "2019-05-01",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "rules_text",
+        "release_note"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLI-0077",
+      "supplierGameCode": "LUC9036",
+      "studio": "Lucky Lantern",
+      "supplyChannel": "aggregator",
+      "aggregator": "ReelBridge",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "slingo",
+      "primaryTheme": "greek_myth",
+      "coreMechanic": "slingo_grid",
+      "payStructure": "not_applicable",
+      "grid": {
+        "reels": 5,
+        "rows": 5
+      },
+      "paylines": null,
+      "jackpotType": "none",
+      "volatility": "very_high",
+      "rtp": 0.955,
+      "maxWinMultiplier": 17000,
+      "minStake": 0.25,
+      "maxStake": 50,
+      "hitFrequency": null,
+      "currency": "USD",
+      "brands": [
+        "bally_casino_us"
+      ],
+      "jurisdictions": [
+        "US-NJ",
+        "US-PA"
+      ],
+      "status": "live",
+      "releaseDate": "2022-09-29",
+      "rgFlags": [
+        "high_intensity"
+      ],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": true,
+      "documents": [
+        "marketing_blurb"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-TAB-0078",
+      "supplierGameCode": "LUC7970",
+      "studio": "Lucky Lantern",
+      "supplyChannel": "aggregator",
+      "aggregator": "ReelBridge",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "table",
+      "primaryTheme": "luxury_vegas",
+      "coreMechanic": "card_table",
+      "payStructure": "not_applicable",
+      "grid": null,
+      "paylines": null,
+      "jackpotType": "none",
+      "volatility": "medium",
+      "rtp": 0.9943,
+      "maxWinMultiplier": 500,
+      "minStake": 0.1,
+      "maxStake": 2500,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "monopoly_casino",
+        "jackpotjoy"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2023-04-24",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-CRA-0079",
+      "supplierGameCode": "RED4955",
+      "studio": "Red Kite Gaming",
+      "supplyChannel": "aggregator",
+      "aggregator": "Spinlane Hub",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "crash",
+      "primaryTheme": "food_sweets",
+      "coreMechanic": "crash_multiplier",
+      "payStructure": "not_applicable",
+      "grid": null,
+      "paylines": null,
+      "jackpotType": "none",
+      "volatility": "very_high",
+      "rtp": 0.9677,
+      "maxWinMultiplier": 15500,
+      "minStake": 0.5,
+      "maxStake": 500,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "virgin_games"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2026-06-29",
+      "rgFlags": [
+        "high_intensity"
+      ],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-BIN-0080",
+      "supplierGameCode": "BLU8227",
+      "studio": "Bluefin Interactive",
+      "supplyChannel": "aggregator",
+      "aggregator": "ReelBridge",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "bingo",
+      "primaryTheme": "wild_west",
+      "coreMechanic": "bingo_ball_draw",
+      "payStructure": "not_applicable",
+      "grid": null,
+      "paylines": null,
+      "jackpotType": "none",
+      "volatility": "medium",
+      "rtp": 0.9012,
+      "maxWinMultiplier": 2900,
+      "minStake": 0.05,
+      "maxStake": 2,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "double_bubble_bingo",
+        "virgin_games",
+        "jackpotjoy"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2025-07-13",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "release_note"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-TAB-0081",
+      "supplierGameCode": "COP2500",
+      "studio": "Copperline",
+      "supplyChannel": "aggregator",
+      "aggregator": "ReelBridge",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "table",
+      "primaryTheme": "tv_gameshow",
+      "coreMechanic": "card_table",
+      "payStructure": "not_applicable",
+      "grid": null,
+      "paylines": null,
+      "jackpotType": "none",
+      "volatility": "medium",
+      "rtp": 0.9852,
+      "maxWinMultiplier": 35,
+      "minStake": 0.1,
+      "maxStake": 2500,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "monopoly_casino",
+        "virgin_games",
+        "jackpotjoy",
+        "rainbow_riches_casino"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2023-03-27",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "rules_text"
+      ],
+      "defects": [
+        "theme_only_in_prose"
+      ],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-LIV-0082",
+      "supplierGameCode": "STA3919",
+      "studio": "Starling Reels",
+      "supplyChannel": "aggregator",
+      "aggregator": "ReelBridge",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "live_dealer",
+      "primaryTheme": "luxury_vegas",
+      "coreMechanic": "card_table",
+      "payStructure": "not_applicable",
+      "grid": null,
+      "paylines": null,
+      "jackpotType": "none",
+      "volatility": "medium",
+      "rtp": 0.9709,
+      "maxWinMultiplier": 2000,
+      "minStake": 1,
+      "maxStake": 2500,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "jackpotjoy",
+        "monopoly_casino",
+        "rainbow_riches_casino"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2021-02-21",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb"
+      ],
+      "defects": [
+        "thin_record"
+      ],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0083",
+      "supplierGameCode": "STA6912",
+      "studio": "Starling Reels",
+      "supplyChannel": "aggregator",
+      "aggregator": "ReelBridge",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "classic_slot",
+      "primaryTheme": "fruit_classic",
+      "coreMechanic": "free_spins",
+      "payStructure": "paylines",
+      "grid": {
+        "reels": 3,
+        "rows": 3
+      },
+      "paylines": 1,
+      "jackpotType": "none",
+      "volatility": "very_high",
+      "rtp": 0.9486,
+      "maxWinMultiplier": 15400,
+      "minStake": 0.2,
+      "maxStake": 5,
+      "hitFrequency": 0.209,
+      "currency": "GBP",
+      "brands": [
+        "rainbow_riches_casino",
+        "jackpotjoy"
+      ],
+      "jurisdictions": [
+        "GB",
+        "ES"
+      ],
+      "status": "live",
+      "releaseDate": "2023-12-13",
+      "rgFlags": [
+        "high_intensity"
+      ],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "rules_text",
+        "release_note"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0084",
+      "supplierGameCode": "BLU4598",
+      "studio": "Bluefin Interactive",
+      "supplyChannel": "aggregator",
+      "aggregator": "ReelBridge",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "classic_slot",
+      "primaryTheme": "seasonal_festive",
+      "coreMechanic": "wheel_bonus",
+      "payStructure": "paylines",
+      "grid": {
+        "reels": 3,
+        "rows": 3
+      },
+      "paylines": 1,
+      "jackpotType": "none",
+      "volatility": "medium",
+      "rtp": 0.9555,
+      "maxWinMultiplier": 3300,
+      "minStake": 0.25,
+      "maxStake": 5,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "rainbow_riches_casino",
+        "monopoly_casino"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2025-02-20",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "rules_text"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-GAM-0085",
+      "supplierGameCode": "STA4280",
+      "studio": "Starling Reels",
+      "supplyChannel": "aggregator",
+      "aggregator": "Spinlane Hub",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "game_show",
+      "primaryTheme": "greek_myth",
+      "coreMechanic": "live_wheel",
+      "payStructure": "not_applicable",
+      "grid": null,
+      "paylines": null,
+      "jackpotType": "none",
+      "volatility": "high",
+      "rtp": 0.9633,
+      "maxWinMultiplier": 7000,
+      "minStake": 0.5,
+      "maxStake": 1000,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "rainbow_riches_casino",
+        "virgin_games"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2019-02-04",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "rules_text",
+        "release_note"
+      ],
+      "defects": [
+        "theme_only_in_prose"
+      ],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0086",
+      "supplierGameCode": "NEO3893",
+      "studio": "Neon Arcade",
+      "supplyChannel": "aggregator",
+      "aggregator": "ReelBridge",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "classic_slot",
+      "primaryTheme": "fishing",
+      "coreMechanic": "multipliers",
+      "payStructure": "paylines",
+      "grid": {
+        "reels": 3,
+        "rows": 3
+      },
+      "paylines": 1,
+      "jackpotType": "none",
+      "volatility": "high",
+      "rtp": 0.9492,
+      "maxWinMultiplier": 13900,
+      "minStake": 0.25,
+      "maxStake": 5,
+      "hitFrequency": 0.223,
+      "currency": "GBP",
+      "brands": [
+        "virgin_games",
+        "jackpotjoy",
+        "bally_casino_us"
+      ],
+      "jurisdictions": [
+        "GB",
+        "US-NJ",
+        "US-PA"
+      ],
+      "status": "live",
+      "releaseDate": "2026-04-05",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "rules_text",
+        "release_note"
+      ],
+      "defects": [
+        "duplicate_listing"
+      ],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLI-0087",
+      "supplierGameCode": "HAR3361",
+      "studio": "Harbour Lane Games",
+      "supplyChannel": "in_house",
+      "aggregator": null,
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "slingo",
+      "primaryTheme": "adventure_exploration",
+      "coreMechanic": "slingo_grid",
+      "payStructure": "not_applicable",
+      "grid": {
+        "reels": 5,
+        "rows": 5
+      },
+      "paylines": null,
+      "jackpotType": "none",
+      "volatility": "very_high",
+      "rtp": 0.9555,
+      "maxWinMultiplier": 49000,
+      "minStake": 0.2,
+      "maxStake": 5,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "monopoly_casino",
+        "bally_casino_us"
+      ],
+      "jurisdictions": [
+        "GB",
+        "US-NJ",
+        "US-PA"
+      ],
+      "status": "suspended",
+      "releaseDate": "2023-05-14",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "rules_text",
+        "marketing_blurb"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-TAB-0088",
+      "supplierGameCode": "WIL2555",
+      "studio": "Wildgrove",
+      "supplyChannel": "aggregator",
+      "aggregator": "Spinlane Hub",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "table",
+      "primaryTheme": "fruit_classic",
+      "coreMechanic": "card_table",
+      "payStructure": "not_applicable",
+      "grid": null,
+      "paylines": null,
+      "jackpotType": "none",
+      "volatility": "low",
+      "rtp": 0.9884,
+      "maxWinMultiplier": 35,
+      "minStake": 0.1,
+      "maxStake": 1000,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "jackpotjoy",
+        "virgin_games",
+        "monopoly_casino",
+        "rainbow_riches_casino",
+        "bally_casino_us"
+      ],
+      "jurisdictions": [
+        "GB",
+        "US-NJ",
+        "US-PA"
+      ],
+      "status": "live",
+      "releaseDate": "2023-04-20",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb"
+      ],
+      "defects": [
+        "thin_record"
+      ],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-LIV-0089",
+      "supplierGameCode": "BLU9763",
+      "studio": "Bluefin Interactive",
+      "supplyChannel": "aggregator",
+      "aggregator": "Spinlane Hub",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "live_dealer",
+      "primaryTheme": "fruit_classic",
+      "coreMechanic": "card_table",
+      "payStructure": "not_applicable",
+      "grid": null,
+      "paylines": null,
+      "jackpotType": "none",
+      "volatility": "medium",
+      "rtp": 0.9586,
+      "maxWinMultiplier": 35,
+      "minStake": 0.5,
+      "maxStake": 2500,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "jackpotjoy",
+        "virgin_games",
+        "monopoly_casino"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2021-03-07",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "rules_text"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLI-0090",
+      "supplierGameCode": "STA2662",
+      "studio": "Starling Reels",
+      "supplyChannel": "aggregator",
+      "aggregator": "ReelBridge",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "slingo",
+      "primaryTheme": "music_party",
+      "coreMechanic": "slingo_grid",
+      "payStructure": "not_applicable",
+      "grid": {
+        "reels": 5,
+        "rows": 5
+      },
+      "paylines": null,
+      "jackpotType": "none",
+      "volatility": "low",
+      "rtp": 0.952,
+      "maxWinMultiplier": 2000,
+      "minStake": 0.1,
+      "maxStake": 5,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "monopoly_casino",
+        "virgin_games"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2026-09-24",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "release_note"
+      ],
+      "defects": [
+        "theme_only_in_prose"
+      ],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLI-0091",
+      "supplierGameCode": "FJO1254",
+      "studio": "Fjord Games",
+      "supplyChannel": "aggregator",
+      "aggregator": "Spinlane Hub",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "slingo",
+      "primaryTheme": "luxury_vegas",
+      "coreMechanic": "slingo_grid",
+      "payStructure": "not_applicable",
+      "grid": {
+        "reels": 5,
+        "rows": 5
+      },
+      "paylines": null,
+      "jackpotType": "none",
+      "volatility": "high",
+      "rtp": 0.9526,
+      "maxWinMultiplier": 10400,
+      "minStake": 0.25,
+      "maxStake": 5,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "monopoly_casino"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2020-08-15",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "rules_text",
+        "release_note"
+      ],
+      "defects": [
+        "theme_only_in_prose"
+      ],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-BIN-0092",
+      "supplierGameCode": "BLU7733",
+      "studio": "Bluefin Interactive",
+      "supplyChannel": "aggregator",
+      "aggregator": "ReelBridge",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "bingo",
+      "primaryTheme": "tv_gameshow",
+      "coreMechanic": "bingo_ball_draw",
+      "payStructure": "not_applicable",
+      "grid": null,
+      "paylines": null,
+      "jackpotType": "none",
+      "volatility": "medium",
+      "rtp": 0.9051,
+      "maxWinMultiplier": 4900,
+      "minStake": 0.1,
+      "maxStake": 2,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "double_bubble_bingo",
+        "virgin_games",
+        "jackpotjoy"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2026-06-28",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "rules_text"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLI-0093",
+      "supplierGameCode": "PAR2796",
+      "studio": "Paragon Play",
+      "supplyChannel": "aggregator",
+      "aggregator": "Spinlane Hub",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "slingo",
+      "primaryTheme": "sport",
+      "coreMechanic": "slingo_grid",
+      "payStructure": "not_applicable",
+      "grid": {
+        "reels": 5,
+        "rows": 5
+      },
+      "paylines": null,
+      "jackpotType": "none",
+      "volatility": "high",
+      "rtp": 0.9554,
+      "maxWinMultiplier": 7500,
+      "minStake": 0.2,
+      "maxStake": 5,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "monopoly_casino"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2021-09-21",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "rules_text"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-INS-0094",
+      "supplierGameCode": "FJO1157",
+      "studio": "Fjord Games",
+      "supplyChannel": "aggregator",
+      "aggregator": "ReelBridge",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "instant_win",
+      "primaryTheme": "wild_west",
+      "coreMechanic": "scratch_reveal",
+      "payStructure": "not_applicable",
+      "grid": null,
+      "paylines": null,
+      "jackpotType": "none",
+      "volatility": "high",
+      "rtp": 0.9497,
+      "maxWinMultiplier": 10000,
+      "minStake": 0.5,
+      "maxStake": 5,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "rainbow_riches_casino",
+        "virgin_games",
+        "monopoly_casino",
+        "jackpotjoy"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2024-08-05",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLI-0095",
+      "supplierGameCode": "COP4737",
+      "studio": "Copperline",
+      "supplyChannel": "aggregator",
+      "aggregator": "Spinlane Hub",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "slingo",
+      "primaryTheme": "norse_myth",
+      "coreMechanic": "slingo_grid",
+      "payStructure": "not_applicable",
+      "grid": {
+        "reels": 5,
+        "rows": 5
+      },
+      "paylines": null,
+      "jackpotType": "none",
+      "volatility": "low",
+      "rtp": 0.9575,
+      "maxWinMultiplier": 1800,
+      "minStake": 0.1,
+      "maxStake": 5,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "monopoly_casino",
+        "double_bubble_bingo",
+        "jackpotjoy"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "coming_soon",
+      "releaseDate": "2027-02-07",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "rules_text",
+        "release_note"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLI-0096",
+      "supplierGameCode": "HAR1739",
+      "studio": "Harbour Lane Games",
+      "supplyChannel": "in_house",
+      "aggregator": null,
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "slingo",
+      "primaryTheme": "irish_luck",
+      "coreMechanic": "slingo_grid",
+      "payStructure": "not_applicable",
+      "grid": {
+        "reels": 5,
+        "rows": 5
+      },
+      "paylines": null,
+      "jackpotType": "none",
+      "volatility": "very_high",
+      "rtp": 0.9555,
+      "maxWinMultiplier": 16400,
+      "minStake": 0.2,
+      "maxStake": 5,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "monopoly_casino",
+        "bally_casino_us"
+      ],
+      "jurisdictions": [
+        "GB",
+        "US-NJ",
+        "US-PA"
+      ],
+      "status": "live",
+      "releaseDate": "2019-07-12",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "rules_text",
+        "editorial",
+        "marketing_blurb"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-BIN-0097",
+      "supplierGameCode": "COP7794",
+      "studio": "Copperline",
+      "supplyChannel": "aggregator",
+      "aggregator": "Spinlane Hub",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "bingo",
+      "primaryTheme": "fantasy_magic",
+      "coreMechanic": "bingo_ball_draw",
+      "payStructure": "not_applicable",
+      "grid": null,
+      "paylines": null,
+      "jackpotType": "none",
+      "volatility": "low",
+      "rtp": 0.8652,
+      "maxWinMultiplier": 800,
+      "minStake": 0.05,
+      "maxStake": 5,
+      "hitFrequency": null,
+      "currency": "USD",
+      "brands": [
+        "bally_casino_us"
+      ],
+      "jurisdictions": [
+        "US-NJ",
+        "US-PA"
+      ],
+      "status": "live",
+      "releaseDate": "2023-10-26",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": true,
+      "documents": [
+        "marketing_blurb",
+        "rules_text"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-INS-0098",
+      "supplierGameCode": "BLU2135",
+      "studio": "Bluefin Interactive",
+      "supplyChannel": "aggregator",
+      "aggregator": "ReelBridge",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "instant_win",
+      "primaryTheme": "ancient_egypt",
+      "coreMechanic": "scratch_reveal",
+      "payStructure": "not_applicable",
+      "grid": null,
+      "paylines": null,
+      "jackpotType": "none",
+      "volatility": "medium",
+      "rtp": 0.9079,
+      "maxWinMultiplier": 3700,
+      "minStake": 1,
+      "maxStake": 5,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "monopoly_casino",
+        "jackpotjoy"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2021-10-02",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb",
+        "rules_text",
+        "release_note"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-SLT-0099",
+      "supplierGameCode": "SAN7208",
+      "studio": "Sandstone Studios",
+      "supplyChannel": "aggregator",
+      "aggregator": "Spinlane Hub",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "classic_slot",
+      "primaryTheme": "space_scifi",
+      "coreMechanic": "free_spins",
+      "payStructure": "paylines",
+      "grid": {
+        "reels": 3,
+        "rows": 3
+      },
+      "paylines": 9,
+      "jackpotType": "none",
+      "volatility": "medium",
+      "rtp": 0.9571,
+      "maxWinMultiplier": 4500,
+      "minStake": 0.1,
+      "maxStake": 5,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "monopoly_casino",
+        "rainbow_riches_casino"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "live",
+      "releaseDate": "2022-11-11",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    },
+    {
+      "id": "BLY-BIN-0100",
+      "supplierGameCode": "PAR7271",
+      "studio": "Paragon Play",
+      "supplyChannel": "aggregator",
+      "aggregator": "Spinlane Hub",
+      "familyId": null,
+      "familyRole": null,
+      "variantKind": null,
+      "format": "bingo",
+      "primaryTheme": "asian_fortune",
+      "coreMechanic": "bingo_ball_draw",
+      "payStructure": "not_applicable",
+      "grid": null,
+      "paylines": null,
+      "jackpotType": "none",
+      "volatility": "high",
+      "rtp": 0.8568,
+      "maxWinMultiplier": 9600,
+      "minStake": 0.05,
+      "maxStake": 2,
+      "hitFrequency": null,
+      "currency": "GBP",
+      "brands": [
+        "double_bubble_bingo"
+      ],
+      "jurisdictions": [
+        "GB"
+      ],
+      "status": "retired",
+      "releaseDate": "2025-10-09",
+      "rgFlags": [],
+      "hasLicensedIp": false,
+      "bonusBuyAllowed": false,
+      "documents": [
+        "marketing_blurb"
+      ],
+      "defects": [],
+      "relatedGameId": null
+    }
+  ]
+}

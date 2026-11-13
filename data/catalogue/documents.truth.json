@@ -1,0 +1,4487 @@
+[
+  {
+    "docId": "BLY-SLT-0001-marketing_blurb",
+    "gameId": "BLY-SLT-0001",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0001-release_note",
+    "gameId": "BLY-SLT-0001",
+    "kind": "release_note",
+    "format": "email",
+    "survivingFacts": [
+      "coreMechanic",
+      "excitementCurve",
+      "hitFrequency",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "narrativeHook",
+      "pace",
+      "payStructure",
+      "paylines",
+      "primaryTheme",
+      "rtp",
+      "secondaryFeatures",
+      "subThemes",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0002-marketing_blurb",
+    "gameId": "BLY-SLT-0002",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "mood",
+      "narrativeHook",
+      "payStructure",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0002-release_note",
+    "gameId": "BLY-SLT-0002",
+    "kind": "release_note",
+    "format": "email",
+    "survivingFacts": [
+      "complexity",
+      "coreMechanic",
+      "excitementCurve",
+      "hitFrequency",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "narrativeHook",
+      "pace",
+      "payStructure",
+      "paylines",
+      "primaryTheme",
+      "rtp",
+      "secondaryFeatures",
+      "subThemes",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0003-marketing_blurb",
+    "gameId": "BLY-SLT-0003",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate",
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0003-rules_text",
+    "gameId": "BLY-SLT-0003",
+    "kind": "rules_text",
+    "format": "cms_html",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "hitFrequency",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "payStructure",
+      "paylines",
+      "rtp",
+      "secondaryFeatures",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "mojibake",
+      "boilerplate"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0004-marketing_blurb",
+    "gameId": "BLY-SLT-0004",
+    "kind": "marketing_blurb",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "mojibake"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0004-release_note",
+    "gameId": "BLY-SLT-0004",
+    "kind": "release_note",
+    "format": "email",
+    "survivingFacts": [
+      "coreMechanic",
+      "excitementCurve",
+      "format",
+      "grid",
+      "hitFrequency",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "pace",
+      "paylines",
+      "primaryTheme",
+      "rtp",
+      "secondaryFeatures",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0005-marketing_blurb",
+    "gameId": "BLY-SLT-0005",
+    "kind": "marketing_blurb",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0005-release_note",
+    "gameId": "BLY-SLT-0005",
+    "kind": "release_note",
+    "format": "email",
+    "survivingFacts": [
+      "coreMechanic",
+      "excitementCurve",
+      "format",
+      "grid",
+      "hitFrequency",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "pace",
+      "paylines",
+      "primaryTheme",
+      "rtp",
+      "secondaryFeatures",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0006-marketing_blurb",
+    "gameId": "BLY-SLT-0006",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0006-release_note",
+    "gameId": "BLY-SLT-0006",
+    "kind": "release_note",
+    "format": "markdown",
+    "survivingFacts": [
+      "coreMechanic",
+      "excitementCurve",
+      "format",
+      "grid",
+      "hitFrequency",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "pace",
+      "paylines",
+      "primaryTheme",
+      "rtp",
+      "secondaryFeatures",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0007-rules_text",
+    "gameId": "BLY-SLT-0007",
+    "kind": "rules_text",
+    "format": "cms_html",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "hitFrequency",
+      "jackpotType",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "payStructure",
+      "paylines",
+      "rtp",
+      "secondaryFeatures",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0007-editorial",
+    "gameId": "BLY-SLT-0007",
+    "kind": "editorial",
+    "format": "markdown",
+    "survivingFacts": [
+      "complexity",
+      "excitementCurve",
+      "format",
+      "mood",
+      "narrativeHook",
+      "nostalgia",
+      "pace",
+      "primaryTheme",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0008-rules_text",
+    "gameId": "BLY-SLT-0008",
+    "kind": "rules_text",
+    "format": "cms_html",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "hitFrequency",
+      "jackpotType",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "payStructure",
+      "paylines",
+      "rtp",
+      "secondaryFeatures",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0008-editorial",
+    "gameId": "BLY-SLT-0008",
+    "kind": "editorial",
+    "format": "cms_html",
+    "survivingFacts": [
+      "complexity",
+      "excitementCurve",
+      "format",
+      "jackpotType",
+      "mood",
+      "narrativeHook",
+      "nostalgia",
+      "pace",
+      "primaryTheme",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0009-rules_text",
+    "gameId": "BLY-SLT-0009",
+    "kind": "rules_text",
+    "format": "pdf_text",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "hitFrequency",
+      "jackpotType",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "payStructure",
+      "paylines",
+      "rtp",
+      "secondaryFeatures",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0009-editorial",
+    "gameId": "BLY-SLT-0009",
+    "kind": "editorial",
+    "format": "cms_html",
+    "survivingFacts": [
+      "complexity",
+      "excitementCurve",
+      "format",
+      "mood",
+      "narrativeHook",
+      "nostalgia",
+      "pace",
+      "primaryTheme",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0010-rules_text",
+    "gameId": "BLY-SLT-0010",
+    "kind": "rules_text",
+    "format": "pdf_text",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "payStructure",
+      "paylines",
+      "rtp",
+      "secondaryFeatures",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0010-editorial",
+    "gameId": "BLY-SLT-0010",
+    "kind": "editorial",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "excitementCurve",
+      "mood",
+      "narrativeHook",
+      "pace",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0011-rules_text",
+    "gameId": "BLY-SLT-0011",
+    "kind": "rules_text",
+    "format": "cms_html",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "payStructure",
+      "paylines",
+      "rtp",
+      "secondaryFeatures",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0011-editorial",
+    "gameId": "BLY-SLT-0011",
+    "kind": "editorial",
+    "format": "markdown",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "excitementCurve",
+      "mood",
+      "narrativeHook",
+      "pace",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0012-rules_text",
+    "gameId": "BLY-SLT-0012",
+    "kind": "rules_text",
+    "format": "pdf_text",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "jackpotType",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "payStructure",
+      "paylines",
+      "rtp",
+      "secondaryFeatures",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0012-editorial",
+    "gameId": "BLY-SLT-0012",
+    "kind": "editorial",
+    "format": "markdown",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "excitementCurve",
+      "jackpotType",
+      "mood",
+      "narrativeHook",
+      "pace",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0013-marketing_blurb",
+    "gameId": "BLY-SLT-0013",
+    "kind": "marketing_blurb",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate",
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": [
+      "volatility"
+    ]
+  },
+  {
+    "docId": "BLY-SLT-0013-release_note",
+    "gameId": "BLY-SLT-0013",
+    "kind": "release_note",
+    "format": "email",
+    "survivingFacts": [
+      "coreMechanic",
+      "grid",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "payStructure",
+      "paylines",
+      "primaryTheme",
+      "rtp",
+      "secondaryFeatures",
+      "subThemes",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0014-marketing_blurb",
+    "gameId": "BLY-SLT-0014",
+    "kind": "marketing_blurb",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "jackpotType",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0015-marketing_blurb",
+    "gameId": "BLY-SLT-0015",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0016-rules_text",
+    "gameId": "BLY-SLT-0016",
+    "kind": "rules_text",
+    "format": "cms_html",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "hitFrequency",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "payStructure",
+      "paylines",
+      "rtp",
+      "secondaryFeatures",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate",
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0017-rules_text",
+    "gameId": "BLY-SLT-0017",
+    "kind": "rules_text",
+    "format": "cms_html",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "hitFrequency",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "payStructure",
+      "paylines",
+      "rtp",
+      "secondaryFeatures",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0018-marketing_blurb",
+    "gameId": "BLY-SLT-0018",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0018-rules_text",
+    "gameId": "BLY-SLT-0018",
+    "kind": "rules_text",
+    "format": "cms_html",
+    "survivingFacts": [],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": "BLY-SLT-0038",
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0018-editorial",
+    "gameId": "BLY-SLT-0018",
+    "kind": "editorial",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "complexity",
+      "coreMechanic",
+      "excitementCurve",
+      "mood",
+      "narrativeHook",
+      "nostalgia",
+      "pace",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0019-marketing_blurb",
+    "gameId": "BLY-SLT-0019",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "mood",
+      "narrativeHook",
+      "payStructure",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0019-rules_text",
+    "gameId": "BLY-SLT-0019",
+    "kind": "rules_text",
+    "format": "pdf_text",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "payStructure",
+      "paylines"
+    ],
+    "partialFacts": [
+      "secondaryFeatures"
+    ],
+    "damage": [
+      "truncate"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0019-editorial",
+    "gameId": "BLY-SLT-0019",
+    "kind": "editorial",
+    "format": "markdown",
+    "survivingFacts": [
+      "artStyle",
+      "complexity",
+      "coreMechanic",
+      "excitementCurve",
+      "mood",
+      "narrativeHook",
+      "nostalgia",
+      "pace",
+      "payStructure",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0020-marketing_blurb",
+    "gameId": "BLY-SLT-0020",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "jackpotType",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0020-rules_text",
+    "gameId": "BLY-SLT-0020",
+    "kind": "rules_text",
+    "format": "cms_html",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "hitFrequency",
+      "jackpotType",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "payStructure",
+      "paylines",
+      "rtp",
+      "secondaryFeatures",
+      "socialElement",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0020-editorial",
+    "gameId": "BLY-SLT-0020",
+    "kind": "editorial",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "complexity",
+      "coreMechanic",
+      "excitementCurve",
+      "jackpotType",
+      "mood",
+      "narrativeHook",
+      "nostalgia",
+      "pace",
+      "primaryTheme",
+      "secondaryFeatures",
+      "socialElement",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0021-marketing_blurb",
+    "gameId": "BLY-SLT-0021",
+    "kind": "marketing_blurb",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "grid",
+      "mood",
+      "narrativeHook",
+      "payStructure",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "mojibake",
+      "boilerplate"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0021-rules_text",
+    "gameId": "BLY-SLT-0021",
+    "kind": "rules_text",
+    "format": "pdf_text",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "payStructure",
+      "rtp",
+      "secondaryFeatures",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0022-marketing_blurb",
+    "gameId": "BLY-SLT-0022",
+    "kind": "marketing_blurb",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "primaryTheme"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0023-marketing_blurb",
+    "gameId": "BLY-SLT-0023",
+    "kind": "marketing_blurb",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "coreMechanic",
+      "maxWinMultiplier",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0023-release_note",
+    "gameId": "BLY-SLT-0023",
+    "kind": "release_note",
+    "format": "markdown",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "format",
+      "grid",
+      "hitFrequency",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "narrativeHook",
+      "paylines",
+      "primaryTheme",
+      "rtp",
+      "secondaryFeatures",
+      "subThemes",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0024-marketing_blurb",
+    "gameId": "BLY-SLT-0024",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "coreMechanic",
+      "jackpotType",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "mojibake",
+      "boilerplate"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0024-rules_text",
+    "gameId": "BLY-SLT-0024",
+    "kind": "rules_text",
+    "format": "cms_html",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "hitFrequency",
+      "jackpotType",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "payStructure",
+      "paylines",
+      "rtp",
+      "secondaryFeatures",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0025-marketing_blurb",
+    "gameId": "BLY-SLT-0025",
+    "kind": "marketing_blurb",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "coreMechanic",
+      "jackpotType",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0025-rules_text",
+    "gameId": "BLY-SLT-0025",
+    "kind": "rules_text",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "jackpotType",
+      "payStructure",
+      "paylines",
+      "secondaryFeatures"
+    ],
+    "partialFacts": [
+      "hitFrequency",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "volatility"
+    ],
+    "damage": [
+      "truncate"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0026-marketing_blurb",
+    "gameId": "BLY-SLT-0026",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "primaryTheme"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate",
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0027-rules_text",
+    "gameId": "BLY-SLT-0027",
+    "kind": "rules_text",
+    "format": "cms_html",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "payStructure",
+      "paylines",
+      "primaryTheme",
+      "rtp",
+      "secondaryFeatures",
+      "subThemes",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0027-editorial",
+    "gameId": "BLY-SLT-0027",
+    "kind": "editorial",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "complexity",
+      "coreMechanic",
+      "excitementCurve",
+      "mood",
+      "narrativeHook",
+      "pace",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0028-marketing_blurb",
+    "gameId": "BLY-SLT-0028",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "jackpotType",
+      "mood",
+      "narrativeHook",
+      "nostalgia",
+      "primaryTheme",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "mojibake"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": [
+      "volatility"
+    ]
+  },
+  {
+    "docId": "BLY-SLT-0028-release_note",
+    "gameId": "BLY-SLT-0028",
+    "kind": "release_note",
+    "format": "email",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "narrativeHook",
+      "payStructure",
+      "paylines",
+      "primaryTheme",
+      "rtp",
+      "secondaryFeatures",
+      "subThemes",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0029-rules_text",
+    "gameId": "BLY-SLT-0029",
+    "kind": "rules_text",
+    "format": "pdf_text",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "payStructure",
+      "paylines",
+      "primaryTheme",
+      "rtp",
+      "secondaryFeatures",
+      "subThemes",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0029-editorial",
+    "gameId": "BLY-SLT-0029",
+    "kind": "editorial",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "bonusStyle",
+      "complexity",
+      "coreMechanic",
+      "mood",
+      "narrativeHook",
+      "pace",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0030-rules_text",
+    "gameId": "BLY-SLT-0030",
+    "kind": "rules_text",
+    "format": "cms_html",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "payStructure",
+      "paylines"
+    ],
+    "partialFacts": [
+      "secondaryFeatures"
+    ],
+    "damage": [
+      "truncate"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0030-editorial",
+    "gameId": "BLY-SLT-0030",
+    "kind": "editorial",
+    "format": "markdown",
+    "survivingFacts": [
+      "artStyle",
+      "bonusStyle",
+      "excitementCurve",
+      "mood",
+      "narrativeHook",
+      "pace",
+      "primaryTheme",
+      "secondaryFeatures",
+      "socialElement",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0031-marketing_blurb",
+    "gameId": "BLY-SLT-0031",
+    "kind": "marketing_blurb",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "mojibake",
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0031-rules_text",
+    "gameId": "BLY-SLT-0031",
+    "kind": "rules_text",
+    "format": "pdf_text",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "hitFrequency",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "payStructure",
+      "paylines",
+      "rtp",
+      "secondaryFeatures",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0031-release_note",
+    "gameId": "BLY-SLT-0031",
+    "kind": "release_note",
+    "format": "email",
+    "survivingFacts": [
+      "bonusStyle",
+      "coreMechanic",
+      "excitementCurve",
+      "hitFrequency",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "narrativeHook",
+      "pace",
+      "payStructure",
+      "paylines",
+      "primaryTheme",
+      "rtp",
+      "secondaryFeatures",
+      "subThemes",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate",
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0032-marketing_blurb",
+    "gameId": "BLY-SLT-0032",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "mood",
+      "narrativeHook",
+      "nostalgia",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate",
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0032-rules_text",
+    "gameId": "BLY-SLT-0032",
+    "kind": "rules_text",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "payStructure",
+      "paylines",
+      "rtp",
+      "secondaryFeatures",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "mojibake",
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0032-release_note",
+    "gameId": "BLY-SLT-0032",
+    "kind": "release_note",
+    "format": "markdown",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "excitementCurve",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "narrativeHook",
+      "pace",
+      "payStructure",
+      "paylines",
+      "primaryTheme",
+      "rtp",
+      "secondaryFeatures",
+      "subThemes",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0033-marketing_blurb",
+    "gameId": "BLY-SLT-0033",
+    "kind": "marketing_blurb",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0034-marketing_blurb",
+    "gameId": "BLY-SLT-0034",
+    "kind": "marketing_blurb",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0034-rules_text",
+    "gameId": "BLY-SLT-0034",
+    "kind": "rules_text",
+    "format": "cms_html",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "payStructure",
+      "paylines",
+      "rtp",
+      "secondaryFeatures",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0034-release_note",
+    "gameId": "BLY-SLT-0034",
+    "kind": "release_note",
+    "format": "markdown",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "excitementCurve",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "pace",
+      "paylines",
+      "primaryTheme",
+      "rtp",
+      "secondaryFeatures",
+      "subThemes",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0035-marketing_blurb",
+    "gameId": "BLY-SLT-0035",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "bonusStyle",
+      "coreMechanic",
+      "grid",
+      "mood",
+      "narrativeHook",
+      "payStructure",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0035-rules_text",
+    "gameId": "BLY-SLT-0035",
+    "kind": "rules_text",
+    "format": "pdf_text",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "payStructure",
+      "secondaryFeatures"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "truncate"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0035-release_note",
+    "gameId": "BLY-SLT-0035",
+    "kind": "release_note",
+    "format": "markdown",
+    "survivingFacts": [
+      "artStyle",
+      "bonusStyle",
+      "coreMechanic",
+      "grid",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "pace",
+      "payStructure",
+      "primaryTheme",
+      "rtp",
+      "secondaryFeatures",
+      "subThemes",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0036-marketing_blurb",
+    "gameId": "BLY-SLT-0036",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": [
+      "volatility"
+    ]
+  },
+  {
+    "docId": "BLY-SLT-0036-release_note",
+    "gameId": "BLY-SLT-0036",
+    "kind": "release_note",
+    "format": "markdown",
+    "survivingFacts": [
+      "artStyle",
+      "bonusStyle",
+      "coreMechanic",
+      "grid",
+      "hitFrequency",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "pace",
+      "paylines",
+      "primaryTheme",
+      "rtp",
+      "secondaryFeatures",
+      "subThemes",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0037-marketing_blurb",
+    "gameId": "BLY-SLT-0037",
+    "kind": "marketing_blurb",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "mojibake"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0038-rules_text",
+    "gameId": "BLY-SLT-0038",
+    "kind": "rules_text",
+    "format": "pdf_text",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "jackpotType",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "payStructure",
+      "paylines",
+      "primaryTheme",
+      "rtp",
+      "secondaryFeatures",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0038-marketing_blurb",
+    "gameId": "BLY-SLT-0038",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0039-marketing_blurb",
+    "gameId": "BLY-SLT-0039",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0039-rules_text",
+    "gameId": "BLY-SLT-0039",
+    "kind": "rules_text",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "hitFrequency",
+      "jackpotType",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "payStructure",
+      "paylines",
+      "primaryTheme",
+      "rtp",
+      "secondaryFeatures",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0039-release_note",
+    "gameId": "BLY-SLT-0039",
+    "kind": "release_note",
+    "format": "markdown",
+    "survivingFacts": [
+      "coreMechanic",
+      "hitFrequency",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "narrativeHook",
+      "payStructure",
+      "paylines",
+      "primaryTheme",
+      "rtp",
+      "secondaryFeatures",
+      "subThemes",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "mojibake"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0040-marketing_blurb",
+    "gameId": "BLY-SLT-0040",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "mojibake"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0041-marketing_blurb",
+    "gameId": "BLY-SLT-0041",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "jackpotType",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0041-rules_text",
+    "gameId": "BLY-SLT-0041",
+    "kind": "rules_text",
+    "format": "cms_html",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "hitFrequency",
+      "jackpotType",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "payStructure",
+      "paylines",
+      "primaryTheme",
+      "rtp",
+      "secondaryFeatures",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "mojibake"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0042-rules_text",
+    "gameId": "BLY-SLT-0042",
+    "kind": "rules_text",
+    "format": "pdf_text",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "hitFrequency",
+      "jackpotType",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "payStructure",
+      "paylines",
+      "rtp",
+      "secondaryFeatures",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "mojibake"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0042-release_note",
+    "gameId": "BLY-SLT-0042",
+    "kind": "release_note",
+    "format": "email",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "hitFrequency",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "payStructure",
+      "paylines",
+      "primaryTheme",
+      "rtp",
+      "secondaryFeatures",
+      "subThemes",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0043-rules_text",
+    "gameId": "BLY-SLT-0043",
+    "kind": "rules_text",
+    "format": "pdf_text",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "hitFrequency",
+      "jackpotType",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "payStructure",
+      "paylines",
+      "rtp",
+      "secondaryFeatures",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0043-editorial",
+    "gameId": "BLY-SLT-0043",
+    "kind": "editorial",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "complexity",
+      "coreMechanic",
+      "mood",
+      "pace",
+      "payStructure",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0043-marketing_blurb",
+    "gameId": "BLY-SLT-0043",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "mood",
+      "narrativeHook",
+      "payStructure",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": [
+      "volatility"
+    ]
+  },
+  {
+    "docId": "BLY-SLT-0043-release_note",
+    "gameId": "BLY-SLT-0043",
+    "kind": "release_note",
+    "format": "markdown",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "hitFrequency",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "mood",
+      "pace",
+      "payStructure",
+      "paylines",
+      "primaryTheme",
+      "rtp",
+      "secondaryFeatures",
+      "subThemes",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0044-marketing_blurb",
+    "gameId": "BLY-SLT-0044",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "mood",
+      "primaryTheme",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0045-marketing_blurb",
+    "gameId": "BLY-SLT-0045",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "mood",
+      "primaryTheme",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0046-marketing_blurb",
+    "gameId": "BLY-SLT-0046",
+    "kind": "marketing_blurb",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0046-rules_text",
+    "gameId": "BLY-SLT-0046",
+    "kind": "rules_text",
+    "format": "pdf_text",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "hitFrequency",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "payStructure",
+      "paylines",
+      "rtp",
+      "secondaryFeatures",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0046-release_note",
+    "gameId": "BLY-SLT-0046",
+    "kind": "release_note",
+    "format": "markdown",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "excitementCurve",
+      "hitFrequency",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "pace",
+      "paylines",
+      "primaryTheme",
+      "rtp",
+      "secondaryFeatures",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0047-marketing_blurb",
+    "gameId": "BLY-SLT-0047",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "complexity",
+      "coreMechanic",
+      "mood",
+      "narrativeHook",
+      "nostalgia",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0048-marketing_blurb",
+    "gameId": "BLY-SLT-0048",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0048-rules_text",
+    "gameId": "BLY-SLT-0048",
+    "kind": "rules_text",
+    "format": "cms_html",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "payStructure",
+      "rtp",
+      "secondaryFeatures",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0049-marketing_blurb",
+    "gameId": "BLY-SLT-0049",
+    "kind": "marketing_blurb",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0049-rules_text",
+    "gameId": "BLY-SLT-0049",
+    "kind": "rules_text",
+    "format": "pdf_text",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "hitFrequency",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "payStructure",
+      "paylines",
+      "rtp",
+      "secondaryFeatures",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0049-release_note",
+    "gameId": "BLY-SLT-0049",
+    "kind": "release_note",
+    "format": "markdown",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "excitementCurve",
+      "hitFrequency",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "pace",
+      "paylines",
+      "primaryTheme",
+      "rtp",
+      "secondaryFeatures",
+      "subThemes",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0050-marketing_blurb",
+    "gameId": "BLY-SLT-0050",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "mood",
+      "narrativeHook",
+      "payStructure",
+      "primaryTheme",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "mojibake",
+      "boilerplate",
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0051-marketing_blurb",
+    "gameId": "BLY-SLT-0051",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "mood",
+      "narrativeHook",
+      "payStructure",
+      "primaryTheme",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0051-rules_text",
+    "gameId": "BLY-SLT-0051",
+    "kind": "rules_text",
+    "format": "pdf_text",
+    "survivingFacts": [],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate"
+    ],
+    "describesGameId": "BLY-SLT-0055",
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0052-marketing_blurb",
+    "gameId": "BLY-SLT-0052",
+    "kind": "marketing_blurb",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "mood",
+      "narrativeHook",
+      "payStructure",
+      "primaryTheme",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0052-rules_text",
+    "gameId": "BLY-SLT-0052",
+    "kind": "rules_text",
+    "format": "cms_html",
+    "survivingFacts": [],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate"
+    ],
+    "describesGameId": "BLY-SLT-0083",
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0052-release_note",
+    "gameId": "BLY-SLT-0052",
+    "kind": "release_note",
+    "format": "email",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "grid",
+      "hitFrequency",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "payStructure",
+      "paylines",
+      "primaryTheme",
+      "rtp",
+      "secondaryFeatures",
+      "subThemes",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0053-marketing_blurb",
+    "gameId": "BLY-SLT-0053",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "primaryTheme"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0054-marketing_blurb",
+    "gameId": "BLY-SLT-0054",
+    "kind": "marketing_blurb",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "coreMechanic",
+      "maxWinMultiplier",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0054-rules_text",
+    "gameId": "BLY-SLT-0054",
+    "kind": "rules_text",
+    "format": "cms_html",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "hitFrequency",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "payStructure",
+      "paylines",
+      "rtp",
+      "secondaryFeatures",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0054-release_note",
+    "gameId": "BLY-SLT-0054",
+    "kind": "release_note",
+    "format": "markdown",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "hitFrequency",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "mood",
+      "paylines",
+      "primaryTheme",
+      "rtp",
+      "secondaryFeatures",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0055-rules_text",
+    "gameId": "BLY-SLT-0055",
+    "kind": "rules_text",
+    "format": "pdf_text",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "payStructure",
+      "paylines",
+      "rtp",
+      "secondaryFeatures",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0055-editorial",
+    "gameId": "BLY-SLT-0055",
+    "kind": "editorial",
+    "format": "markdown",
+    "survivingFacts": [
+      "artStyle",
+      "complexity",
+      "coreMechanic",
+      "excitementCurve",
+      "mood",
+      "narrativeHook",
+      "pace",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0055-marketing_blurb",
+    "gameId": "BLY-SLT-0055",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0056-rules_text",
+    "gameId": "BLY-SLT-0056",
+    "kind": "rules_text",
+    "format": "cms_html",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "payStructure",
+      "paylines"
+    ],
+    "partialFacts": [
+      "secondaryFeatures"
+    ],
+    "damage": [
+      "truncate"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0056-editorial",
+    "gameId": "BLY-SLT-0056",
+    "kind": "editorial",
+    "format": "markdown",
+    "survivingFacts": [
+      "artStyle",
+      "complexity",
+      "coreMechanic",
+      "excitementCurve",
+      "mood",
+      "narrativeHook",
+      "pace",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0056-marketing_blurb",
+    "gameId": "BLY-SLT-0056",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "maxWinMultiplier",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0057-marketing_blurb",
+    "gameId": "BLY-SLT-0057",
+    "kind": "marketing_blurb",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "maxWinMultiplier",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "mojibake"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0057-rules_text",
+    "gameId": "BLY-SLT-0057",
+    "kind": "rules_text",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "payStructure",
+      "paylines",
+      "rtp",
+      "secondaryFeatures",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0058-marketing_blurb",
+    "gameId": "BLY-SLT-0058",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "maxWinMultiplier",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0058-rules_text",
+    "gameId": "BLY-SLT-0058",
+    "kind": "rules_text",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "payStructure",
+      "paylines",
+      "rtp",
+      "secondaryFeatures",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "mojibake",
+      "boilerplate",
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-LIV-0059-marketing_blurb",
+    "gameId": "BLY-LIV-0059",
+    "kind": "marketing_blurb",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "format",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "socialElement",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-LIV-0059-rules_text",
+    "gameId": "BLY-LIV-0059",
+    "kind": "rules_text",
+    "format": "pdf_text",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "primaryTheme",
+      "rtp",
+      "subThemes",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-LIV-0059-release_note",
+    "gameId": "BLY-LIV-0059",
+    "kind": "release_note",
+    "format": "markdown",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "narrativeHook",
+      "primaryTheme",
+      "rtp",
+      "socialElement",
+      "subThemes",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-TAB-0060-rules_text",
+    "gameId": "BLY-TAB-0060",
+    "kind": "rules_text",
+    "format": "cms_html",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "primaryTheme",
+      "rtp",
+      "subThemes",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-TAB-0060-marketing_blurb",
+    "gameId": "BLY-TAB-0060",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "format",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLI-0061-marketing_blurb",
+    "gameId": "BLY-SLI-0061",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "maxWinMultiplier",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0062-marketing_blurb",
+    "gameId": "BLY-SLT-0062",
+    "kind": "marketing_blurb",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "coreMechanic",
+      "jackpotType",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0062-rules_text",
+    "gameId": "BLY-SLT-0062",
+    "kind": "rules_text",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "jackpotType",
+      "payStructure",
+      "paylines",
+      "secondaryFeatures"
+    ],
+    "partialFacts": [
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "volatility"
+    ],
+    "damage": [
+      "truncate",
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0062-release_note",
+    "gameId": "BLY-SLT-0062",
+    "kind": "release_note",
+    "format": "email",
+    "survivingFacts": [
+      "coreMechanic",
+      "jackpotType",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "paylines",
+      "primaryTheme",
+      "rtp",
+      "secondaryFeatures",
+      "subThemes",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-INS-0063-rules_text",
+    "gameId": "BLY-INS-0063",
+    "kind": "rules_text",
+    "format": "pdf_text",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "jackpotType",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "payStructure",
+      "rtp",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0064-marketing_blurb",
+    "gameId": "BLY-SLT-0064",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "complexity",
+      "mood",
+      "payStructure",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLI-0065-rules_text",
+    "gameId": "BLY-SLI-0065",
+    "kind": "rules_text",
+    "format": "pdf_text",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "jackpotType",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "payStructure",
+      "rtp",
+      "secondaryFeatures",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLI-0065-editorial",
+    "gameId": "BLY-SLI-0065",
+    "kind": "editorial",
+    "format": "markdown",
+    "survivingFacts": [
+      "artStyle",
+      "bonusStyle",
+      "excitementCurve",
+      "mood",
+      "pace",
+      "primaryTheme",
+      "secondaryFeatures",
+      "socialElement",
+      "subThemes",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-LIV-0066-marketing_blurb",
+    "gameId": "BLY-LIV-0066",
+    "kind": "marketing_blurb",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "primaryTheme",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-CRA-0067-marketing_blurb",
+    "gameId": "BLY-CRA-0067",
+    "kind": "marketing_blurb",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "mojibake"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-CRA-0067-rules_text",
+    "gameId": "BLY-CRA-0067",
+    "kind": "rules_text",
+    "format": "pdf_text",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "rtp",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-BIN-0068-marketing_blurb",
+    "gameId": "BLY-BIN-0068",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-BIN-0068-rules_text",
+    "gameId": "BLY-BIN-0068",
+    "kind": "rules_text",
+    "format": "cms_html",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "rtp",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0069-marketing_blurb",
+    "gameId": "BLY-SLT-0069",
+    "kind": "marketing_blurb",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-GAM-0070-rules_text",
+    "gameId": "BLY-GAM-0070",
+    "kind": "rules_text",
+    "format": "cms_html",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "primaryTheme",
+      "rtp",
+      "subThemes",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-BIN-0071-rules_text",
+    "gameId": "BLY-BIN-0071",
+    "kind": "rules_text",
+    "format": "pdf_text",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "primaryTheme",
+      "rtp",
+      "subThemes",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-BIN-0071-editorial",
+    "gameId": "BLY-BIN-0071",
+    "kind": "editorial",
+    "format": "markdown",
+    "survivingFacts": [
+      "coreMechanic",
+      "excitementCurve",
+      "mood",
+      "narrativeHook",
+      "pace",
+      "primaryTheme",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-INS-0072-marketing_blurb",
+    "gameId": "BLY-INS-0072",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "coreMechanic",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-INS-0072-rules_text",
+    "gameId": "BLY-INS-0072",
+    "kind": "rules_text",
+    "format": "cms_html",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "primaryTheme",
+      "rtp",
+      "subThemes",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-INS-0072-release_note",
+    "gameId": "BLY-INS-0072",
+    "kind": "release_note",
+    "format": "markdown",
+    "survivingFacts": [
+      "coreMechanic",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "pace",
+      "primaryTheme",
+      "rtp",
+      "subThemes",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-LIV-0073-marketing_blurb",
+    "gameId": "BLY-LIV-0073",
+    "kind": "marketing_blurb",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "mood",
+      "nostalgia",
+      "pace",
+      "primaryTheme",
+      "socialElement",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-LIV-0073-rules_text",
+    "gameId": "BLY-LIV-0073",
+    "kind": "rules_text",
+    "format": "pdf_text",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "nostalgia",
+      "primaryTheme",
+      "rtp",
+      "socialElement",
+      "subThemes",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate",
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-LIV-0073-release_note",
+    "gameId": "BLY-LIV-0073",
+    "kind": "release_note",
+    "format": "markdown",
+    "survivingFacts": [
+      "coreMechanic",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "nostalgia",
+      "pace",
+      "primaryTheme",
+      "rtp",
+      "socialElement",
+      "subThemes",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLI-0074-marketing_blurb",
+    "gameId": "BLY-SLI-0074",
+    "kind": "marketing_blurb",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "excitementCurve",
+      "mood",
+      "narrativeHook",
+      "pace",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLI-0074-rules_text",
+    "gameId": "BLY-SLI-0074",
+    "kind": "rules_text",
+    "format": "pdf_text",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "payStructure",
+      "rtp",
+      "secondaryFeatures",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-TAB-0075-marketing_blurb",
+    "gameId": "BLY-TAB-0075",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "mood",
+      "narrativeHook",
+      "pace",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "mojibake",
+      "boilerplate",
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-TAB-0075-rules_text",
+    "gameId": "BLY-TAB-0075",
+    "kind": "rules_text",
+    "format": "cms_html",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "rtp",
+      "secondaryFeatures",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-LIV-0076-marketing_blurb",
+    "gameId": "BLY-LIV-0076",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "jackpotType",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "secondaryFeatures",
+      "socialElement",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "mojibake"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-LIV-0076-rules_text",
+    "gameId": "BLY-LIV-0076",
+    "kind": "rules_text",
+    "format": "pdf_text",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "format",
+      "jackpotType",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "rtp",
+      "secondaryFeatures",
+      "socialElement",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-LIV-0076-release_note",
+    "gameId": "BLY-LIV-0076",
+    "kind": "release_note",
+    "format": "email",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "jackpotType",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "mood",
+      "narrativeHook",
+      "pace",
+      "primaryTheme",
+      "rtp",
+      "secondaryFeatures",
+      "socialElement",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLI-0077-marketing_blurb",
+    "gameId": "BLY-SLI-0077",
+    "kind": "marketing_blurb",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-TAB-0078-marketing_blurb",
+    "gameId": "BLY-TAB-0078",
+    "kind": "marketing_blurb",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "mood",
+      "narrativeHook",
+      "pace",
+      "primaryTheme",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-CRA-0079-marketing_blurb",
+    "gameId": "BLY-CRA-0079",
+    "kind": "marketing_blurb",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "excitementCurve",
+      "mood",
+      "narrativeHook",
+      "pace",
+      "primaryTheme",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-BIN-0080-release_note",
+    "gameId": "BLY-BIN-0080",
+    "kind": "release_note",
+    "format": "email",
+    "survivingFacts": [
+      "artStyle",
+      "complexity",
+      "coreMechanic",
+      "format",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "narrativeHook",
+      "pace",
+      "primaryTheme",
+      "rtp",
+      "subThemes",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "mojibake",
+      "boilerplate"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-TAB-0081-marketing_blurb",
+    "gameId": "BLY-TAB-0081",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-TAB-0081-rules_text",
+    "gameId": "BLY-TAB-0081",
+    "kind": "rules_text",
+    "format": "pdf_text",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "primaryTheme",
+      "rtp",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate",
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-LIV-0082-marketing_blurb",
+    "gameId": "BLY-LIV-0082",
+    "kind": "marketing_blurb",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "artStyle",
+      "mood",
+      "primaryTheme"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "mojibake",
+      "boilerplate",
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0083-rules_text",
+    "gameId": "BLY-SLT-0083",
+    "kind": "rules_text",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "hitFrequency",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "payStructure",
+      "paylines",
+      "primaryTheme",
+      "rtp",
+      "secondaryFeatures",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0083-release_note",
+    "gameId": "BLY-SLT-0083",
+    "kind": "release_note",
+    "format": "email",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "hitFrequency",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "mood",
+      "paylines",
+      "primaryTheme",
+      "rtp",
+      "secondaryFeatures",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "mojibake"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0084-marketing_blurb",
+    "gameId": "BLY-SLT-0084",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "mood",
+      "primaryTheme",
+      "secondaryFeatures"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0084-rules_text",
+    "gameId": "BLY-SLT-0084",
+    "kind": "rules_text",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "payStructure",
+      "paylines",
+      "primaryTheme",
+      "rtp",
+      "secondaryFeatures",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate",
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-GAM-0085-marketing_blurb",
+    "gameId": "BLY-GAM-0085",
+    "kind": "marketing_blurb",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "narrativeHook",
+      "primaryTheme",
+      "socialElement",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-GAM-0085-rules_text",
+    "gameId": "BLY-GAM-0085",
+    "kind": "rules_text",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "primaryTheme",
+      "rtp",
+      "socialElement",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-GAM-0085-release_note",
+    "gameId": "BLY-GAM-0085",
+    "kind": "release_note",
+    "format": "markdown",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "narrativeHook",
+      "primaryTheme",
+      "rtp",
+      "socialElement",
+      "subThemes",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0086-marketing_blurb",
+    "gameId": "BLY-SLT-0086",
+    "kind": "marketing_blurb",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "coreMechanic",
+      "maxWinMultiplier",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0086-rules_text",
+    "gameId": "BLY-SLT-0086",
+    "kind": "rules_text",
+    "format": "pdf_text",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "hitFrequency",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "payStructure",
+      "paylines",
+      "rtp",
+      "secondaryFeatures",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "mojibake",
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0086-release_note",
+    "gameId": "BLY-SLT-0086",
+    "kind": "release_note",
+    "format": "email",
+    "survivingFacts": [
+      "coreMechanic",
+      "hitFrequency",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "mood",
+      "narrativeHook",
+      "nostalgia",
+      "paylines",
+      "primaryTheme",
+      "rtp",
+      "secondaryFeatures",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLI-0087-rules_text",
+    "gameId": "BLY-SLI-0087",
+    "kind": "rules_text",
+    "format": "cms_html",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "payStructure",
+      "primaryTheme",
+      "rtp",
+      "secondaryFeatures",
+      "subThemes",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLI-0087-marketing_blurb",
+    "gameId": "BLY-SLI-0087",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "coreMechanic",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-TAB-0088-marketing_blurb",
+    "gameId": "BLY-TAB-0088",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "primaryTheme",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-LIV-0089-marketing_blurb",
+    "gameId": "BLY-LIV-0089",
+    "kind": "marketing_blurb",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "artStyle",
+      "format",
+      "mood",
+      "narrativeHook",
+      "nostalgia",
+      "pace",
+      "primaryTheme",
+      "socialElement",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate",
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-LIV-0089-rules_text",
+    "gameId": "BLY-LIV-0089",
+    "kind": "rules_text",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "format",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "primaryTheme",
+      "rtp",
+      "socialElement",
+      "subThemes",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLI-0090-marketing_blurb",
+    "gameId": "BLY-SLI-0090",
+    "kind": "marketing_blurb",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLI-0090-release_note",
+    "gameId": "BLY-SLI-0090",
+    "kind": "release_note",
+    "format": "email",
+    "survivingFacts": [
+      "artStyle",
+      "bonusStyle",
+      "complexity",
+      "coreMechanic",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "pace",
+      "primaryTheme",
+      "rtp",
+      "secondaryFeatures",
+      "subThemes",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLI-0091-marketing_blurb",
+    "gameId": "BLY-SLI-0091",
+    "kind": "marketing_blurb",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "excitementCurve",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLI-0091-rules_text",
+    "gameId": "BLY-SLI-0091",
+    "kind": "rules_text",
+    "format": "pdf_text",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "rtp",
+      "secondaryFeatures",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLI-0091-release_note",
+    "gameId": "BLY-SLI-0091",
+    "kind": "release_note",
+    "format": "markdown",
+    "survivingFacts": [
+      "artStyle",
+      "complexity",
+      "coreMechanic",
+      "excitementCurve",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "pace",
+      "primaryTheme",
+      "rtp",
+      "secondaryFeatures",
+      "subThemes",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-BIN-0092-marketing_blurb",
+    "gameId": "BLY-BIN-0092",
+    "kind": "marketing_blurb",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "mood",
+      "narrativeHook",
+      "nostalgia",
+      "primaryTheme",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-BIN-0092-rules_text",
+    "gameId": "BLY-BIN-0092",
+    "kind": "rules_text",
+    "format": "pdf_text",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "rtp",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLI-0093-marketing_blurb",
+    "gameId": "BLY-SLI-0093",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "excitementCurve",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLI-0093-rules_text",
+    "gameId": "BLY-SLI-0093",
+    "kind": "rules_text",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "rtp",
+      "secondaryFeatures",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-INS-0094-marketing_blurb",
+    "gameId": "BLY-INS-0094",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "complexity",
+      "coreMechanic",
+      "mood",
+      "primaryTheme",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLI-0095-marketing_blurb",
+    "gameId": "BLY-SLI-0095",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLI-0095-rules_text",
+    "gameId": "BLY-SLI-0095",
+    "kind": "rules_text",
+    "format": "cms_html",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "primaryTheme",
+      "rtp",
+      "secondaryFeatures",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLI-0095-release_note",
+    "gameId": "BLY-SLI-0095",
+    "kind": "release_note",
+    "format": "markdown",
+    "survivingFacts": [
+      "artStyle",
+      "grid",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "pace",
+      "primaryTheme",
+      "rtp",
+      "secondaryFeatures",
+      "subThemes",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate",
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLI-0096-rules_text",
+    "gameId": "BLY-SLI-0096",
+    "kind": "rules_text",
+    "format": "cms_html",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "primaryTheme",
+      "rtp",
+      "secondaryFeatures",
+      "subThemes",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLI-0096-editorial",
+    "gameId": "BLY-SLI-0096",
+    "kind": "editorial",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "excitementCurve",
+      "grid",
+      "mood",
+      "pace",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLI-0096-marketing_blurb",
+    "gameId": "BLY-SLI-0096",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "mood",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-BIN-0097-marketing_blurb",
+    "gameId": "BLY-BIN-0097",
+    "kind": "marketing_blurb",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "mood",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-BIN-0097-rules_text",
+    "gameId": "BLY-BIN-0097",
+    "kind": "rules_text",
+    "format": "cms_html",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "primaryTheme",
+      "rtp",
+      "secondaryFeatures",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-INS-0098-marketing_blurb",
+    "gameId": "BLY-INS-0098",
+    "kind": "marketing_blurb",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "artStyle",
+      "complexity",
+      "coreMechanic",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-INS-0098-rules_text",
+    "gameId": "BLY-INS-0098",
+    "kind": "rules_text",
+    "format": "pdf_text",
+    "survivingFacts": [
+      "coreMechanic",
+      "format",
+      "grid",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "payStructure",
+      "primaryTheme",
+      "rtp",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-INS-0098-release_note",
+    "gameId": "BLY-INS-0098",
+    "kind": "release_note",
+    "format": "email",
+    "survivingFacts": [
+      "artStyle",
+      "complexity",
+      "coreMechanic",
+      "maxStake",
+      "maxWinMultiplier",
+      "minStake",
+      "primaryTheme",
+      "rtp",
+      "volatility"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "whitespace"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-0099-marketing_blurb",
+    "gameId": "BLY-SLT-0099",
+    "kind": "marketing_blurb",
+    "format": "cms_html",
+    "survivingFacts": [
+      "artStyle",
+      "mood",
+      "narrativeHook",
+      "nostalgia",
+      "pace",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-BIN-0100-marketing_blurb",
+    "gameId": "BLY-BIN-0100",
+    "kind": "marketing_blurb",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "mood",
+      "narrativeHook",
+      "pace",
+      "primaryTheme",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "mojibake"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-9001-marketing_blurb",
+    "gameId": "BLY-SLT-9001",
+    "kind": "marketing_blurb",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "artStyle",
+      "coreMechanic",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "secondaryFeatures",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [
+      "boilerplate"
+    ],
+    "describesGameId": null,
+    "misleadingFacts": []
+  },
+  {
+    "docId": "BLY-SLT-9002-marketing_blurb",
+    "gameId": "BLY-SLT-9002",
+    "kind": "marketing_blurb",
+    "format": "aggregator_xml",
+    "survivingFacts": [
+      "coreMechanic",
+      "maxWinMultiplier",
+      "mood",
+      "narrativeHook",
+      "primaryTheme",
+      "subThemes"
+    ],
+    "partialFacts": [],
+    "damage": [],
+    "describesGameId": null,
+    "misleadingFacts": []
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "degradeSeed": 7,
+  "planSeed": 20261113,
+  "generation": {
+    "model": "openai/gpt-6-luna",
+    "promptVersion": "gen-v1",
+    "planSeed": 20261113,
+    "generatedAt": "2026-11-13T13:03:30.308Z"
+  },
+  "counts": {
+    "feedRecords": 102,
+    "documents": 200,
+    "format:cms_html": 81,
+    "format:email": 16,
+    "format:aggregator_xml": 49,
+    "format:markdown": 26,
+    "format:pdf_text": 28,
+    "kind:marketing_blurb": 84,
+    "kind:release_note": 33,
+    "kind:rules_text": 65,
+    "kind:editorial": 18
+  },
+  "duplicates": {
+    "BLY-SLT-9001": "BLY-SLT-0069",
+    "BLY-SLT-9002": "BLY-SLT-0086"
+  },
+  "files": {
+    "catalogue.raw.json": "6e0383e2be34b118",
+    "documents.json": "45bddb9951329c95",
+    "documents.truth.json": "1bfc47e1faa160f2"
+  }
+}
