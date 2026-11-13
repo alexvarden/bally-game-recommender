@@ -16,7 +16,7 @@
     "crap": "node scripts/quality/crap.ts --threshold 30",
     "ci": "npm run typecheck && npm run test:coverage && npm run crap",
     "eval": "node evals/report.ts",
-    "eval:strict": "node evals/report.ts --strict"
+    "eval:strict": "node evals/report.ts --strict",
     "similarity:embed": "node scripts/similarity/embed.ts",
     "similarity:preview": "node scripts/similarity/preview.ts"
   },
