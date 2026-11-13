@@ -14,7 +14,9 @@
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
     "crap": "node scripts/quality/crap.ts --threshold 30",
-    "ci": "npm run typecheck && npm run test:coverage && npm run crap"
+    "ci": "npm run typecheck && npm run test:coverage && npm run crap",
+    "eval": "node evals/report.ts",
+    "eval:strict": "node evals/report.ts --strict"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.8.0",
