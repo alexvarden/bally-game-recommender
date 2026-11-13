@@ -58,7 +58,7 @@ export const Manifest = z.object({
 
 // ---------- Label vocabularies: how real feeds spell things ----------
 
-const FORMAT_LABELS: Record<string, string[]> = {
+export const FORMAT_LABELS: Record<string, string[]> = {
   video_slot: ["Video Slots", "slot", "Slots", "VIDEO_SLOT", "Video Slot"],
   classic_slot: ["Classic Slots", "Fruit Machine", "slot", "3-Reel"],
   slingo: ["Slingo", "SLINGO", "Slingo/Slots"],
@@ -70,7 +70,7 @@ const FORMAT_LABELS: Record<string, string[]> = {
   game_show: ["Game Show", "Live Game Show", "LIVE - Shows"],
 };
 
-const THEME_LABELS: Record<string, string[]> = {
+export const THEME_LABELS: Record<string, string[]> = {
   ancient_egypt: ["Egyptian", "Egypt / Pyramids", "ANCIENT EGYPT", "egypt"],
   irish_luck: ["Irish", "Luck of the Irish", "Celtic", "leprechaun"],
   norse_myth: ["Norse", "Vikings", "Mythology - Norse"],
@@ -93,7 +93,7 @@ const THEME_LABELS: Record<string, string[]> = {
   sport: ["Sport", "Football", "Sports"],
 };
 
-const MECHANIC_LABELS: Record<string, string[]> = {
+export const MECHANIC_LABELS: Record<string, string[]> = {
   hold_and_win: ["Hold & Win", "hold n win", "HOLD AND WIN", "Lock & Respin"],
   cascades: ["Cascading Reels", "Tumble", "avalanche", "Cascades"],
   expanding_wilds: ["Expanding Wilds", "expanding wild", "EXP WILDS"],
@@ -120,14 +120,14 @@ const MECHANIC_LABELS: Record<string, string[]> = {
   progressive_reels: ["Progressive Reels"],
 };
 
-const VOL_LABELS: Record<string, string[]> = {
+export const VOL_LABELS: Record<string, string[]> = {
   low: ["Low", "low", "1/5", "2/5", "L"],
   medium: ["Medium", "Med", "3/5", "MEDIUM", "M"],
   high: ["High", "4/5", "HIGH", "Med-High", "H"],
   very_high: ["Very High", "5/5", "V.High", "Extreme", "very high"],
 };
 
-const BRAND_CODES: Record<string, string[]> = {
+export const BRAND_CODES: Record<string, string[]> = {
   jackpotjoy: ["JPJ", "Jackpotjoy", "jackpotjoy"],
   virgin_games: ["VG", "Virgin Games", "virgin"],
   monopoly_casino: ["MON", "Monopoly Casino", "monopoly"],
@@ -136,21 +136,21 @@ const BRAND_CODES: Record<string, string[]> = {
   bally_casino_us: ["BALLY-US", "Bally Casino (US)", "ballyus"],
 };
 
-const MARKET_CODES: Record<string, string[]> = {
+export const MARKET_CODES: Record<string, string[]> = {
   GB: ["GB", "UK", "UKGC"],
   ES: ["ES", "Spain", "DGOJ"],
   "US-NJ": ["NJ", "US-NJ"],
   "US-PA": ["PA", "US-PA"],
 };
 
-const STATUS_LABELS: Record<string, string[]> = {
+export const STATUS_LABELS: Record<string, string[]> = {
   live: ["live", "Live", "ACTIVE", "1"],
   coming_soon: ["coming soon", "PRE-RELEASE", "scheduled"],
   suspended: ["suspended", "Disabled", "OFF"],
   retired: ["retired", "EOL", "Archived"],
 };
 
-const JACKPOT_LABELS: Record<string, string[]> = {
+export const JACKPOT_LABELS: Record<string, string[]> = {
   none: ["None", "N/A", "no", ""],
   fixed: ["Fixed", "fixed jackpots", "Mini/Minor/Major/Grand"],
   local_progressive: ["Progressive (Local)", "local prog", "Site Progressive"],

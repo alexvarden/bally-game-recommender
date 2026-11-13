@@ -1,0 +1,27 @@
+{
+  "dates": {
+    "initial": "2026-11-10",
+    "update": "2026-11-13"
+  },
+  "newTitles": [
+    "BLY-CRA-0079",
+    "BLY-INS-0098",
+    "BLY-SLI-0096",
+    "BLY-SLT-0021",
+    "BLY-SLT-0028",
+    "BLY-SLT-0031",
+    "BLY-SLT-0037",
+    "BLY-SLT-0051",
+    "BLY-TAB-0060",
+    "BLY-TAB-0075"
+  ],
+  "rtpChange": {
+    "gameId": "BLY-INS-0063",
+    "fromRtp": 0.9155,
+    "toRtp": 0.8955
+  },
+  "lateDocument": {
+    "docId": "BLY-SLT-0003-marketing_blurb",
+    "gameId": "BLY-SLT-0003"
+  }
+}
