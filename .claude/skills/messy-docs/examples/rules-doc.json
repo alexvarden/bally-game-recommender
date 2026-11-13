@@ -1,0 +1,27 @@
+{
+  "docId": "DOC-0042-rules",
+  "title": "Pharaoh's Vault Hold & Win",
+  "source": "Sandstone Studios",
+  "sections": [
+    {
+      "heading": "Game Overview",
+      "text": "Pharaoh's Vault is a 5-reel, 3-row video slot with 20 fixed paylines. Explore the tomb's hidden chambers and uncover the treasures of the boy king.",
+      "tags": ["format", "grid", "paylines", "payStructure", "primaryTheme", "narrativeHook"]
+    },
+    {
+      "heading": "Game Information",
+      "text": "Volatility: High\nMin bet: £0.20\nMax bet: £5.00\nMax win: 5,000x total bet",
+      "tags": ["volatility", "minStake", "maxStake", "maxWinMultiplier"]
+    },
+    {
+      "heading": "Hold & Win Feature",
+      "text": "Landing 6 or more Scarab coin symbols triggers the Hold & Win feature. Coins lock in place and the player receives 3 respins. Each new coin resets the respins to 3.\nFill all 15 positions to win the Grand jackpot.",
+      "tags": ["coreMechanic", "secondaryFeatures", "jackpotType"]
+    },
+    {
+      "heading": "Return to Player",
+      "text": "The theoretical return to player (RTP) of this game is 96.12%. Malfunction voids all pays and plays.",
+      "tags": ["rtp"]
+    }
+  ]
+}
