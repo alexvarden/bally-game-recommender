@@ -216,28 +216,29 @@ function renderAggregatorXml(doc: CleanDoc, rng: Rng): string {
   ].join("\n");
 }
 
+function markdownKv(pairs: [string, string][], bullet: string, rng: Rng): string[] {
+  if (chance(rng, 0.4)) {
+    // Hand-written tables with misaligned pipes.
+    return [`| Item | Value |\n|---|---|`, ...pairs.map(([k, v]) => `| ${k} |${v} ${chance(rng, 0.3) ? "" : "|"}`)];
+  }
+  return pairs.map(([k, v]) => `${bullet} ${chance(rng, 0.6) ? `**${k}:**` : `${k} -`} ${v}`);
+}
+
+function markdownSection(s: CleanSection, bullet: string, rng: Rng): string[] {
+  const out: string[] = [];
+  if (s.heading) out.push(pick(rng, [`## ${s.heading}`, `### ${s.heading}`, `**${s.heading}**`, `${s.heading}:`]));
+  if (isKvBlock(s.text)) out.push(...markdownKv(kvPairs(s.text), bullet, rng));
+  else for (const para of splitLines(s.text)) out.push(chance(rng, 0.15) ? `${para}<br>` : para);
+  out.push("");
+  return out;
+}
+
 function renderMarkdown(doc: CleanDoc, rng: Rng): string {
   const bullet = pick(rng, ["-", "*", "•"]);
   const out: string[] = [];
   out.push(chance(rng, 0.5) ? `# ${doc.title}` : `${doc.title}\n${"=".repeat(doc.title.length)}`);
   if (chance(rng, 0.4)) out.push(`_${pick(rng, ["DRAFT", "v2 – updated", "FINAL (2)"])}_ ${pick(rng, ["🎰", "🚀", ""])}`);
-
-  for (const s of doc.sections) {
-    if (s.heading) out.push(pick(rng, [`## ${s.heading}`, `### ${s.heading}`, `**${s.heading}**`, `${s.heading}:`]));
-    if (isKvBlock(s.text)) {
-      const pairs = kvPairs(s.text);
-      if (chance(rng, 0.4)) {
-        // Hand-written tables with misaligned pipes.
-        out.push(`| Item | Value |\n|---|---|`);
-        for (const [k, v] of pairs) out.push(`| ${k} |${v} ${chance(rng, 0.3) ? "" : "|"}`);
-      } else {
-        for (const [k, v] of pairs) out.push(`${bullet} ${chance(rng, 0.6) ? `**${k}:**` : `${k} -`} ${v}`);
-      }
-    } else {
-      for (const para of splitLines(s.text)) out.push(chance(rng, 0.15) ? `${para}<br>` : para);
-    }
-    out.push("");
-  }
+  for (const s of doc.sections) out.push(...markdownSection(s, bullet, rng));
   if (chance(rng, 0.5)) out.push(`[Assets](https://cdn.example.invalid/${doc.docId}/assets.zip) | [Paytable PDF][1]\n\n[1]: https://cdn.example.invalid/${doc.docId}/paytable.pdf`);
   return out.join("\n");
 }
@@ -273,45 +274,49 @@ function renderEmail(doc: CleanDoc, rng: Rng): string {
   ].join("\n");
 }
 
+/** Hard wraps with hyphenation, as text extraction from a PDF produces. */
+export function wrapParagraph(para: string, width: number, rng: Rng): string[] {
+  const lines: string[] = [];
+  let line = "";
+  for (const word of para.split(/\s+/)) {
+    if ((line + " " + word).trim().length <= width) {
+      line = (line + " " + word).trim();
+    } else if (word.length > 7 && chance(rng, 0.35)) {
+      const cut = Math.max(3, Math.floor(word.length / 2));
+      lines.push(`${line} ${word.slice(0, cut)}-`.trim());
+      line = word.slice(cut);
+    } else {
+      lines.push(line);
+      line = word;
+    }
+  }
+  if (line) lines.push(line);
+  return lines;
+}
+
+/** Splits lines into pages of 30, dropping pages with nothing on them. */
+export function paginate(lines: string[], perPage = 30): string[][] {
+  const pages: string[][] = [];
+  for (let i = 0; i < lines.length; i += perPage) {
+    const page = lines.slice(i, i + perPage);
+    if (page.some((l) => l.trim())) pages.push(page);
+  }
+  return pages;
+}
+
 function renderPdfText(doc: CleanDoc, rng: Rng): string {
   const width = 58 + Math.floor(rng() * 18);
   const ligatures = chance(rng, 0.6);
   const lines: string[] = [doc.title.toUpperCase(), ""];
-
   for (const s of doc.sections) {
     if (s.heading) lines.push(s.heading.toUpperCase(), "");
-    for (const para of splitLines(s.text)) {
-      // Hard wraps with hyphenation, as text extraction from a PDF produces.
-      let line = "";
-      for (const word of para.split(/\s+/)) {
-        if ((line + " " + word).trim().length <= width) {
-          line = (line + " " + word).trim();
-        } else if (word.length > 7 && chance(rng, 0.35)) {
-          const cut = Math.max(3, Math.floor(word.length / 2));
-          lines.push(`${line} ${word.slice(0, cut)}-`.trim());
-          line = word.slice(cut);
-        } else {
-          lines.push(line);
-          line = word;
-        }
-      }
-      if (line) lines.push(line);
-      lines.push("");
-    }
+    for (const para of splitLines(s.text)) lines.push(...wrapParagraph(para, width, rng), "");
   }
 
-  // Running headers and page numbers every ~30 lines.
-  const pages: string[][] = [];
-  for (let i = 0; i < lines.length; i += 30) {
-    const page = lines.slice(i, i + 30);
-    if (page.some((l) => l.trim())) pages.push(page);
-  }
+  const pages = paginate(lines);
   const header = `${doc.source ?? "Studio"} — Game Rules ${pick(rng, ["v1.0", "v1.3", "rev. B"])}    CONFIDENTIAL`;
-  let text = pages
-    .map((p, i) => [header, "", ...p, "", `Page ${i + 1} of ${pages.length}`, "\f"].join("\n"))
-    .join("\n");
-  if (ligatures) text = text.replace(/fi/g, "ﬁ").replace(/fl/g, "ﬂ");
-  return text;
+  const text = pages.map((p, i) => [header, "", ...p, "", `Page ${i + 1} of ${pages.length}`, "\f"].join("\n")).join("\n");
+  return ligatures ? text.replace(/fi/g, "\ufb01").replace(/fl/g, "\ufb02") : text;
 }
 
 const RENDERERS: Record<Format, (doc: CleanDoc, rng: Rng) => string> = {
@@ -416,23 +421,27 @@ export function pickFormat(candidates: readonly Format[], seed: number, docId: s
 
 // ---------- CLI ----------
 
+function argValue(argv: readonly string[], flag: string): string | undefined {
+  const i = argv.indexOf(flag);
+  return i > -1 ? argv[i + 1] : undefined;
+}
+
+/** Parses CLI arguments into a document path and render options; throws on unknown formats or damage. */
+export function parseCliArgs(argv: readonly string[], readDoc: (path: string) => CleanDoc) {
+  const path = argValue(argv, "--in");
+  if (!path) throw new Error("usage: node render.ts --in doc.json [--format <fmt>|random] [--seed N] [--damage a,b]");
+  const doc = readDoc(path);
+  const seed = Number(argValue(argv, "--seed") ?? 42);
+  const requested = argValue(argv, "--format") ?? "random";
+  const format = requested === "random" ? pickFormat(FORMATS, seed, doc.docId) : (requested as Format);
+  if (!FORMATS.includes(format)) throw new Error(`unknown format ${format}; expected one of ${FORMATS.join(", ")}`);
+  const damage = (argValue(argv, "--damage")?.split(",") ?? []) as Damage[];
+  for (const d of damage) if (!DAMAGES.includes(d)) throw new Error(`unknown damage ${d}`);
+  return { doc, options: { format, seed, damage } satisfies RenderOptions };
+}
+
 if (import.meta.url === `file://${process.argv[1]}`) {
   const { readFileSync } = await import("node:fs");
-  const args = Object.fromEntries(
-    process.argv.slice(2).reduce<[string, string][]>((acc, a, i, all) => {
-      if (a.startsWith("--")) acc.push([a.slice(2), all[i + 1] ?? ""]);
-      return acc;
-    }, []),
-  );
-  if (!args.in) {
-    console.error("usage: node render.ts --in doc.json [--format <fmt>|random] [--seed N] [--damage a,b]");
-    process.exit(1);
-  }
-  const doc = JSON.parse(readFileSync(args.in, "utf8")) as CleanDoc;
-  const seed = Number(args.seed ?? 42);
-  const format = !args.format || args.format === "random" ? pickFormat(FORMATS, seed, doc.docId) : (args.format as Format);
-  if (!FORMATS.includes(format)) throw new Error(`unknown format ${format}; expected one of ${FORMATS.join(", ")}`);
-  const damage = (args.damage ? args.damage.split(",") : []) as Damage[];
-  for (const d of damage) if (!DAMAGES.includes(d)) throw new Error(`unknown damage ${d}`);
-  console.log(JSON.stringify(render(doc, { format, seed, damage }), null, 2));
+  const { doc, options } = parseCliArgs(process.argv, (p) => JSON.parse(readFileSync(p, "utf8")) as CleanDoc);
+  console.log(JSON.stringify(render(doc, options), null, 2));
 }

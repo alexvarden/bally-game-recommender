@@ -9,7 +9,9 @@
  * Output: data/catalogue/plan.json
  */
 import { mkdirSync, writeFileSync } from "node:fs";
+import { dirname } from "node:path";
 import { z } from "zod";
+import { argValue, countBy, isMain } from "../../src/lib/cli.ts";
 import { between, chance, intBetween, mulberry32, pick, sample, shuffle, type Rng } from "../../src/lib/random.ts";
 import {
   Brand,
@@ -28,6 +30,7 @@ import {
 } from "../../src/catalogue/schema.ts";
 
 export const PLAN_PATH = "data/catalogue/plan.json";
+export const DEFAULT_SEED = 20261113;
 
 const VariantKind = z.enum(["megaways", "jackpot", "deluxe"]);
 
@@ -227,133 +230,195 @@ function releaseDateFor(status: z.infer<typeof Status>, rng: Rng) {
 }
 
 // ---------- Build ----------
+//
+// Random draws happen in a fixed order, so a given seed always yields the same plan. If you change the order of
+// draws, the committed catalogue no longer matches its plan: plan.test.ts catches that.
 
-export function buildPlan(seed: number): Plan {
-  const rng = mulberry32(seed);
+type Market = "gb" | "both" | "us";
 
+/** Hands out values from a shuffled list, reshuffling when it runs out, so values spread evenly. */
+export function cycler<T>(rng: Rng, values: readonly T[]): () => T {
+  const queue: T[] = [];
+  return () => {
+    if (queue.length === 0) queue.push(...shuffle(rng, values));
+    return queue.pop()!;
+  };
+}
+
+function orderedFormats(rng: Rng) {
   const formats = shuffle(
     rng,
     FORMAT_MIX.flatMap(([f, n]) => Array.from({ length: n }, () => f)),
   );
   // Families are video slots; pull them to the front so their members get contiguous ids.
-  formats.sort((a, b) => Number(b === "video_slot") - Number(a === "video_slot"));
+  return formats.sort((a, b) => Number(b === "video_slot") - Number(a === "video_slot"));
+}
 
-  // Spread themes so every theme has neighbours to be recommended.
-  const themeQueue: z.infer<typeof Theme>[] = [];
-  const nextTheme = () => {
-    if (themeQueue.length === 0) themeQueue.push(...shuffle(rng, Theme.options));
-    return themeQueue.pop()!;
+export function gameId(format: z.infer<typeof Format>, index: number) {
+  const prefix = format === "video_slot" || format === "classic_slot" ? "SLT" : format.slice(0, 3).toUpperCase();
+  return `BLY-${prefix}-${String(index + 1).padStart(4, "0")}`;
+}
+
+/** Most games are GB-only, some are shared with the US site, a few are US-only. */
+function marketFor(rng: Rng): Market {
+  const r = rng();
+  if (r < 0.08) return "us";
+  return r < 0.23 ? "both" : "gb";
+}
+
+function gbBrandsFor(format: z.infer<typeof Format>, rng: Rng): z.infer<typeof Brand>[] {
+  if (format === "bingo") return ["double_bubble_bingo", ...sample(rng, ["jackpotjoy", "virgin_games"] as const, intBetween(rng, 0, 2))];
+  if (format === "slingo") return ["monopoly_casino", ...sample(rng, ["jackpotjoy", "virgin_games", "double_bubble_bingo"] as const, intBetween(rng, 0, 2))];
+  return sample(rng, GB_BRANDS, chance(rng, 0.15) ? 1 : intBetween(rng, 2, 4));
+}
+
+export function brandsFor(format: z.infer<typeof Format>, market: Market, rng: Rng): z.infer<typeof Brand>[] {
+  // Drawn even for US-only games, to keep the seeded sequence stable.
+  const gb = gbBrandsFor(format, rng);
+  if (market === "us") return ["bally_casino_us"];
+  return market === "both" ? [...gb, "bally_casino_us"] : gb;
+}
+
+export function jurisdictionsFor(market: Market, rng: Rng): z.infer<typeof Jurisdiction>[] {
+  const isGb = market !== "us";
+  return [
+    ...(isGb ? (["GB"] as const) : []),
+    ...(isGb && chance(rng, 0.15) ? (["ES"] as const) : []),
+    ...(market !== "gb" ? (["US-NJ", "US-PA"] as const) : []),
+  ];
+}
+
+function jackpotFor(mechanic: z.infer<typeof CoreMechanic>, rng: Rng): z.infer<typeof JackpotType> {
+  if (mechanic === "hold_and_win" && chance(rng, 0.6)) return "fixed";
+  return chance(rng, 0.08) ? "local_progressive" : "none";
+}
+
+function rgFlagsFor(format: z.infer<typeof Format>, volatility: z.infer<typeof Volatility>, rng: Rng): z.infer<typeof RgFlag>[] {
+  return format === "crash" || (volatility === "very_high" && chance(rng, 0.4)) ? ["high_intensity"] : [];
+}
+
+/** In-house games always have rules; aggregator games mostly arrive with a blurb and sometimes more. */
+export function documentsFor(channel: z.infer<typeof SupplyChannel>, rng: Rng): z.infer<typeof DocumentKind>[] {
+  const docs: z.infer<typeof DocumentKind>[] =
+    channel === "in_house"
+      ? ["rules_text", ...(chance(rng, 0.7) ? (["editorial"] as const) : []), ...(chance(rng, 0.5) ? (["marketing_blurb"] as const) : [])]
+      : [
+          ...(chance(rng, 0.9) ? (["marketing_blurb"] as const) : []),
+          ...(chance(rng, 0.65) ? (["rules_text"] as const) : []),
+          ...(chance(rng, 0.5) ? (["release_note"] as const) : []),
+        ];
+  return docs.length ? docs : ["marketing_blurb"];
+}
+
+function themeFor(format: z.infer<typeof Format>, rng: Rng, nextTheme: () => z.infer<typeof Theme>) {
+  if (format === "live_dealer" || format === "table") return pick(rng, ["luxury_vegas", "tv_gameshow", "fruit_classic"] as const);
+  return nextTheme();
+}
+
+function startsFamily(rng: Rng, format: z.infer<typeof Format>, index: number, familiesMade: number) {
+  return familiesMade < FAMILY_COUNT && format === "video_slot" && index < 40 && chance(rng, 0.5);
+}
+
+interface Cyclers {
+  theme: () => z.infer<typeof Theme>;
+  mechanic: () => z.infer<typeof CoreMechanic>;
+}
+
+function planStandalone(rng: Rng, format: z.infer<typeof Format>, index: number, familiesMade: number, next: Cyclers): PlannedGame {
+  const supplyChannel: z.infer<typeof SupplyChannel> = chance(rng, 0.25) ? "in_house" : "aggregator";
+  const studio = pick(rng, supplyChannel === "in_house" ? IN_HOUSE_STUDIOS : AGGREGATOR_STUDIOS);
+  const coreMechanic = mechanicFor(format, rng, next.mechanic());
+  const volatility = volatilityFor(format, rng);
+  const market = marketFor(rng);
+  const brands = brandsFor(format, market, rng);
+  const jurisdictions = jurisdictionsFor(market, rng);
+  const familyId = startsFamily(rng, format, index, familiesMade) ? `FAM-${String(familiesMade + 1).padStart(2, "0")}` : null;
+  const structure = structureFor(format, coreMechanic, rng);
+  const isGb = market !== "us";
+
+  const game: PlannedGame = {
+    id: gameId(format, index),
+    supplierGameCode: `${studio.split(" ")[0]!.slice(0, 3).toUpperCase()}${intBetween(rng, 1000, 9999)}`,
+    studio,
+    supplyChannel,
+    aggregator: supplyChannel === "aggregator" ? pick(rng, AGGREGATORS) : null,
+    familyId,
+    familyRole: familyId ? "base" : null,
+    variantKind: null,
+    format,
+    primaryTheme: themeFor(format, rng, next.theme),
+    coreMechanic,
+    ...structure,
+    jackpotType: jackpotFor(coreMechanic, rng),
+    volatility,
+    rtp: rtpFor(format, supplyChannel, rng),
+    maxWinMultiplier: maxWinFor(format, volatility, rng),
+    ...stakesFor(format, isGb, rng),
+    hitFrequency: hitFrequencyFor(format, volatility, rng),
+    currency: isGb ? "GBP" : "USD",
+    brands,
+    jurisdictions,
+    status: "live",
+    releaseDate: "",
+    rgFlags: rgFlagsFor(format, volatility, rng),
+    hasLicensedIp: format === "video_slot" && chance(rng, 0.08),
+    // Bonus buy is restricted in GB: only US-only games may have it.
+    bonusBuyAllowed: market === "us",
+    documents: documentsFor(supplyChannel, rng),
+    defects: [],
+    relatedGameId: null,
   };
-  const mechanicQueue: z.infer<typeof CoreMechanic>[] = [];
-  const nextMechanic = () => {
-    if (mechanicQueue.length === 0) mechanicQueue.push(...shuffle(rng, SLOT_MECHANICS));
-    return mechanicQueue.pop()!;
+  game.releaseDate = releaseDateFor(game.status, rng);
+  return game;
+}
+
+/** How each kind of variant differs from its base game. */
+const VARIANT_CHANGES: Record<z.infer<typeof VariantKind>, (base: PlannedGame, rng: Rng) => Partial<PlannedGame>> = {
+  megaways: (b, rng) => ({ payStructure: "megaways", grid: { reels: 6, rows: 7 }, paylines: 117649, volatility: "very_high", maxWinMultiplier: maxWinFor(b.format, "very_high", rng) }),
+  jackpot: (b) => ({ jackpotType: "network_progressive", rtp: Math.round((b.rtp - 0.02) * 10000) / 10000 }),
+  deluxe: (b) => ({ volatility: b.volatility === "low" ? "medium" : b.volatility, maxWinMultiplier: Math.round(b.maxWinMultiplier * 1.5) }),
+};
+
+/** Variants copy the family's identity and differ in one dimension. */
+export function planVariant(base: PlannedGame, variantKind: z.infer<typeof VariantKind>, id: string, rng: Rng): PlannedGame {
+  const game: PlannedGame = {
+    ...base,
+    id,
+    supplierGameCode: `${base.supplierGameCode}-${variantKind.slice(0, 2).toUpperCase()}`,
+    familyRole: "variant",
+    variantKind,
+    status: "live",
+    releaseDate: releaseDateFor("live", rng),
+    documents: [...base.documents],
+    defects: [],
+    relatedGameId: null,
   };
+  return { ...game, ...VARIANT_CHANGES[variantKind](base, rng) };
+}
+
+export function buildPlan(seed: number): Plan {
+  const rng = mulberry32(seed);
+  const formats = orderedFormats(rng);
+  // Spread themes and slot mechanics so every value has neighbours to be recommended.
+  const next: Cyclers = { theme: cycler(rng, Theme.options), mechanic: cycler(rng, SLOT_MECHANICS) };
 
   const games: PlannedGame[] = [];
-  let family: { id: string; base: PlannedGame; remaining: z.infer<typeof VariantKind>[] } | null = null;
+  let family: { base: PlannedGame; remaining: z.infer<typeof VariantKind>[] } | null = null;
   let familiesMade = 0;
 
-  for (let i = 0; i < formats.length; i++) {
-    const format = formats[i]!;
-    const id = `BLY-${format === "video_slot" || format === "classic_slot" ? "SLT" : format.slice(0, 3).toUpperCase()}-${String(i + 1).padStart(4, "0")}`;
-
-    // Variants copy the family's identity and differ in one dimension.
-    if (family && family.remaining.length > 0) {
-      const variantKind = family.remaining.shift()!;
-      const b = family.base;
-      const g: PlannedGame = {
-        ...b,
-        id,
-        supplierGameCode: `${b.supplierGameCode}-${variantKind.slice(0, 2).toUpperCase()}`,
-        familyRole: "variant",
-        variantKind,
-        status: "live",
-        releaseDate: releaseDateFor("live", rng),
-        documents: [...b.documents],
-        defects: [],
-        relatedGameId: null,
-      };
-      if (variantKind === "megaways") Object.assign(g, { payStructure: "megaways", grid: { reels: 6, rows: 7 }, paylines: 117649, volatility: "very_high", maxWinMultiplier: maxWinFor(format, "very_high", rng) });
-      if (variantKind === "jackpot") Object.assign(g, { jackpotType: "network_progressive", rtp: Math.round((b.rtp - 0.02) * 10000) / 10000 });
-      if (variantKind === "deluxe") Object.assign(g, { volatility: b.volatility === "low" ? "medium" : b.volatility, maxWinMultiplier: Math.round(b.maxWinMultiplier * 1.5) });
-      games.push(g);
+  formats.forEach((format, index) => {
+    if (family) {
+      games.push(planVariant(family.base, family.remaining.shift()!, gameId(format, index), rng));
       if (family.remaining.length === 0) family = null;
-      continue;
+      return;
     }
-
-    const supplyChannel: z.infer<typeof SupplyChannel> = chance(rng, 0.25) ? "in_house" : "aggregator";
-    const studio = supplyChannel === "in_house" ? pick(rng, IN_HOUSE_STUDIOS) : pick(rng, AGGREGATOR_STUDIOS);
-    const coreMechanic = mechanicFor(format, rng, nextMechanic());
-    const volatility = volatilityFor(format, rng);
-
-    // Availability: most games GB-only, some shared with the US site, a few US-only.
-    const r = rng();
-    const market = r < 0.08 ? "us" : r < 0.23 ? "both" : "gb";
-    const isGb = market !== "us";
-    let brands: z.infer<typeof Brand>[];
-    if (format === "bingo") brands = ["double_bubble_bingo", ...sample(rng, ["jackpotjoy", "virgin_games"] as const, intBetween(rng, 0, 2))];
-    else if (format === "slingo") brands = ["monopoly_casino", ...sample(rng, ["jackpotjoy", "virgin_games", "double_bubble_bingo"] as const, intBetween(rng, 0, 2))];
-    else brands = sample(rng, GB_BRANDS, chance(rng, 0.15) ? 1 : intBetween(rng, 2, 4));
-    if (market === "us") brands = ["bally_casino_us"];
-    if (market === "both") brands = [...brands, "bally_casino_us"];
-    const jurisdictions: z.infer<typeof Jurisdiction>[] = [
-      ...(isGb ? (["GB"] as const) : []),
-      ...(isGb && chance(rng, 0.15) ? (["ES"] as const) : []),
-      ...(market !== "gb" ? (["US-NJ", "US-PA"] as const) : []),
-    ];
-
-    const familyId = familiesMade < FAMILY_COUNT && format === "video_slot" && i < 40 && chance(rng, 0.5) ? `FAM-${String(familiesMade + 1).padStart(2, "0")}` : null;
-
-    const structure = structureFor(format, coreMechanic, rng);
-    const g: PlannedGame = {
-      id,
-      supplierGameCode: `${studio.split(" ")[0]!.slice(0, 3).toUpperCase()}${intBetween(rng, 1000, 9999)}`,
-      studio,
-      supplyChannel,
-      aggregator: supplyChannel === "aggregator" ? pick(rng, AGGREGATORS) : null,
-      familyId,
-      familyRole: familyId ? "base" : null,
-      variantKind: null,
-      format,
-      primaryTheme: format === "live_dealer" || format === "table" ? pick(rng, ["luxury_vegas", "tv_gameshow", "fruit_classic"] as const) : nextTheme(),
-      coreMechanic,
-      ...structure,
-      jackpotType: coreMechanic === "hold_and_win" && chance(rng, 0.6) ? "fixed" : chance(rng, 0.08) ? "local_progressive" : "none",
-      volatility,
-      rtp: rtpFor(format, supplyChannel, rng),
-      maxWinMultiplier: maxWinFor(format, volatility, rng),
-      ...stakesFor(format, isGb, rng),
-      hitFrequency: hitFrequencyFor(format, volatility, rng),
-      currency: isGb ? "GBP" : "USD",
-      brands,
-      jurisdictions,
-      status: "live",
-      releaseDate: "",
-      rgFlags: format === "crash" || (volatility === "very_high" && chance(rng, 0.4)) ? ["high_intensity"] : [],
-      hasLicensedIp: format === "video_slot" && chance(rng, 0.08),
-      // Bonus buy is restricted in GB: only US-only games may have it.
-      bonusBuyAllowed: market === "us",
-      documents:
-        supplyChannel === "in_house"
-          ? ["rules_text", ...(chance(rng, 0.7) ? (["editorial"] as const) : []), ...(chance(rng, 0.5) ? (["marketing_blurb"] as const) : [])]
-          : [
-              ...(chance(rng, 0.9) ? (["marketing_blurb"] as const) : []),
-              ...(chance(rng, 0.65) ? (["rules_text"] as const) : []),
-              ...(chance(rng, 0.5) ? (["release_note"] as const) : []),
-            ],
-      defects: [],
-      relatedGameId: null,
-    };
-    if (g.documents.length === 0) g.documents = ["marketing_blurb"];
-    g.releaseDate = releaseDateFor(g.status, rng);
-    games.push(g);
-
-    if (familyId) {
+    const game = planStandalone(rng, format, index, familiesMade, next);
+    games.push(game);
+    if (game.familyId) {
       familiesMade++;
-      family = { id: familyId, base: g, remaining: sample(rng, VariantKind.options, chance(rng, 0.4) ? 2 : 1) };
+      family = { base: game, remaining: sample(rng, VariantKind.options, chance(rng, 0.4) ? 2 : 1) };
     }
-  }
+  });
 
   assignStatuses(games, rng);
   assignDefects(games, rng);
@@ -401,24 +466,27 @@ function assignDefects(games: PlannedGame[], rng: Rng) {
   for (const g of take(2, (g) => g.supplyChannel === "aggregator")) g.defects.push("duplicate_listing");
 }
 
-// ---------- CLI ----------
+// ---------- Entry point ----------
 
-if (import.meta.url === `file://${process.argv[1]}`) {
-  const seedArg = process.argv.indexOf("--seed");
-  const seed = seedArg > -1 ? Number(process.argv[seedArg + 1]) : 20261113;
-  const plan = buildPlan(seed);
-  Plan.parse(plan);
-  mkdirSync("data/catalogue", { recursive: true });
-  writeFileSync(PLAN_PATH, JSON.stringify(plan, null, 2));
-
-  const count = <K extends string>(f: (g: PlannedGame) => K | K[]) =>
-    plan.games.flatMap((g) => [f(g)].flat()).reduce<Record<string, number>>((acc, k) => ((acc[k] = (acc[k] ?? 0) + 1), acc), {});
-  console.log(`wrote ${plan.games.length} planned games to ${PLAN_PATH}`);
-  console.log("formats  ", count((g) => g.format));
-  console.log("channel  ", count((g) => g.supplyChannel));
-  console.log("status   ", count((g) => g.status));
-  console.log("families ", count((g) => g.familyRole ?? "none"));
-  console.log("defects  ", count((g) => g.defects));
-  console.log("docs     ", count((g) => g.documents));
-  console.log("themes   ", count((g) => g.primaryTheme));
+export function summarise(plan: Plan) {
+  const games = plan.games;
+  return {
+    formats: countBy(games, (g) => g.format),
+    channel: countBy(games, (g) => g.supplyChannel),
+    status: countBy(games, (g) => g.status),
+    families: countBy(games, (g) => g.familyRole ?? "none"),
+    defects: countBy(games, (g) => g.defects),
+    docs: countBy(games, (g) => g.documents),
+    themes: countBy(games, (g) => g.primaryTheme),
+  };
 }
+
+export function run(argv: readonly string[], outPath = PLAN_PATH): Plan {
+  const plan = Plan.parse(buildPlan(Number(argValue(argv, "--seed", String(DEFAULT_SEED)))));
+  mkdirSync(dirname(outPath), { recursive: true });
+  writeFileSync(outPath, JSON.stringify(plan, null, 2));
+  console.log(`wrote ${plan.games.length} planned games to ${outPath}`, summarise(plan));
+  return plan;
+}
+
+if (isMain(import.meta.url)) run(process.argv);

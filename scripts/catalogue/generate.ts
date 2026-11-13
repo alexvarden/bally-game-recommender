@@ -30,19 +30,17 @@ import {
   SecondaryFeature,
   SocialElement,
 } from "../../src/catalogue/schema.ts";
+import { argValue, hasFlag, isMain } from "../../src/lib/cli.ts";
 import { generateStructured, LlmError } from "../../src/lib/llm.ts";
 import { Plan, PLAN_PATH, type PlannedGame } from "./plan.ts";
 
 export const GROUND_TRUTH_PATH = "data/catalogue/ground-truth.json";
 const CACHE_DIR = "data/catalogue/.cache";
 const PROMPT_VERSION = "gen-v1";
-const MODEL = process.env.CATALOGUE_MODEL ?? "openai/gpt-6-luna";
+const DEFAULT_MODEL = "openai/gpt-6-luna";
 const BATCH_SIZE = 4;
 const CONCURRENCY = 4;
 const MAX_ATTEMPTS = 3;
-const FAKE = process.argv.includes("--fake");
-const BATCH_LIMIT = process.argv.includes("--batches") ? Number(process.argv[process.argv.indexOf("--batches") + 1]) : Infinity;
-const usage = { input: 0, output: 0 };
 
 // ---------- What the model returns ----------
 
@@ -122,7 +120,7 @@ Documents: write exactly the planned document kinds, each as sections. Keep one 
 
 Tags: on each section, list only the fields that section states or clearly shows: ${ExtractableField.options.join(", ")}. Don't tag a field just because it fits the game; it must be readable from that section's text alone. Experience fields (pace, excitementCurve, bonusStyle, complexity) need explicit wording such as "fast-paced" or "frequent small features", not just a general vibe.`;
 
-function promptFor(batch: PlannedGame[], usedNames: string[]) {
+export function promptFor(batch: PlannedGame[], usedNames: string[]) {
   const games = batch.map((g) => ({
     id: g.id,
     studio: g.studio,
@@ -152,46 +150,63 @@ function promptFor(batch: PlannedGame[], usedNames: string[]) {
 
 const NUMERIC_TAGS = ["rtp", "maxWinMultiplier", "minStake", "maxStake", "hitFrequency", "paylines"] as const;
 
-/** Throws on output we must not accept; returns warnings for tags it had to drop. */
-function checkGame(plan: PlannedGame, gen: GeneratedGame): string[] {
-  const warnings: string[] = [];
-  const wantKinds = [...plan.documents].sort().join(",");
-  const gotKinds = gen.documents.map((d) => d.kind).sort().join(",");
-  if (wantKinds !== gotKinds) throw new Error(`${plan.id}: documents ${gotKinds} != planned ${wantKinds}`);
+type Display = ReturnType<typeof displayFacts>;
+type Section = GeneratedGame["documents"][number]["sections"][number];
 
-  const display = displayFacts(plan);
+function assertPlannedDocuments(plan: PlannedGame, gen: GeneratedGame) {
+  const want = [...plan.documents].sort().join(",");
+  const got = gen.documents.map((d) => d.kind).sort().join(",");
+  if (want !== got) throw new Error(`${plan.id}: documents ${got} != planned ${want}`);
+}
+
+/** A percentage in any doc that isn't the RTP is a contradicting fact, not a style choice. */
+function assertNoConflictingRtp(plan: PlannedGame, gen: GeneratedGame, display: Display) {
   const allText = gen.documents.flatMap((d) => d.sections.map((s) => s.text)).join("\n");
-
-  // A percentage in any doc that isn't the RTP is a contradicting fact, not a style choice.
   for (const m of allText.matchAll(/\b(\d{2}\.\d{1,2})\s?%/g)) {
     if (`${m[1]}%` !== display.rtp) throw new Error(`${plan.id}: doc states ${m[0]} but RTP is ${display.rtp}`);
   }
+}
 
-  for (const doc of gen.documents) {
-    for (const s of doc.sections) {
-      s.tags = s.tags.filter((tag) => {
-        if (!(NUMERIC_TAGS as readonly string[]).includes(tag)) return true;
-        const want = display[tag as (typeof NUMERIC_TAGS)[number]];
-        const ok = want !== null && s.text.includes(want);
-        if (!ok) warnings.push(`${plan.id}/${doc.kind}: dropped tag ${tag}; section doesn't contain "${want}"`);
-        return ok;
-      });
-      // Add numeric tags the model forgot, so truncation ground truth stays honest.
-      for (const tag of NUMERIC_TAGS) {
-        const want = display[tag];
-        if (want && !s.tags.includes(tag) && s.text.includes(want) && !(tag === "paylines" && want.length < 3)) s.tags.push(tag);
-      }
-    }
-  }
+const isNumericTag = (tag: string): tag is (typeof NUMERIC_TAGS)[number] => (NUMERIC_TAGS as readonly string[]).includes(tag);
 
-  if (!plan.bonusBuyAllowed && gen.secondaryFeatures.includes("bonus_buy")) {
-    gen.secondaryFeatures = gen.secondaryFeatures.filter((f) => f !== "bonus_buy");
-    warnings.push(`${plan.id}: removed bonus_buy (not allowed in GB)`);
+/**
+ * Keeps a numeric tag only if the section contains the exact display string, and adds tags the model forgot,
+ * so the ground truth never claims a number that isn't there. Returns a warning per dropped tag.
+ */
+export function verifyNumericTags(section: Section, display: Display, where: string): string[] {
+  const warnings: string[] = [];
+  section.tags = section.tags.filter((tag) => {
+    if (!isNumericTag(tag)) return true;
+    const want = display[tag];
+    const ok = want !== null && section.text.includes(want);
+    if (!ok) warnings.push(`${where}: dropped tag ${tag}; section doesn't contain "${want}"`);
+    return ok;
+  });
+  for (const tag of NUMERIC_TAGS) {
+    const want = display[tag];
+    // Short paylines like "5" match too easily by accident, so they are never added.
+    const findable = want !== null && !(tag === "paylines" && want.length < 3);
+    if (findable && !section.tags.includes(tag) && section.text.includes(want)) section.tags.push(tag);
   }
   return warnings;
 }
 
-function assemble(plan: PlannedGame, gen: GeneratedGame) {
+function removeDisallowedBonusBuy(plan: PlannedGame, gen: GeneratedGame): string[] {
+  if (plan.bonusBuyAllowed || !gen.secondaryFeatures.includes("bonus_buy")) return [];
+  gen.secondaryFeatures = gen.secondaryFeatures.filter((f) => f !== "bonus_buy");
+  return [`${plan.id}: removed bonus_buy (not allowed in GB)`];
+}
+
+/** Throws on output we must not accept; fixes what it safely can and returns a warning for each fix. */
+export function checkGame(plan: PlannedGame, gen: GeneratedGame): string[] {
+  assertPlannedDocuments(plan, gen);
+  const display = displayFacts(plan);
+  assertNoConflictingRtp(plan, gen, display);
+  const tagWarnings = gen.documents.flatMap((doc) => doc.sections.flatMap((s) => verifyNumericTags(s, display, `${plan.id}/${doc.kind}`)));
+  return [...tagWarnings, ...removeDisallowedBonusBuy(plan, gen)];
+}
+
+export function assemble(plan: PlannedGame, gen: GeneratedGame) {
   const game: GroundTruthGame = GroundTruthGame.parse({
     id: plan.id,
     supplierGameCode: plan.supplierGameCode,
@@ -250,7 +265,7 @@ function assemble(plan: PlannedGame, gen: GeneratedGame) {
 // ---------- Batching, caching, calling ----------
 
 /** Groups games into batches without splitting a family, so variants can share the base's name. */
-function batchesOf(games: PlannedGame[]): PlannedGame[][] {
+export function batchesOf(games: PlannedGame[]): PlannedGame[][] {
   const batches: PlannedGame[][] = [];
   let current: PlannedGame[] = [];
   for (let i = 0; i < games.length; i++) {
@@ -267,7 +282,7 @@ function batchesOf(games: PlannedGame[]): PlannedGame[][] {
 }
 
 /** Template content with no API call, for exercising the pipeline end to end. Never commit its output. */
-function fakeBatch(batch: PlannedGame[]): GeneratedGame[] {
+export function fakeBatch(batch: PlannedGame[]): GeneratedGame[] {
   return batch.map((p) => {
     const d = displayFacts(p);
     const name = `Fake ${p.primaryTheme.replace(/_/g, " ")} ${p.id.slice(-4)}`;
@@ -306,35 +321,60 @@ function fakeBatch(batch: PlannedGame[]): GeneratedGame[] {
   });
 }
 
-async function generateBatch(batch: PlannedGame[], usedNames: string[]) {
-  if (FAKE) return { games: fakeBatch(batch), cached: false };
-  const key = createHash("sha256").update(JSON.stringify({ PROMPT_VERSION, MODEL, SYSTEM, batch })).digest("hex").slice(0, 16);
-  const cachePath = `${CACHE_DIR}/${batch[0]!.id}-${key}.json`;
-  if (existsSync(cachePath)) return { games: GeneratedBatch.parse(JSON.parse(readFileSync(cachePath, "utf8"))).games, cached: true };
+export interface GenerateDeps {
+  llm: typeof generateStructured;
+  model: string;
+  cacheDir: string;
+  fake: boolean;
+}
+
+export interface BatchResult {
+  games: GeneratedGame[];
+  cached: boolean;
+  usage: { input: number; output: number };
+}
+
+const NO_USAGE = { input: 0, output: 0 };
+
+function assertBatchIds(batch: PlannedGame[], out: z.infer<typeof GeneratedBatch>) {
+  const got = out.games.map((g) => g.id).sort().join(",");
+  const want = batch.map((g) => g.id).sort().join(",");
+  if (got !== want) throw new Error(`returned ids ${got}, expected ${want}`);
+  // Validate on copies: checkGame fixes tags in place, and the cache should hold the raw response.
+  batch.forEach((p) => checkGame(p, structuredClone(out.games.find((g) => g.id === p.id)!)));
+}
+
+async function callModel(batch: PlannedGame[], usedNames: string[], deps: GenerateDeps): Promise<BatchResult> {
+  const response = await deps.llm({
+    schema: GeneratedBatch,
+    schemaName: "catalogue_batch",
+    model: deps.model,
+    maxTokens: 24000,
+    system: SYSTEM,
+    user: promptFor(batch, usedNames),
+  });
+  assertBatchIds(batch, response.data);
+  return { games: response.data.games, cached: false, usage: { input: response.usage.inputTokens, output: response.usage.outputTokens } };
+}
+
+export function cachePathFor(batch: PlannedGame[], deps: Pick<GenerateDeps, "model" | "cacheDir">) {
+  const key = createHash("sha256").update(JSON.stringify({ PROMPT_VERSION, MODEL: deps.model, SYSTEM, batch })).digest("hex").slice(0, 16);
+  return `${deps.cacheDir}/${batch[0]!.id}-${key}.json`;
+}
+
+/** One batch: from cache if present, otherwise the model with retries on retryable failures. */
+export async function generateBatch(batch: PlannedGame[], usedNames: string[], deps: GenerateDeps): Promise<BatchResult> {
+  if (deps.fake) return { games: fakeBatch(batch), cached: false, usage: NO_USAGE };
+  const cachePath = cachePathFor(batch, deps);
+  if (existsSync(cachePath)) return { games: GeneratedBatch.parse(JSON.parse(readFileSync(cachePath, "utf8"))).games, cached: true, usage: NO_USAGE };
 
   let lastError: unknown;
   for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
     try {
-      const response = await generateStructured({
-        schema: GeneratedBatch,
-        schemaName: "catalogue_batch",
-        model: MODEL,
-        maxTokens: 24000,
-        system: SYSTEM,
-        user: promptFor(batch, usedNames),
-      });
-      const out = response.data;
-      usage.input += response.usage.inputTokens;
-      usage.output += response.usage.outputTokens;
-
-      const ids = out.games.map((g) => g.id).sort().join(",");
-      const want = batch.map((g) => g.id).sort().join(",");
-      if (ids !== want) throw new Error(`returned ids ${ids}, expected ${want}`);
-      batch.forEach((p) => checkGame(p, structuredClone(out.games.find((g) => g.id === p.id)!)));
-
-      mkdirSync(CACHE_DIR, { recursive: true });
-      writeFileSync(cachePath, JSON.stringify(out, null, 2));
-      return { games: out.games, cached: false };
+      const result = await callModel(batch, usedNames, deps);
+      mkdirSync(deps.cacheDir, { recursive: true });
+      writeFileSync(cachePath, JSON.stringify({ games: result.games }, null, 2));
+      return result;
     } catch (err) {
       lastError = err;
       console.warn(`  batch ${batch[0]!.id} attempt ${attempt} failed: ${err instanceof Error ? err.message : err}`);
@@ -344,32 +384,27 @@ async function generateBatch(batch: PlannedGame[], usedNames: string[]) {
   throw lastError;
 }
 
-async function main() {
-  const plan = Plan.parse(JSON.parse(readFileSync(PLAN_PATH, "utf8")));
-  const batches = batchesOf(plan.games).slice(0, BATCH_LIMIT);
-  console.log(`${plan.games.length} games, running ${batches.length} batches, model ${MODEL}`);
-
+/** Runs batches in waves; each wave sees the names used by earlier waves. */
+export async function generateAll(batches: PlannedGame[][], deps: GenerateDeps) {
   const generated = new Map<string, GeneratedGame>();
   const usedNames: string[] = [];
+  const usage = { input: 0, output: 0 };
   for (let i = 0; i < batches.length; i += CONCURRENCY) {
-    const wave = batches.slice(i, i + CONCURRENCY);
-    const results = await Promise.all(wave.map((b) => generateBatch(b, [...usedNames])));
+    const results = await Promise.all(batches.slice(i, i + CONCURRENCY).map((b) => generateBatch(b, [...usedNames], deps)));
     results.forEach((r, j) => {
       console.log(`  batch ${i + j + 1}/${batches.length} ${r.cached ? "(cached)" : "done"}: ${r.games.map((g) => g.name).join(" | ")}`);
-      for (const g of r.games) {
-        generated.set(g.id, g);
-        usedNames.push(g.name);
-      }
+      r.games.forEach((g) => (generated.set(g.id, g), usedNames.push(g.name)));
+      usage.input += r.usage.input;
+      usage.output += r.usage.output;
     });
   }
+  return { generated, usedNames, usage };
+}
 
-  console.log(`tokens this run: ${usage.input} in / ${usage.output} out`);
-  if (Number.isFinite(BATCH_LIMIT)) {
-    console.log("partial run: batches cached; ground truth not written. Run without --batches to finish.");
-    return;
-  }
-
-  const dupes = usedNames.filter((n, i) => usedNames.indexOf(n) !== i);
+/** Checks every generated game against its plan and assembles the ground truth. */
+export function buildGroundTruth(plan: Plan, generated: Map<string, GeneratedGame>, meta: GroundTruth["meta"]): GroundTruth {
+  const names = plan.games.map((p) => generated.get(p.id)!.name);
+  const dupes = names.filter((n, i) => names.indexOf(n) !== i);
   if (dupes.length) throw new Error(`duplicate names: ${dupes.join(", ")}. Delete the affected cache files and re-run.`);
 
   const warnings: string[] = [];
@@ -378,19 +413,46 @@ async function main() {
   for (const p of plan.games) {
     const gen = structuredClone(generated.get(p.id)!);
     warnings.push(...checkGame(p, gen));
-    const a = assemble(p, gen);
-    games.push(a.game);
-    documents.push(...a.documents);
+    const assembled = assemble(p, gen);
+    games.push(assembled.game);
+    documents.push(...assembled.documents);
   }
-
-  const truth: GroundTruth = {
-    meta: { model: FAKE ? "fake" : MODEL, promptVersion: PROMPT_VERSION, planSeed: plan.seed, generatedAt: new Date().toISOString() },
-    games,
-    documents,
-    warnings,
-  };
-  writeFileSync(GROUND_TRUTH_PATH, JSON.stringify(GroundTruth.parse(truth), null, 2));
-  console.log(`wrote ${games.length} games and ${documents.length} documents to ${GROUND_TRUTH_PATH} (${warnings.length} warnings)`);
+  return GroundTruth.parse({ meta, games, documents, warnings });
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) await main();
+export interface RunOptions {
+  planPath: string;
+  outPath: string;
+  batchLimit: number;
+  deps: GenerateDeps;
+}
+
+export function optionsFrom(argv: readonly string[], env: NodeJS.ProcessEnv): RunOptions {
+  return {
+    planPath: PLAN_PATH,
+    outPath: GROUND_TRUTH_PATH,
+    batchLimit: hasFlag(argv, "--batches") ? Number(argValue(argv, "--batches", "1")) : Infinity,
+    deps: { llm: generateStructured, model: env.CATALOGUE_MODEL ?? DEFAULT_MODEL, cacheDir: CACHE_DIR, fake: hasFlag(argv, "--fake") },
+  };
+}
+
+export async function run(opts: RunOptions): Promise<GroundTruth | null> {
+  const plan = Plan.parse(JSON.parse(readFileSync(opts.planPath, "utf8")));
+  const batches = batchesOf(plan.games).slice(0, opts.batchLimit);
+  console.log(`${plan.games.length} games, running ${batches.length} batches, model ${opts.deps.model}`);
+
+  const { generated, usage } = await generateAll(batches, opts.deps);
+  console.log(`tokens this run: ${usage.input} in / ${usage.output} out`);
+  if (Number.isFinite(opts.batchLimit)) {
+    console.log("partial run: batches cached; ground truth not written. Run without --batches to finish.");
+    return null;
+  }
+
+  const meta = { model: opts.deps.fake ? "fake" : opts.deps.model, promptVersion: PROMPT_VERSION, planSeed: plan.seed, generatedAt: new Date().toISOString() };
+  const truth = buildGroundTruth(plan, generated, meta);
+  writeFileSync(opts.outPath, JSON.stringify(truth, null, 2));
+  console.log(`wrote ${truth.games.length} games and ${truth.documents.length} documents to ${opts.outPath} (${truth.warnings.length} warnings)`);
+  return truth;
+}
+
+if (isMain(import.meta.url)) await run(optionsFrom(process.argv, process.env));

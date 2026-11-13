@@ -58,8 +58,54 @@ export async function generateStructured<T extends z.ZodType>(req: StructuredReq
 
 // ---------- OpenRouter ----------
 
+export function openRouterBody<T extends z.ZodType>(req: StructuredRequest<T>) {
+  return {
+    model: openRouterModelId(req.model),
+    max_tokens: req.maxTokens ?? 16000,
+    messages: [
+      { role: "system", content: req.system },
+      { role: "user", content: req.user },
+    ],
+    response_format: {
+      type: "json_schema",
+      json_schema: { name: req.schemaName, strict: true, schema: z.toJSONSchema(req.schema, { target: "draft-7" }) },
+    },
+    // Only route to providers that honour the schema, rather than silently ignoring it.
+    provider: { require_parameters: true },
+  };
+}
+
+export interface OpenRouterResponse {
+  model: string;
+  choices?: { finish_reason: string; message: { content: string | null; refusal?: string | null } }[];
+  usage?: { prompt_tokens: number; completion_tokens: number };
+  error?: { message: string };
+}
+
+/** The message content of a completion, or a typed error saying whether a retry could help. */
+export function contentOf(json: OpenRouterResponse): string {
+  if (json.error) throw new LlmError(`OpenRouter error: ${json.error.message}`, true);
+  const choice = json.choices?.[0];
+  if (!choice) throw new LlmError("OpenRouter returned no choices", true);
+  if (choice.message.refusal) throw new LlmError(`refused: ${choice.message.refusal}`, false);
+  if (choice.finish_reason === "length") throw new LlmError("hit max_tokens", true);
+  return choice.message.content ?? "";
+}
+
+/** Parses and validates model output; invalid output is retryable because a fresh sample may be fine. */
+export function parseStructured<T extends z.ZodType>(schema: T, content: string): z.infer<T> {
+  let parsed: unknown;
+  try {
+    parsed = JSON.parse(content);
+  } catch {
+    throw new LlmError(`response was not JSON: ${content.slice(0, 200)}`, true);
+  }
+  const result = schema.safeParse(parsed);
+  if (!result.success) throw new LlmError(`response failed schema: ${result.error.message.slice(0, 500)}`, true);
+  return result.data;
+}
+
 async function viaOpenRouter<T extends z.ZodType>(req: StructuredRequest<T>): Promise<StructuredResponse<z.infer<T>>> {
-  const model = openRouterModelId(req.model);
   const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
     method: "POST",
     headers: {
@@ -67,49 +113,16 @@ async function viaOpenRouter<T extends z.ZodType>(req: StructuredRequest<T>): Pr
       "Content-Type": "application/json",
       "X-Title": "bally-game-recommender",
     },
-    body: JSON.stringify({
-      model,
-      max_tokens: req.maxTokens ?? 16000,
-      messages: [
-        { role: "system", content: req.system },
-        { role: "user", content: req.user },
-      ],
-      response_format: {
-        type: "json_schema",
-        json_schema: { name: req.schemaName, strict: true, schema: z.toJSONSchema(req.schema, { target: "draft-7" }) },
-      },
-      // Only route to providers that honour the schema, rather than silently ignoring it.
-      provider: { require_parameters: true },
-    }),
+    body: JSON.stringify(openRouterBody(req)),
     signal: AbortSignal.timeout(10 * 60_000),
   });
-
   if (!res.ok) {
     const body = await res.text();
     throw new LlmError(`OpenRouter ${res.status}: ${body.slice(0, 500)}`, res.status === 429 || res.status >= 500);
   }
-  const json = (await res.json()) as {
-    model: string;
-    choices?: { finish_reason: string; message: { content: string | null; refusal?: string | null } }[];
-    usage?: { prompt_tokens: number; completion_tokens: number };
-    error?: { message: string };
-  };
-  if (json.error) throw new LlmError(`OpenRouter error: ${json.error.message}`, true);
-  const choice = json.choices?.[0];
-  if (!choice) throw new LlmError("OpenRouter returned no choices", true);
-  if (choice.message.refusal) throw new LlmError(`refused: ${choice.message.refusal}`, false);
-  if (choice.finish_reason === "length") throw new LlmError("hit max_tokens", true);
-
-  let parsed: unknown;
-  try {
-    parsed = JSON.parse(choice.message.content ?? "");
-  } catch {
-    throw new LlmError(`response was not JSON: ${(choice.message.content ?? "").slice(0, 200)}`, true);
-  }
-  const result = req.schema.safeParse(parsed);
-  if (!result.success) throw new LlmError(`response failed schema: ${result.error.message.slice(0, 500)}`, true);
+  const json = (await res.json()) as OpenRouterResponse;
   return {
-    data: result.data,
+    data: parseStructured(req.schema, contentOf(json)),
     provider: "openrouter",
     model: json.model,
     usage: { inputTokens: json.usage?.prompt_tokens ?? 0, outputTokens: json.usage?.completion_tokens ?? 0 },
@@ -134,10 +147,8 @@ async function viaAnthropic<T extends z.ZodType>(req: StructuredRequest<T>): Pro
   if (response.stop_reason === "refusal") throw new LlmError(`refused: ${response.stop_details?.category ?? "unknown"}`, false);
   if (response.stop_reason === "max_tokens") throw new LlmError("hit max_tokens", true);
   if (!response.parsed_output) throw new LlmError("no parsed output", true);
-  const result = req.schema.safeParse(response.parsed_output);
-  if (!result.success) throw new LlmError(`response failed schema: ${result.error.message.slice(0, 500)}`, true);
   return {
-    data: result.data,
+    data: parseStructured(req.schema, JSON.stringify(response.parsed_output)),
     provider: "anthropic",
     model: response.model,
     usage: { inputTokens: response.usage.input_tokens, outputTokens: response.usage.output_tokens },
